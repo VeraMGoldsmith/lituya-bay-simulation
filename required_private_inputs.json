@@ -1,0 +1,9 @@
+{
+  "data/reference/component_roles.json": "cea80898cfcb8e1d259bb2955d6ae5a0079c6972843dbd4ca9c5925b85f00ee5",
+  "data/reference/mesh_sampling.json": "e824a46cd41821a07cec14c34d5824d4e5dfce602c7cec64a8edc084733ed3ca",
+  "data/reference/mesh_surfaces_15m.npz": "0c082bb8331262cb6424296c994e5ac0490a8f1d1d072e67936f80763c081070",
+  "data/reference/original_model_code.txt": "d442b27a9f678e397fb00974d8bf8ec8e5f0b1aa7ed96e290708bc63537a4893",
+  "data/reference/original_probes.json": "339a412f4d45c569f06cfee0cad64db25c626806b8f82d5a1056ccaf1c6ec399",
+  "data/reference/rock_mesh_properties.json": "12478a17074be07e683d70174fa233d5cf2f1b6f381d074da63631a7a8cfc0ad",
+  "data/reference/verified_settings.json": "6fea4c59da95efa472048a70b168735bd52e07704d60ef6f1f4969a093580bca"
+}

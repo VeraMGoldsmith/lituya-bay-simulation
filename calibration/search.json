@@ -1,0 +1,7 @@
+{
+  "durations_s": [12.0, 15.0, 18.0],
+  "travel_distances_m": [1200.0, 1400.0, 1600.0],
+  "direction": "negative local Y only; original release footprint unchanged",
+  "selection": "lowest finite proxy score, including the unchanged baseline",
+  "receiver_bounds_xyxy_m": [500.0, 1500.0, 2600.0, 3700.0]
+}

@@ -1,0 +1,11 @@
+{
+  "source": "Gonzalez-Vida et al. (2019), NHESS 19, 369–388, Figure 11",
+  "doi": "10.5194/nhess-19-369-2019",
+  "temporal": {"8": 272.4, "10": 251.1, "20": 161.5},
+  "opposite_spur_arrival_s": 30.0,
+  "maximum_runup_m": 523.9,
+  "maximum_runup_time_s_information_only": 39.0,
+  "hysea_optimum_provenance_only": {"alpha_deg": 13.0, "density_ratio_water_to_slide": 0.44, "interlayer_friction": 0.08},
+  "arrival_caution": "30 s is retained from Figure 11(e) and the original add-on. Section 9.1 mentions first spur contact at 22 s. This is an approximate proxy target, not a unique observed arrival.",
+  "metric_caution": "Depth-averaged receiving-water maximum and ground-wetting diagnostics are not proved equivalent to the HySEA diagnostics. Published optimum parameters are not substituted into GeoClaw."
+}

@@ -1,0 +1,8 @@
+{
+  "explanation": "Both recipes compile the standard v5.14.0 shallow-water solver with the same three Riemann sources, no custom Fortran. Comment differences do not change the binary capabilities. Existing binary is accepted only when its recorded hash matches.",
+  "allowed_makefile_sha256": [
+    "19b62f7aa19e3816f53fe886571b1ef8b2423b930e9a3a7353cedafb489369d5",
+    "fc92ad62cea6da0646836073f3578fa01394f53212a056664e6ae9e241f9f544",
+    "e96d4a9c38b8cde5637cf021efcec3b609550eeecc390a106517b8fbb7d09eac"
+  ]
+}

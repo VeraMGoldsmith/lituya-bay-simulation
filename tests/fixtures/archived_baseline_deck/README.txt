@@ -1,0 +1,1 @@
+Archived original baseline .data files from run 20261014T041225Z_ae73321a. Used for input-contract parser tests only; not water simulations. Test writer regenerates only point_style=0 monitor fixture text. Production always uses installed Clawpack write_data.

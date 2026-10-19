@@ -1,0 +1,16 @@
+{
+  "schema": 1,
+  "experiment": "fixed_source_water_speed_limit",
+  "caps_m_s": [
+    50,
+    100,
+    200
+  ],
+  "frozen_config_sha256": "a357e1654d6662655b2f89f8e7c5bb11de2b12399d171c913fb4102aaca49d38",
+  "terrain_file_sha256": "87421359138db59e4ff22c1d6c5f0e28d381221e16f03addea681cb28ef646f8",
+  "source_file_sha256": "fda47894cf2cae1d336af5b54e6a3fb4e254cb96e1c763933325fe17315f3d19",
+  "source_note": "Original 30 s / 1400 m baseline; no calibration or new source.",
+  "planned_production_cases": 3,
+  "full_duration_s": 420.0,
+  "historically_validated": false
+}

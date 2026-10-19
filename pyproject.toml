@@ -1,0 +1,25 @@
+[project]
+name = "lituya-bay-simulation"
+version = "0.1.0"
+description = "Experimental GeoClaw simulations and numerical sensitivity checks for Lituya Bay"
+requires-python = ">=3.12"
+readme = "README.md"
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+markers = ["reference_data: requires the separately supplied, checksummed reconstruction files"]
+addopts = "-q --cov --cov-config=pyproject.toml --cov-report=term-missing --cov-report=json:coverage.json --cov-report=xml:coverage.xml --cov-report=html:htmlcov"
+
+[tool.coverage.run]
+source = ["simulation", "calibration", "reporting", "geoclaw", "tools", "workflow"]
+relative_files = true
+branch = false
+
+[tool.coverage.report]
+fail_under = 0
+precision = 2
+show_missing = true
+
+[tool.coverage.html]
+directory = "htmlcov"

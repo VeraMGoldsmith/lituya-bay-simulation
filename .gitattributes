@@ -1,0 +1,16 @@
+* text=auto
+*.sh text eol=lf
+*.py text eol=lf
+*.md text eol=lf
+*.json text eol=lf
+*.toml text eol=lf
+*.yml text eol=lf
+*.npz binary
+*.npy binary
+*.png binary
+*.gif binary
+
+# Preserve checksum-bearing records and solver-generated formatting verbatim.
+*.data -text -whitespace
+*.fixture binary
+experiments/**/results.csv -text whitespace=cr-at-eol

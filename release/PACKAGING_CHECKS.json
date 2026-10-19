@@ -1,0 +1,66 @@
+{
+  "distribution_version": "0.1.0",
+  "recorded_date": "2026-10-19",
+  "scope": "Software packaging only. No Docker rebuild, preflight, or hydrodynamic run.",
+  "test_environment": {
+    "image_id": "sha256:e34a83602d2ed2abaad337aa2a4b97a5f6e84b8f801de5fb6cc40f714d7027d4",
+    "python": "3.12.15",
+    "platform": "Linux ARM64",
+    "network": "disabled",
+    "source_mount": "read_only"
+  },
+  "public_suite": {
+    "status": "passed",
+    "passed": 352,
+    "skipped": 13,
+    "failed": 0,
+    "coverage_percent": 83.43949044585987,
+    "coverage_scope": "All production Python modules; reconstruction-dependent tests explicitly skipped; full-suite threshold not applied."
+  },
+  "full_reference_data_suite": {
+    "status": "not_rerun",
+    "reason": "This packaging pass verified the data-independent distribution; the full reference-data suite remains a separate local check.",
+    "command": "python -m pytest --with-reference-data --cov-fail-under=90"
+  },
+  "original_evidence_integrity": {
+    "sealed_code_sha256": {
+      "files": 60,
+      "all_match": true
+    },
+    "experiment_file_sha256": {
+      "files": 451,
+      "all_match": true
+    },
+    "prepared_input_sha256": {
+      "files": 10,
+      "all_match": true
+    }
+  },
+  "sealed_source_comparison": {
+    "unchanged_files": 51,
+    "modified_files": [
+      "Dockerfile",
+      "pyproject.toml"
+    ],
+    "omitted_files": [
+      "data/reference/component_roles.json",
+      "data/reference/mesh_sampling.json",
+      "data/reference/mesh_surfaces_15m.npz",
+      "data/reference/original_model_code.txt",
+      "data/reference/original_probes.json",
+      "data/reference/rock_mesh_properties.json",
+      "data/reference/verified_settings.json"
+    ],
+    "note": "All core simulation, GeoClaw setup, and numerical validation source files are unchanged."
+  },
+  "additional_packaging_changes": [
+    "Restored workflow.py, calibration, reporting, and the full tests directory.",
+    "Marked 13 reference-dependent tests; explicit opt-in checks all seven reference hashes.",
+    "Default container command shows bounded comparison help.",
+    "Distribution metadata and technical README/CI were updated.",
+    "One-time recovery launchers, manuscripts, raw output fields, and reference assets are excluded."
+  ],
+  "remote_ci": "not_run",
+  "docker_build": "not_run",
+  "result_copies_unchanged": true
+}

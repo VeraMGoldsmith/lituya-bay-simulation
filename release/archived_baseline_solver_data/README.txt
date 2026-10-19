@@ -1,0 +1,1 @@
+Original baseline solver control files, supplied in the diagnostic archive. Runtime common controls must match after stripping comments, normalising shared input paths and masking only the speed_limit value. The new fgmax specification is checked separately. These files are reference evidence, not a solver or replacement .data writer.

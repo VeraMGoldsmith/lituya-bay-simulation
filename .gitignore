@@ -1,0 +1,62 @@
+# Reproducible generated calculations and browser results
+/runs/
+/results/
+/logs/
+/data/prepared/
+/data/raw/
+/calibration_runs/
+
+# Python, JIT, build products, environments
+__pycache__/
+*.py[cod]
+*.nbc
+*.nbi
+*.egg-info/
+.venv/
+venv/
+build/
+dist/
+*.o
+*.mod
+**/xgeoclaw
+
+# Local test output; curated verification snapshots remain tracked
+.pytest_cache/
+.coverage
+.coverage.*
+coverage.json
+coverage.xml
+htmlcov/
+
+# Archives are transport, not source structure
+*.zip
+*.tar
+*.tar.gz
+
+# Local editor, operating-system, and credential files
+.DS_Store
+._*
+.idea/
+.vscode/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Bounded speed-limit comparison generated output
+comparison_runs/
+comparison_results/
+comparison_logs/
+step03_evidence/
+lituya-comparison-diagnostics-*.zip
+
+*.bundle
+
+# Reference assets, research drafts, and local handoff material are not distributed.
+/data/reference/
+*.docx
+*.pdf
+*.bundle
+*.log
+/publication-review/

@@ -1,0 +1,61 @@
+{
+  "project": "Lituya Bay \u2014 reconstructed basin and prescribed landslide",
+  "version": "2.0.0",
+  "clawpack_tag": "v5.14.0",
+  "historically_calibrated": false,
+  "coordinates": {
+    "system": "native local Cartesian metres",
+    "native_reference_water_z_m": 220.0
+  },
+  "domain": {
+    "x_min_m": -1010.0,
+    "x_max_m": 5800.0,
+    "y_min_m": -8775.0,
+    "y_max_m": 4800.0
+  },
+  "geometry": {
+    "sw_relief_factor": 1.0,
+    "exclusion_barrier_elevation_m": 2000.0,
+    "include_published_virtual_wall": true
+  },
+  "source": {
+    "kind": "volume-conserving translation of the projected original Rockslide.stl thickness; prescribed, not two-fluid dynamics",
+    "volume_m3": 51066493.51727992,
+    "travel_negative_y_m": 1400.0,
+    "travel_x_m": 0.0,
+    "start_time_s": 0.0,
+    "travel_duration_s": 30.0,
+    "history_interval_s": 0.25,
+    "maximum_solver_step_during_motion_s": 0.1,
+    "motion_law": "quintic smoothstep, rest to rest",
+    "provenance": "Initial footprint and volume from uploaded Franco mesh. Direction follows the reconstructed cross-inlet setting. Travel distance and duration are explicit UNCALIBRATED adaptation choices, not recovered FLOW-3D outputs."
+  },
+  "water": {
+    "sea_level_m": 0.0,
+    "gravity_m_s2": 9.81,
+    "dry_tolerance_m": 1e-06,
+    "manning_n": 0.025,
+    "friction_depth_m": 1000000.0
+  },
+  "run": {
+    "target_cell_size_m": 30.0,
+    "duration_s": 420.0,
+    "early_output_until_s": 60.0,
+    "early_output_interval_s": 2.0,
+    "late_output_interval_s": 20.0,
+    "still_output_interval_s": 60.0
+  },
+  "checks": {
+    "still_evaluation_depth_m": 1.0,
+    "still_eta_limit_m": 1e-05,
+    "still_speed_limit_m_s": 1e-05,
+    "negative_depth_limit_m": 1e-09,
+    "dry_land_negative_limit_m": 1e-06,
+    "dry_land_momentum_limit_m2_s": 1e-10,
+    "minimum_wave_above_baseline_m": 0.01,
+    "maximum_bed_change_error_m": 0.02,
+    "initial_bed_error_limit_m": 0.02,
+    "runup_depth_threshold_m": 0.1,
+    "require_open_connection_to_bay": true
+  }
+}

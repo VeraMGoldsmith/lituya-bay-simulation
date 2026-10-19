@@ -1,0 +1,4 @@
+case,water_speed_limit_m_s,status,runup_expanded_m,runup_legacy_m,boundary_touching,logged_reset_events,wall_seconds
+cap_050,50,completed_basic_checks,339.72425,339.72425,False,7782,46.390956562999996
+cap_100,100,completed_basic_checks,469.84918,463.9969,False,14,44.856715936000015
+cap_200,200,checks_failed,,,,0,45.211775312000015

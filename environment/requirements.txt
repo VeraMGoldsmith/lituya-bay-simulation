@@ -1,0 +1,8 @@
+# Direct runtime pins inherited from the checked baseline environment.
+numpy==2.3.5
+scipy==1.17.0
+rasterio==1.5.0
+matplotlib==3.10.8
+Pillow==12.3.0
+# Optional original-STL resampling utility; not used by normal runs.
+numba==0.65.1

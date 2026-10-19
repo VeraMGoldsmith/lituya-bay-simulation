@@ -1,0 +1,26 @@
+name: Software tests
+on: [push, pull_request, workflow_dispatch]
+permissions:
+  contents: read
+jobs:
+  unit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+          cache: pip
+          cache-dependency-path: environment/requirements*.txt
+      - name: Install pinned test dependencies
+        run: python -m pip install -r environment/requirements-test.txt
+      - name: Tests without private reconstruction data
+        run: python -m pytest
+      - name: Upload coverage report
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: coverage-python-3.12
+          path: |
+            coverage.xml
+            coverage.json

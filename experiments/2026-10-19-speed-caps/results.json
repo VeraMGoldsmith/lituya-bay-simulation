@@ -1,0 +1,406 @@
+{
+  "session": "comparison_runs/20261019T041033Z_ff1b17c2",
+  "experiment_status": "completed_with_failures",
+  "cases": {
+    "cap_050": {
+      "status": "completed_basic_checks",
+      "valid_for_comparison": true,
+      "cap_m_s": 50,
+      "solver_and_checks_wall_seconds": 46.390956562999996,
+      "field_validation_status": "passed_basic_checks",
+      "frames": 49,
+      "last_time_s": 420.0,
+      "time_step_check": {
+        "status": "passed",
+        "case": "slide",
+        "steps": 1178,
+        "last_time_s": 420.0,
+        "requested_source_step_cap_s": 0.1,
+        "output_time_step_factor": 1.001,
+        "maxima": {
+          "all_steps_s": 0.4859,
+          "steps_starting_before_source_stop_s": 0.1
+        },
+        "errors": [],
+        "logged_speed_resets": 7782,
+        "speed_limit_sensitivity_validated": false
+      },
+      "trace_statistics": {
+        "minimum_dt_s": 0.02,
+        "maximum_dt_s": 0.4859,
+        "maximum_cfl": 0.965,
+        "cfl_violations": []
+      },
+      "limiter": {
+        "status": "parsed",
+        "logged_b4step2_events": 7782,
+        "events_at_depth_ge_10_m": 4846,
+        "maximum_printed_depth_m": 128.0,
+        "first_time_s": 24.8,
+        "last_time_s": 91.7,
+        "note": "Rounded b4step2 log events only; not all limiting operations or energy loss."
+      },
+      "gauges_diagnostic_only_if_invalid": {
+        "P2": {
+          "maximum_eta_m": 196.0448,
+          "time_at_maximum_eta_s": 22.8,
+          "samples": 1178,
+          "first_time_s": 0.0,
+          "last_time_s": 419.7055
+        },
+        "P3": {
+          "maximum_eta_m": 73.39219,
+          "time_at_maximum_eta_s": 48.35241,
+          "samples": 1178,
+          "first_time_s": 0.0,
+          "last_time_s": 419.7055
+        },
+        "P5": {
+          "maximum_eta_m": 22.72904,
+          "time_at_maximum_eta_s": 75.82434,
+          "samples": 1178,
+          "first_time_s": 0.0,
+          "last_time_s": 419.7055
+        }
+      },
+      "monitor_diagnostics_not_valid_runup_if_case_failed": {
+        "legacy": {
+          "maximum_wetted_cell_elevation_m": 339.72425,
+          "peak_locations": [
+            {
+              "x_m": 925.0,
+              "y_m": 1758.3609272,
+              "maximum_depth_m": 4.857501,
+              "time_at_maximum_depth_s": 45.757487,
+              "on_monitor_boundary": true
+            }
+          ],
+          "peak_touches_monitor_boundary": true,
+          "artificial_monitor_cells": 72,
+          "wetted_artificial_monitor_cells": 0,
+          "eligible_natural_land_cells": 1765,
+          "observed_points": 2491,
+          "monitor_points": 2491,
+          "all_points_observed": true,
+          "depth_threshold_m": 0.1,
+          "metric_scope": "provided_monitor_only",
+          "historically_validated": false,
+          "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence."
+        },
+        "expanded": {
+          "maximum_wetted_cell_elevation_m": 339.72425,
+          "peak_locations": [
+            {
+              "x_m": 925.0,
+              "y_m": 1758.3609272,
+              "maximum_depth_m": 4.857501,
+              "time_at_maximum_depth_s": 45.757487,
+              "on_monitor_boundary": false
+            }
+          ],
+          "peak_touches_monitor_boundary": false,
+          "artificial_monitor_cells": 5075,
+          "wetted_artificial_monitor_cells": 0,
+          "eligible_natural_land_cells": 2615,
+          "observed_points": 10318,
+          "monitor_points": 10318,
+          "all_points_observed": true,
+          "depth_threshold_m": 0.1,
+          "metric_scope": "provided_monitor_only",
+          "historically_validated": false,
+          "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence."
+        }
+      }
+    },
+    "cap_100": {
+      "status": "completed_basic_checks",
+      "valid_for_comparison": true,
+      "cap_m_s": 100,
+      "solver_and_checks_wall_seconds": 44.856715936000015,
+      "field_validation_status": "passed_basic_checks",
+      "frames": 49,
+      "last_time_s": 420.0,
+      "time_step_check": {
+        "status": "passed",
+        "case": "slide",
+        "steps": 1205,
+        "last_time_s": 420.0,
+        "requested_source_step_cap_s": 0.1,
+        "output_time_step_factor": 1.001,
+        "maxima": {
+          "all_steps_s": 0.4867,
+          "steps_starting_before_source_stop_s": 0.1
+        },
+        "errors": [],
+        "logged_speed_resets": 14,
+        "speed_limit_sensitivity_validated": false
+      },
+      "trace_statistics": {
+        "minimum_dt_s": 0.002809,
+        "maximum_dt_s": 0.4867,
+        "maximum_cfl": 0.969,
+        "cfl_violations": []
+      },
+      "limiter": {
+        "status": "parsed",
+        "logged_b4step2_events": 14,
+        "events_at_depth_ge_10_m": 0,
+        "maximum_printed_depth_m": 5.95,
+        "first_time_s": 45.59,
+        "last_time_s": 50.27,
+        "note": "Rounded b4step2 log events only; not all limiting operations or energy loss."
+      },
+      "gauges_diagnostic_only_if_invalid": {
+        "P2": {
+          "maximum_eta_m": 196.0448,
+          "time_at_maximum_eta_s": 22.8,
+          "samples": 1205,
+          "first_time_s": 0.0,
+          "last_time_s": 419.6951
+        },
+        "P3": {
+          "maximum_eta_m": 78.13353,
+          "time_at_maximum_eta_s": 48.6857,
+          "samples": 1205,
+          "first_time_s": 0.0,
+          "last_time_s": 419.6951
+        },
+        "P5": {
+          "maximum_eta_m": 22.34237,
+          "time_at_maximum_eta_s": 75.57604,
+          "samples": 1205,
+          "first_time_s": 0.0,
+          "last_time_s": 419.6951
+        }
+      },
+      "monitor_diagnostics_not_valid_runup_if_case_failed": {
+        "legacy": {
+          "maximum_wetted_cell_elevation_m": 463.9969,
+          "peak_locations": [
+            {
+              "x_m": 925.0,
+              "y_m": 1548.5927152,
+              "maximum_depth_m": 14.682812,
+              "time_at_maximum_depth_s": 44.669211,
+              "on_monitor_boundary": true
+            }
+          ],
+          "peak_touches_monitor_boundary": true,
+          "artificial_monitor_cells": 72,
+          "wetted_artificial_monitor_cells": 0,
+          "eligible_natural_land_cells": 1765,
+          "observed_points": 2491,
+          "monitor_points": 2491,
+          "all_points_observed": true,
+          "depth_threshold_m": 0.1,
+          "metric_scope": "provided_monitor_only",
+          "historically_validated": false,
+          "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence."
+        },
+        "expanded": {
+          "maximum_wetted_cell_elevation_m": 469.84918,
+          "peak_locations": [
+            {
+              "x_m": 895.0,
+              "y_m": 1608.5264901,
+              "maximum_depth_m": 1.5597324,
+              "time_at_maximum_depth_s": 45.27179,
+              "on_monitor_boundary": false
+            }
+          ],
+          "peak_touches_monitor_boundary": false,
+          "artificial_monitor_cells": 5075,
+          "wetted_artificial_monitor_cells": 0,
+          "eligible_natural_land_cells": 2615,
+          "observed_points": 10318,
+          "monitor_points": 10318,
+          "all_points_observed": true,
+          "depth_threshold_m": 0.1,
+          "metric_scope": "provided_monitor_only",
+          "historically_validated": false,
+          "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence."
+        }
+      }
+    },
+    "cap_200": {
+      "status": "checks_failed",
+      "valid_for_comparison": false,
+      "cap_m_s": 200,
+      "solver_and_checks_wall_seconds": 45.211775312000015,
+      "field_validation_status": "passed_basic_checks",
+      "frames": 49,
+      "last_time_s": 420.0,
+      "time_step_check": {
+        "status": "failed",
+        "case": "slide",
+        "steps": 1205,
+        "last_time_s": 420.0,
+        "requested_source_step_cap_s": 0.1,
+        "output_time_step_factor": 1.001,
+        "maxima": {
+          "all_steps_s": 0.4867,
+          "steps_starting_before_source_stop_s": 0.1
+        },
+        "errors": [
+          "Actual CFL 1.12 exceeds the configured maximum.",
+          "Actual CFL 1.19 exceeds the configured maximum."
+        ],
+        "logged_speed_resets": 0,
+        "speed_limit_sensitivity_validated": false
+      },
+      "trace_statistics": {
+        "minimum_dt_s": 0.02,
+        "maximum_dt_s": 0.4867,
+        "maximum_cfl": 1.19,
+        "cfl_violations": [
+          {
+            "line": 769,
+            "end_time_s": 46.7127,
+            "dt_s": 0.2246,
+            "cfl": 1.12,
+            "raw": "AMRCLAW: level  1  CFL = .112E+01  dt = 0.2246E+00  final t = 0.467127E+02"
+          },
+          {
+            "line": 776,
+            "end_time_s": 47.3638,
+            "dt_s": 0.2552,
+            "cfl": 1.19,
+            "raw": "AMRCLAW: level  1  CFL = .119E+01  dt = 0.2552E+00  final t = 0.473638E+02"
+          }
+        ]
+      },
+      "limiter": {
+        "status": "parsed",
+        "logged_b4step2_events": 0,
+        "events_at_depth_ge_10_m": 0,
+        "maximum_printed_depth_m": null,
+        "first_time_s": null,
+        "last_time_s": null,
+        "note": "Rounded b4step2 log events only; not all limiting operations or energy loss."
+      },
+      "gauges_diagnostic_only_if_invalid": {
+        "P2": {
+          "maximum_eta_m": 196.0448,
+          "time_at_maximum_eta_s": 22.8,
+          "samples": 1205,
+          "first_time_s": 0.0,
+          "last_time_s": 419.6972
+        },
+        "P3": {
+          "maximum_eta_m": 77.9455,
+          "time_at_maximum_eta_s": 48.65381,
+          "samples": 1205,
+          "first_time_s": 0.0,
+          "last_time_s": 419.6972
+        },
+        "P5": {
+          "maximum_eta_m": 22.33274,
+          "time_at_maximum_eta_s": 75.5609,
+          "samples": 1205,
+          "first_time_s": 0.0,
+          "last_time_s": 419.6972
+        }
+      },
+      "monitor_diagnostics_not_valid_runup_if_case_failed": {
+        "legacy": {
+          "maximum_wetted_cell_elevation_m": 463.9969,
+          "peak_locations": [
+            {
+              "x_m": 925.0,
+              "y_m": 1548.5927152,
+              "maximum_depth_m": 14.682812,
+              "time_at_maximum_depth_s": 44.669211,
+              "on_monitor_boundary": true
+            }
+          ],
+          "peak_touches_monitor_boundary": true,
+          "artificial_monitor_cells": 72,
+          "wetted_artificial_monitor_cells": 0,
+          "eligible_natural_land_cells": 1765,
+          "observed_points": 2491,
+          "monitor_points": 2491,
+          "all_points_observed": true,
+          "depth_threshold_m": 0.1,
+          "metric_scope": "provided_monitor_only",
+          "historically_validated": false,
+          "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence."
+        },
+        "expanded": {
+          "maximum_wetted_cell_elevation_m": 469.84918,
+          "peak_locations": [
+            {
+              "x_m": 895.0,
+              "y_m": 1608.5264901,
+              "maximum_depth_m": 1.5597324,
+              "time_at_maximum_depth_s": 45.27179,
+              "on_monitor_boundary": false
+            }
+          ],
+          "peak_touches_monitor_boundary": false,
+          "artificial_monitor_cells": 5075,
+          "wetted_artificial_monitor_cells": 0,
+          "eligible_natural_land_cells": 2615,
+          "observed_points": 10318,
+          "monitor_points": 10318,
+          "all_points_observed": true,
+          "depth_threshold_m": 0.1,
+          "metric_scope": "provided_monitor_only",
+          "historically_validated": false,
+          "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence."
+        }
+      }
+    }
+  },
+  "summary": {
+    "preflight_status": "passed",
+    "experiment_status": "completed_with_failures",
+    "cases": [
+      {
+        "case": "cap_050",
+        "water_speed_limit_m_s": 50,
+        "status": "completed_basic_checks",
+        "runup_expanded_m": 339.72425,
+        "runup_legacy_m": 339.72425,
+        "boundary_touching": false,
+        "logged_reset_events": 7782,
+        "wall_seconds": 46.390956562999996
+      },
+      {
+        "case": "cap_100",
+        "water_speed_limit_m_s": 100,
+        "status": "completed_basic_checks",
+        "runup_expanded_m": 469.84918,
+        "runup_legacy_m": 463.9969,
+        "boundary_touching": false,
+        "logged_reset_events": 14,
+        "wall_seconds": 44.856715936000015
+      },
+      {
+        "case": "cap_200",
+        "water_speed_limit_m_s": 200,
+        "status": "checks_failed",
+        "runup_expanded_m": null,
+        "runup_legacy_m": null,
+        "boundary_touching": null,
+        "logged_reset_events": 0,
+        "wall_seconds": 45.211775312000015
+      }
+    ],
+    "setting_differences": {
+      "R100_minus_R50_m": 130.12493,
+      "R200_minus_R100_m": null,
+      "R200_minus_R50_m": null
+    },
+    "historically_validated": false,
+    "note": "No preferred cap is selected. Passing checks does not establish convergence or historical validity."
+  },
+  "verification": {
+    "sealed_code_files": 60,
+    "sealed_input_files": 10,
+    "all_hashes_match": true,
+    "raw_monitors_remeasured": true,
+    "fresh_50_matches_archived_legacy_exactly": true
+  },
+  "case_outputs_unchanged": true,
+  "analysis_starts_solver": false
+}

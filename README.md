@@ -14,21 +14,6 @@ The study examines how different water-speed limits (50, 100, and 200 m/s) affec
 
 The objective is to identify the model’s numerical limitations and establish a basis for further validation and refinement.
 
-## Start with software tests
-
-Use Python 3.12 in a virtual environment, from the repository root:
-
-```sh
-python3.12 -m venv .venv
-source .venv/bin/activate
-python -m pip install -r environment/requirements-test.txt
-python -m pytest
-```
-
-The default tests need no reconstruction data and start no water solver.
-Reconstruction-dependent tests are explicitly skipped. See
-[testing instructions](docs/TESTING.md) for the full local check and coverage scope.
-
 ## Recorded experiment
 
 The completed session is `20261019T041033Z_ff1b17c2`; each case reached 420 s.

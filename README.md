@@ -44,6 +44,10 @@ These figures use saved outputs from session `20261019T041033Z_ff1b17c2`, compar
 
 ![Wave evolution](docs/figures/wave_evolution.png)
 
+**Animated wave evolution.** Simulated water-surface elevation for the 100 m/s numerical water-speed limit, using all 49 saved frames from 0–420 s. Playback is accelerated 25× with timing proportional to the recorded timestamps and no interpolated wave motion. The final frame is held for 1.2 seconds before the 18-second loop repeats.
+
+![Lituya Bay — simulated wave evolution](docs/previews/wave_evolution_cap_100/wave_evolution_cap_100_text_preview.gif)
+
 **Inundation and run-up.** Maximum recorded water depth on eligible natural land within the expanded monitoring area. Each location shows its maximum over time, not one snapshot. Contours show ground elevation; stars mark the highest monitored run-up, not verified bay-wide maxima.
 
 ![Inundation and run-up](docs/figures/spatial_runup.png)

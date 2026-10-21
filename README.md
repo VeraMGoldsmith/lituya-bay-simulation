@@ -36,6 +36,26 @@ Run-up was measured as the maximum eligible ground elevation reached by water at
 
 The results demonstrate numerical sensitivity but do not, by themselves, establish historical accuracy or numerical convergence.
 
+## Recorded-output visualizations
+
+These figures use saved outputs from session `20261019T041033Z_ff1b17c2`, comparing two numerical water-speed limits over 420 seconds. They show simulated results, not historical observations.
+
+**Wave evolution.** Water-surface elevation relative to model sea level at six recorded times: 20, 46, 80, 160, 300 and 420 s. Rows compare the 50 and 100 m/s numerical water-speed limits using a shared symmetric-log colour scale.
+
+![Wave evolution](docs/figures/wave_evolution.png)
+
+**Inundation and run-up.** Maximum recorded water depth on eligible natural land within the expanded monitoring area. Each location shows its maximum over time, not one snapshot. Contours show ground elevation; stars mark the highest monitored run-up, not verified bay-wide maxima.
+
+![Inundation and run-up](docs/figures/spatial_runup.png)
+
+**Numerical sensitivity.** Monitored run-up increases from 339.72 m to 469.85 m between the 50 and 100 m/s configurations. The 200 m/s configuration is excluded because it failed the recorded CFL/time-step checks. This comparison does not establish historical accuracy or numerical convergence.
+
+![Numerical sensitivity](docs/figures/numerical_sensitivity.png)
+
+Map axes use local model coordinates. Masking artificial cells does not remove their influence on the simulation.
+
+The [figure provenance](docs/figures/figure_provenance.json) records full-precision measurements, settings, source hashes and rendering details. The [plotting script](experiments/2026-10-19-speed-caps/plot_figures.py) verifies saved data before generating the figures. Regeneration requires the original local session; raw fields and reference inputs are not included in this repository.
+
 ## Software tests
 
 Use Python 3.12 in a virtual environment, from the repository root:

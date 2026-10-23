@@ -36,29 +36,29 @@ Run-up was measured as the maximum eligible ground elevation reached by water at
 
 The results demonstrate numerical sensitivity but do not, by themselves, establish historical accuracy or numerical convergence.
 
-## Recorded-output visualizations
+## Simulation visualizations
 
-These figures use saved outputs from session `20261019T041033Z_ff1b17c2`, comparing two numerical water-speed limits over 420 seconds. They show simulated results, not historical observations.
+The figures and animation present saved outputs from session `20261019T041033Z_ff1b17c2`, covering a 420 s simulation period. The figures compare the 50 and 100 m/s numerical water-speed limits, while the animation shows the 100 m/s configuration. Together, they illustrate simulated wave evolution, inundation, and monitored run-up. These are simulation results, not historical observations.
 
-**Wave evolution.** Water-surface elevation relative to model sea level at six recorded times: 20, 46, 80, 160, 300 and 420 s. Rows compare the 50 and 100 m/s numerical water-speed limits using a shared symmetric-log colour scale.
+**Wave evolution.** The maps show water-surface elevation relative to model sea level at six recorded times: 20, 46, 80, 160, 300, and 420 s. The two rows compare the 50 and 100 m/s configurations using a shared symmetric-log color scale.
 
 ![Wave evolution](docs/figures/wave_evolution.png)
 
-**Animated wave evolution.** Simulated water-surface elevation for the 100 m/s numerical water-speed limit, using all 49 saved frames from 0–420 s. Playback is accelerated 25× with timing proportional to the recorded timestamps and no interpolated wave motion. The final frame is held for 1.2 seconds before the 18-second loop repeats.
+**Animated wave evolution.** The animation shows simulated water-surface elevation for the 100 m/s configuration over 0–420 s. It uses all 49 saved frames, displayed at 25× speed with timing proportional to their recorded timestamps and no interpolation between frames.
 
 ![Lituya Bay — simulated wave evolution](docs/previews/wave_evolution_cap_100/wave_evolution_cap_100_text_preview.gif)
 
-**Inundation and run-up.** Maximum recorded water depth on eligible natural land within the expanded monitoring area. Each location shows its maximum over time, not one snapshot. Contours show ground elevation; stars mark the highest monitored run-up, not verified bay-wide maxima.
+**Inundation and run-up.** The maps show the maximum simulated water depth on eligible natural land within the expanded monitoring area. Each location represents its maximum over the simulation period. Contours show ground elevation, and stars identify the highest monitored run-up in each configuration. These run-up values have not been verified as bay-wide maxima.
 
 ![Inundation and run-up](docs/figures/spatial_runup.png)
 
-**Numerical sensitivity.** Monitored run-up increases from 339.72 m to 469.85 m between the 50 and 100 m/s configurations. The 200 m/s configuration is excluded because it failed the recorded CFL/time-step checks. This comparison does not establish historical accuracy or numerical convergence.
+**Numerical sensitivity.** Monitored run-up is 339.72 m for the 50 m/s configuration and 469.85 m for the 100 m/s configuration. This difference demonstrates sensitivity to the numerical water-speed limit within the tested configurations. The 200 m/s configuration is excluded because it failed the recorded CFL/time-step checks.
 
 ![Numerical sensitivity](docs/figures/numerical_sensitivity.png)
 
-Map axes use local model coordinates. Masking artificial cells does not remove their influence on the simulation.
+The maps use local model coordinates. Masking artificial cells in the figures does not remove their influence on the simulation. The results do not establish historical accuracy or numerical convergence.
 
-The [figure provenance](docs/figures/figure_provenance.json) records full-precision measurements, settings, source hashes and rendering details. The [plotting script](experiments/2026-10-19-speed-caps/plot_figures.py) verifies saved data before generating the figures. Regeneration requires the original local session; raw fields and reference inputs are not included in this repository.
+The [figure provenance](docs/figures/figure_provenance.json) records full-precision measurements, settings, source hashes and rendering details. The [plotting script](experiments/2026-10-19-speed-caps/plot_figures.py) checks the saved data before generating the figures. Regeneration requires the original local simulation session; raw simulation fields and reference inputs are not included in this repository.
 
 ## Software tests
 

@@ -1,0 +1,482 @@
+{
+  "session": "comparison_runs/20261019T041033Z_ff1b17c2",
+  "analysis_starts_solver": false,
+  "experiment_provenance_sha256": "d468a5c3183da1e1949a71ec10c2d30a09147d9981ab48c3963f48ae5b34be6d",
+  "script_sha256": "d14339d366c4619f502ec9a2417d99e02085eacf77a3c8acdddf3ad34ad88bbb",
+  "reader_sha256": {
+    "simulation/__init__.py": "b9689c48c903feb2b81c0a6900fd08922d28030c3164bdbc18d477b380d6e178",
+    "simulation/read_output.py": "83682c1312b26ab38eda360de064086c68ae711eab581311289502a82a79cb21",
+    "simulation/monitoring.py": "0d8d2e445f03bc08dc35500419b429fe8277523ac4d5d13e4427bc56a3b16cf0",
+    "simulation/runup_metrics.py": "dd6636543f630e0e39771814cb6766ac2751b932ed885413710135d0c3e973d3",
+    "simulation/numerics.py": "02b5ee361423d0b4f41f02f003da6d63d545a23cd2e9ad2134a258e5f00e1964"
+  },
+  "result_files_sha256": {
+    "results.csv": "08515f5f9f98bf3ed08346161a8c4596b656b751628d2115f66664c1dcfd7603",
+    "results.json": "a5b0c6a141d21e3cc00614374382cebc331c131723a8a859c370491e49edff66"
+  },
+  "verification": {
+    "sealed_experiment_files": 451,
+    "prepared_inputs": 10,
+    "all_hashes_match": true,
+    "raw_monitors_remeasured": true,
+    "raw_metrics_equal_recorded_metrics": true,
+    "static_monitor_beds_verified": true,
+    "exact_saved_times": true
+  },
+  "consumed_session_files_sha256": {
+    "cases/cap_050/config.json": "7a738e7181f2e4c7398cab7e85345e470d841218f026e5b4e678ee69d119eedd",
+    "cases/cap_050/fgmax0001.txt": "e615771a4011bd962fc94eb7c207d5a1f62fc13f91677c7561c7d116619d4581",
+    "cases/cap_050/fgmax0002.txt": "4380372bdb07676dbd3931a4b9cf99322f0270fff4a2619f3911260c80867cf6",
+    "cases/cap_050/fgmax_grids.data": "dd5ffff06e66a26558b5bf6b31f32b3cba155a9b6a3ab63b6564c37d8263dccb",
+    "cases/cap_050/fort.q0000": "311261a2b4ee6802726813819295460f48da82e171c0091df9e3b8d4a8effe01",
+    "cases/cap_050/fort.q0010": "f1f2cd39c6e36fa6e4ec3795f0a7d181bf82a52f01e6c0cc9da5febee81e6454",
+    "cases/cap_050/fort.q0023": "777934b996d34c32a358a02e1af718f95bcd3d392619c800cd0200be3f0d09b6",
+    "cases/cap_050/fort.q0031": "04f0ba93552e39ed2b5ab59dd621f018a8b9a5849c2730e7b24f10ec4ec65d16",
+    "cases/cap_050/fort.q0035": "7783a76e3036f8ee1c01092f4734c88cb340705e7dd7d7fb81ce187a5736669d",
+    "cases/cap_050/fort.q0042": "59315aa1ed2f9e3225742a723006a04c5873a981c5e558f9342d7651a18ef29a",
+    "cases/cap_050/fort.q0048": "006ebdae635732ce20ec4056ea2fcde3e1c0e3475433ed5c34fd9001d8bdb554",
+    "cases/cap_050/fort.t0000": "492aaa498161af310f0a11e6bd9aae883019bf5171220226a5d726722f602b57",
+    "cases/cap_050/fort.t0001": "b5e8f1cc2302a14e00cbfa75cb5153ae504af0429589bd077bd1f558dafeac20",
+    "cases/cap_050/fort.t0002": "01fcffbfdf555617fdb1ca686324d442f71cc80fb7f17163a26117684808d336",
+    "cases/cap_050/fort.t0003": "16f3d86d018249afb7c254cbfdb6d88fd5842fecec2b2c12c0c06e1d7d3497c1",
+    "cases/cap_050/fort.t0004": "a22e5c0ade00433f2c46c4f938ed50d6aed994aa1233b8c197082075ec0dccef",
+    "cases/cap_050/fort.t0005": "911818433352a74502fcaa08388372b884c6aa3a7ff817e6403bb3bd0df7aa35",
+    "cases/cap_050/fort.t0006": "96b92c7af60bc5f923bee6602ad13eb3db0cab157ff87392f2bc8cd6691b5f7e",
+    "cases/cap_050/fort.t0007": "695e32ad8570cb2fcefe67fad7cfbd245c60c67da60c20846993a17aa29b4112",
+    "cases/cap_050/fort.t0008": "94b3702d147a416763b9947a636367fa609bf377d12935318078dec54e135113",
+    "cases/cap_050/fort.t0009": "4a0fe3e9d19a031a8b235d1cc5b1eee883b2886eb7ba12682ce6d5fa87f6a647",
+    "cases/cap_050/fort.t0010": "bd2ef84e5657ab87cec7ba905518aaa32ed083e6e0b999a8f7bc4cd77a256907",
+    "cases/cap_050/fort.t0011": "d693f95a4c5ba3fddfec9aa6de75786bfe871bd67bfb14aa6b08b599be9ea458",
+    "cases/cap_050/fort.t0012": "aacd320b9a61f51f8c79565ee0a14ddb5fa993f0ee108202001c166b6483e7ca",
+    "cases/cap_050/fort.t0013": "3490358240cbb65ab31940f482dc36fc77ab08bee82a0babc770e9812d34bae2",
+    "cases/cap_050/fort.t0014": "a9916f72bbe97c9320d03df0419c32fa6f787f0e362b3ceb7545861f714e0278",
+    "cases/cap_050/fort.t0015": "2eb016ccf77f40f3552128beda068e552e28190909e4e432a9fd64c687fb39a6",
+    "cases/cap_050/fort.t0016": "30c901dc107b29bdcc6dd9a29cf21c01a41ad308cf2efda7251af2897a5ff10f",
+    "cases/cap_050/fort.t0017": "3950117a4f86191f9087ddd91e97f73c53e2270608cc5f2b8c0c9c05c098e756",
+    "cases/cap_050/fort.t0018": "b94a3c64e9d522e2a2a552ba919bd914e7020fa41e9710503266a6d8d3075fd5",
+    "cases/cap_050/fort.t0019": "aaae8af811dee6495816d9e7e487a075e428ac996342260c9e16a43aa6fe5d9f",
+    "cases/cap_050/fort.t0020": "ea48718e73801c9734d53c8cc4c2827157c25f1c0fef9daa54388bcc40c65b48",
+    "cases/cap_050/fort.t0021": "3fbeeca0dae5cd47b96c3f537298ddd62337da82597b47aa4b6edc0a056fe7a5",
+    "cases/cap_050/fort.t0022": "a304685ec07a5e3753f0cd9b5d4a937cb140badcd8592d77864dea7ab1268816",
+    "cases/cap_050/fort.t0023": "8c9e2c7b604238917905a5309e80da2a753e69a5a0daa4ea7fab6376112056cf",
+    "cases/cap_050/fort.t0024": "6e7a80094e7be54a714dbda9f99d9778f4601b9d8768d8c35ee5b612c20386b7",
+    "cases/cap_050/fort.t0025": "670da250744b88c4830133bb7fa8073b9f70870cea84d38f91b617917473f673",
+    "cases/cap_050/fort.t0026": "6ca3d38d77832f7cf1f465e8501cd4dbb19830bab618346e50f969fdf89ca9c5",
+    "cases/cap_050/fort.t0027": "c5ccaa92113a40e0c3ea2d5e4ce564df4808a08b12d7f01e3eed212f496298cf",
+    "cases/cap_050/fort.t0028": "921e42f57fb28478b4c0ea1d7779b8b189bcb70abe5834c4c02a2129b05cec48",
+    "cases/cap_050/fort.t0029": "1b1014e75a8c95f6b61b128e8d279229e0da9735263cef434f8707e0e1b043b2",
+    "cases/cap_050/fort.t0030": "76cbb03c4a037432f17cd70e66241cbe3d4188e5433c478f7cb44c5d3a331659",
+    "cases/cap_050/fort.t0031": "1b92dac64a85daf701d931b2d71a599f0fb26abe531fa93252b50249e9671f58",
+    "cases/cap_050/fort.t0032": "86e31768135470c82e0bf23c624a0d6cd07e277680a380b9a449a3c03e96305f",
+    "cases/cap_050/fort.t0033": "329b0b888f57b13ff8cae5d41adbaeb2c6be2f0f05c7d2a1c201ecf7357b3b13",
+    "cases/cap_050/fort.t0034": "1aac53faaac55a9d53ff07645bf72bee65c278d4e05612c28ef58840d9a4176a",
+    "cases/cap_050/fort.t0035": "b83188d9acebc3b0adfa2fbd999826df5507c4b7beaf2fce29b2f27760b8d7d0",
+    "cases/cap_050/fort.t0036": "9b16032c0902853ae428c877d0b31a86ce3e71af58e003612cb4d9cc70b6f171",
+    "cases/cap_050/fort.t0037": "888c9a4fc1822b05c09f9b5f6f6c2e086e8198685ef0db3c40ef70e130e2b0a9",
+    "cases/cap_050/fort.t0038": "d8c2e02d51161de33bcb43b8744b0d104be552f9f157eea51e26c4931e72da03",
+    "cases/cap_050/fort.t0039": "b31c73dec889ea43e22d47953712c1edd1c5546dfccb1d0ed531eed14257e28e",
+    "cases/cap_050/fort.t0040": "ffb0da4c456813899c58a7eaed0ae95e141b5f4e335a0d34558ca98a56598617",
+    "cases/cap_050/fort.t0041": "603f25d2f419e51bfecbc809e9a9364e7f91f409ed70bdc13a40a7078e1b883c",
+    "cases/cap_050/fort.t0042": "76d50aff7b1dd49281ec58b8e52b9cc8cc56a99ad241fe33280add1e7861e46b",
+    "cases/cap_050/fort.t0043": "6615499258006beae420563d9f0208f136b7feec8b3bff7b613e3d0fa75a78ea",
+    "cases/cap_050/fort.t0044": "8be3ccf904523c5db3ac6b3a5f645f285c98d86f8952a59e5793d2fcc784bba0",
+    "cases/cap_050/fort.t0045": "71ed26e6f4438ed9e8121429a51a9ba2661947d919b056e92680ddeceadef7eb",
+    "cases/cap_050/fort.t0046": "6d5e83b8437fb9eb8a4c84f0bd1c8828471dd5b2e6e46579aa20ef6275e91c74",
+    "cases/cap_050/fort.t0047": "9e6b46deee71283c71ccc75295bcc9e6d1358d4227a0b4fa40a52c9e094236c5",
+    "cases/cap_050/fort.t0048": "b16be4e103bfce78d89e490dd8616262cda9042c756f17ac3e1675b0e1264ec7",
+    "cases/cap_050/time_step_check.json": "53fd9e6f61899b9f47d8bed9ed29a3da26e3319090817880052805e999fc0ed1",
+    "cases/cap_050/validation.json": "5e59a95a3aa5c2d51e8036394f03846438a3e48a5095f3f5aab8c713d4daa042",
+    "cases/cap_100/config.json": "2cb628ee6c1955648a615118678acc77974aed25cf39ca2a0e8cd3c8ce72150e",
+    "cases/cap_100/fgmax0001.txt": "dfb758fc7d875b3680aea1515c0eb1aa6dd6fbf5b13b279fee4cdd5ab1f4fdd8",
+    "cases/cap_100/fgmax0002.txt": "50777d8c07d8d71f245a830b7aa0a28c3ecc9bd9d621c22f258e00289f17a835",
+    "cases/cap_100/fgmax_grids.data": "dd5ffff06e66a26558b5bf6b31f32b3cba155a9b6a3ab63b6564c37d8263dccb",
+    "cases/cap_100/fort.q0000": "311261a2b4ee6802726813819295460f48da82e171c0091df9e3b8d4a8effe01",
+    "cases/cap_100/fort.q0010": "f1f2cd39c6e36fa6e4ec3795f0a7d181bf82a52f01e6c0cc9da5febee81e6454",
+    "cases/cap_100/fort.q0023": "eef7a6a987b219258ef031a49382a1ea6dc60880420d7a494d8aff0ebb4a2e6e",
+    "cases/cap_100/fort.q0031": "183ab5ebac175bcd2243ccf28c6714416a04b5d4e357221f259edf4068b7ca15",
+    "cases/cap_100/fort.q0035": "ae55e7f3f99b0e5926074942169f8cc9e517167b6da5177b914b1cc429d1aaf5",
+    "cases/cap_100/fort.q0042": "a7e3493c81f1964020bb23e0708d09e5121b2f572284e3b2a850a1d8738b92dd",
+    "cases/cap_100/fort.q0048": "ec9a79d39a8f368a51e1b29ac0cee6e79f1f4717417ddfd176ed778eb6e49470",
+    "cases/cap_100/fort.t0000": "492aaa498161af310f0a11e6bd9aae883019bf5171220226a5d726722f602b57",
+    "cases/cap_100/fort.t0001": "b5e8f1cc2302a14e00cbfa75cb5153ae504af0429589bd077bd1f558dafeac20",
+    "cases/cap_100/fort.t0002": "01fcffbfdf555617fdb1ca686324d442f71cc80fb7f17163a26117684808d336",
+    "cases/cap_100/fort.t0003": "16f3d86d018249afb7c254cbfdb6d88fd5842fecec2b2c12c0c06e1d7d3497c1",
+    "cases/cap_100/fort.t0004": "a22e5c0ade00433f2c46c4f938ed50d6aed994aa1233b8c197082075ec0dccef",
+    "cases/cap_100/fort.t0005": "911818433352a74502fcaa08388372b884c6aa3a7ff817e6403bb3bd0df7aa35",
+    "cases/cap_100/fort.t0006": "96b92c7af60bc5f923bee6602ad13eb3db0cab157ff87392f2bc8cd6691b5f7e",
+    "cases/cap_100/fort.t0007": "695e32ad8570cb2fcefe67fad7cfbd245c60c67da60c20846993a17aa29b4112",
+    "cases/cap_100/fort.t0008": "94b3702d147a416763b9947a636367fa609bf377d12935318078dec54e135113",
+    "cases/cap_100/fort.t0009": "4a0fe3e9d19a031a8b235d1cc5b1eee883b2886eb7ba12682ce6d5fa87f6a647",
+    "cases/cap_100/fort.t0010": "bd2ef84e5657ab87cec7ba905518aaa32ed083e6e0b999a8f7bc4cd77a256907",
+    "cases/cap_100/fort.t0011": "d693f95a4c5ba3fddfec9aa6de75786bfe871bd67bfb14aa6b08b599be9ea458",
+    "cases/cap_100/fort.t0012": "aacd320b9a61f51f8c79565ee0a14ddb5fa993f0ee108202001c166b6483e7ca",
+    "cases/cap_100/fort.t0013": "3490358240cbb65ab31940f482dc36fc77ab08bee82a0babc770e9812d34bae2",
+    "cases/cap_100/fort.t0014": "a9916f72bbe97c9320d03df0419c32fa6f787f0e362b3ceb7545861f714e0278",
+    "cases/cap_100/fort.t0015": "2eb016ccf77f40f3552128beda068e552e28190909e4e432a9fd64c687fb39a6",
+    "cases/cap_100/fort.t0016": "30c901dc107b29bdcc6dd9a29cf21c01a41ad308cf2efda7251af2897a5ff10f",
+    "cases/cap_100/fort.t0017": "3950117a4f86191f9087ddd91e97f73c53e2270608cc5f2b8c0c9c05c098e756",
+    "cases/cap_100/fort.t0018": "b94a3c64e9d522e2a2a552ba919bd914e7020fa41e9710503266a6d8d3075fd5",
+    "cases/cap_100/fort.t0019": "aaae8af811dee6495816d9e7e487a075e428ac996342260c9e16a43aa6fe5d9f",
+    "cases/cap_100/fort.t0020": "ea48718e73801c9734d53c8cc4c2827157c25f1c0fef9daa54388bcc40c65b48",
+    "cases/cap_100/fort.t0021": "3fbeeca0dae5cd47b96c3f537298ddd62337da82597b47aa4b6edc0a056fe7a5",
+    "cases/cap_100/fort.t0022": "a304685ec07a5e3753f0cd9b5d4a937cb140badcd8592d77864dea7ab1268816",
+    "cases/cap_100/fort.t0023": "8c9e2c7b604238917905a5309e80da2a753e69a5a0daa4ea7fab6376112056cf",
+    "cases/cap_100/fort.t0024": "6e7a80094e7be54a714dbda9f99d9778f4601b9d8768d8c35ee5b612c20386b7",
+    "cases/cap_100/fort.t0025": "670da250744b88c4830133bb7fa8073b9f70870cea84d38f91b617917473f673",
+    "cases/cap_100/fort.t0026": "6ca3d38d77832f7cf1f465e8501cd4dbb19830bab618346e50f969fdf89ca9c5",
+    "cases/cap_100/fort.t0027": "c5ccaa92113a40e0c3ea2d5e4ce564df4808a08b12d7f01e3eed212f496298cf",
+    "cases/cap_100/fort.t0028": "921e42f57fb28478b4c0ea1d7779b8b189bcb70abe5834c4c02a2129b05cec48",
+    "cases/cap_100/fort.t0029": "1b1014e75a8c95f6b61b128e8d279229e0da9735263cef434f8707e0e1b043b2",
+    "cases/cap_100/fort.t0030": "76cbb03c4a037432f17cd70e66241cbe3d4188e5433c478f7cb44c5d3a331659",
+    "cases/cap_100/fort.t0031": "1b92dac64a85daf701d931b2d71a599f0fb26abe531fa93252b50249e9671f58",
+    "cases/cap_100/fort.t0032": "86e31768135470c82e0bf23c624a0d6cd07e277680a380b9a449a3c03e96305f",
+    "cases/cap_100/fort.t0033": "329b0b888f57b13ff8cae5d41adbaeb2c6be2f0f05c7d2a1c201ecf7357b3b13",
+    "cases/cap_100/fort.t0034": "1aac53faaac55a9d53ff07645bf72bee65c278d4e05612c28ef58840d9a4176a",
+    "cases/cap_100/fort.t0035": "b83188d9acebc3b0adfa2fbd999826df5507c4b7beaf2fce29b2f27760b8d7d0",
+    "cases/cap_100/fort.t0036": "9b16032c0902853ae428c877d0b31a86ce3e71af58e003612cb4d9cc70b6f171",
+    "cases/cap_100/fort.t0037": "888c9a4fc1822b05c09f9b5f6f6c2e086e8198685ef0db3c40ef70e130e2b0a9",
+    "cases/cap_100/fort.t0038": "d8c2e02d51161de33bcb43b8744b0d104be552f9f157eea51e26c4931e72da03",
+    "cases/cap_100/fort.t0039": "b31c73dec889ea43e22d47953712c1edd1c5546dfccb1d0ed531eed14257e28e",
+    "cases/cap_100/fort.t0040": "ffb0da4c456813899c58a7eaed0ae95e141b5f4e335a0d34558ca98a56598617",
+    "cases/cap_100/fort.t0041": "603f25d2f419e51bfecbc809e9a9364e7f91f409ed70bdc13a40a7078e1b883c",
+    "cases/cap_100/fort.t0042": "76d50aff7b1dd49281ec58b8e52b9cc8cc56a99ad241fe33280add1e7861e46b",
+    "cases/cap_100/fort.t0043": "6615499258006beae420563d9f0208f136b7feec8b3bff7b613e3d0fa75a78ea",
+    "cases/cap_100/fort.t0044": "8be3ccf904523c5db3ac6b3a5f645f285c98d86f8952a59e5793d2fcc784bba0",
+    "cases/cap_100/fort.t0045": "71ed26e6f4438ed9e8121429a51a9ba2661947d919b056e92680ddeceadef7eb",
+    "cases/cap_100/fort.t0046": "6d5e83b8437fb9eb8a4c84f0bd1c8828471dd5b2e6e46579aa20ef6275e91c74",
+    "cases/cap_100/fort.t0047": "9e6b46deee71283c71ccc75295bcc9e6d1358d4227a0b4fa40a52c9e094236c5",
+    "cases/cap_100/fort.t0048": "b16be4e103bfce78d89e490dd8616262cda9042c756f17ac3e1675b0e1264ec7",
+    "cases/cap_100/time_step_check.json": "484d724383ba6bda37c5b1c1e7d37450984336865a5bf6075bc776d0869fdaa4",
+    "cases/cap_100/validation.json": "633a8e3c6d3bfedecd9f7bae954445952dc2c5cc1ec45c32e84270ee20c2951d",
+    "cases/cap_200/time_step_check.json": "718d1bc5fdcda9f135ab89591682242a8a23fd08f071585b8289fcbf5066cc09",
+    "config.json": "a357e1654d6662655b2f89f8e7c5bb11de2b12399d171c913fb4102aaca49d38",
+    "inputs/checks.json": "1863a8a3ec0027b10dd27feb7e0c3722ebed28bb4961b3d7a41c2d80a0d6c09c",
+    "inputs/config.json": "a357e1654d6662655b2f89f8e7c5bb11de2b12399d171c913fb4102aaca49d38",
+    "inputs/setup.json": "0182e8aa273cb4d1fafb19bce2026e3251225b38adbbabfca487e0ec9ad96d90",
+    "inputs/slide.dtt3": "fda47894cf2cae1d336af5b54e6a3fb4e254cb96e1c763933325fe17315f3d19",
+    "inputs/source_arrays.npz": "bd92d4c5e39bc8f6b129dae512fd72089648d20f2304f75815f537387b9e7800",
+    "inputs/source_history.csv": "c04c5723cb6457efb5c4b3c0a286553d81b7bc9f533d3bdc05209c99a7a34c6b",
+    "inputs/source_placement.json": "7761c9e87d936fb1b23fd274120432795958e58be2cc0a16cc927aba5b71fdb0",
+    "inputs/terrain.tif": "ecc7fb903ae1f100942b1ebf6344a52205ce9ffb248635b3077dc9b9dac626ec",
+    "inputs/terrain.tt3": "87421359138db59e4ff22c1d6c5f0e28d381221e16f03addea681cb28ef646f8",
+    "inputs/terrain_arrays.npz": "7df44e4a3c35ff05a92e945cd8e612a7d3b228cac25816aa5e49643a6eeba70c"
+  },
+  "runtime": {
+    "python": "3.12.15",
+    "numpy": "2.3.5",
+    "scipy": "1.17.0",
+    "matplotlib": "3.10.8",
+    "docker_image_sha256": "sha256:e34a83602d2ed2abaad337aa2a4b97a5f6e84b8f801de5fb6cc40f714d7027d4"
+  },
+  "simulation_settings": {
+    "clawpack": "v5.14.0",
+    "grid_cells": [
+      227,
+      453
+    ],
+    "domain_xyxy_m": [
+      -1010.0,
+      -8775.0,
+      5800.0,
+      4800.0
+    ],
+    "dx_m": 30.0,
+    "dy_m": 29.96688741721846,
+    "duration_s": 420,
+    "source": {
+      "kind": "volume-conserving translation of the projected original Rockslide.stl thickness; prescribed, not two-fluid dynamics",
+      "volume_m3": 51066493.51727992,
+      "travel_negative_y_m": 1400.0,
+      "travel_x_m": 0.0,
+      "start_time_s": 0.0,
+      "travel_duration_s": 30.0,
+      "history_interval_s": 0.25,
+      "maximum_solver_step_during_motion_s": 0.1,
+      "motion_law": "quintic smoothstep, rest to rest",
+      "provenance": "Initial footprint and volume from uploaded Franco mesh. Direction follows the reconstructed cross-inlet setting. Travel distance and duration are explicit UNCALIBRATED adaptation choices, not recovered FLOW-3D outputs."
+    },
+    "coordinates": {
+      "system": "native local Cartesian metres",
+      "native_reference_water_z_m": 220.0
+    },
+    "model_sea_level_m": 0,
+    "runup_depth_threshold_m": 0.1,
+    "monitor_specs": [
+      {
+        "name": "legacy",
+        "fgno": 1,
+        "bounds_xyxy_m": [
+          900.0,
+          900.0,
+          2500.0,
+          2300.0
+        ]
+      },
+      {
+        "name": "expanded",
+        "fgno": 2,
+        "bounds_xyxy_m": [
+          -1000.0,
+          0.0,
+          3000.0,
+          2300.0
+        ]
+      }
+    ]
+  },
+  "wave_frames": {
+    "cap_050": [
+      {
+        "time_s": 20,
+        "frame": 10,
+        "wet_eta_min_m": -45.14055627537163,
+        "wet_eta_max_m": 195.7130061271897
+      },
+      {
+        "time_s": 46,
+        "frame": 23,
+        "wet_eta_min_m": -69.16169831326974,
+        "wet_eta_max_m": 344.4614407015969
+      },
+      {
+        "time_s": 80,
+        "frame": 31,
+        "wet_eta_min_m": -75.68419025824423,
+        "wet_eta_max_m": 269.8466889795156
+      },
+      {
+        "time_s": 160,
+        "frame": 35,
+        "wet_eta_min_m": -39.49614323724462,
+        "wet_eta_max_m": 125.4332781138293
+      },
+      {
+        "time_s": 300,
+        "frame": 42,
+        "wet_eta_min_m": -19.29166981508506,
+        "wet_eta_max_m": 125.0220020277518
+      },
+      {
+        "time_s": 420,
+        "frame": 48,
+        "wet_eta_min_m": -25.47364999590478,
+        "wet_eta_max_m": 73.71909966858988
+      }
+    ],
+    "cap_100": [
+      {
+        "time_s": 20,
+        "frame": 10,
+        "wet_eta_min_m": -45.14055627537163,
+        "wet_eta_max_m": 195.7130061271897
+      },
+      {
+        "time_s": 46,
+        "frame": 23,
+        "wet_eta_min_m": -69.96050868513134,
+        "wet_eta_max_m": 474.3304885305099
+      },
+      {
+        "time_s": 80,
+        "frame": 31,
+        "wet_eta_min_m": -77.74986168620647,
+        "wet_eta_max_m": 419.6109755088086
+      },
+      {
+        "time_s": 160,
+        "frame": 35,
+        "wet_eta_min_m": -39.26800214335879,
+        "wet_eta_max_m": 125.5696279083894
+      },
+      {
+        "time_s": 300,
+        "frame": 42,
+        "wet_eta_min_m": -21.26585860716442,
+        "wet_eta_max_m": 125.0547116538351
+      },
+      {
+        "time_s": 420,
+        "frame": 48,
+        "wet_eta_min_m": -28.1250856922676,
+        "wet_eta_max_m": 124.9912620238542
+      }
+    ]
+  },
+  "runup_metrics": {
+    "cap_050": {
+      "legacy": {
+        "maximum_wetted_cell_elevation_m": 339.72425,
+        "peak_locations": [
+          {
+            "x_m": 925.0,
+            "y_m": 1758.3609272,
+            "maximum_depth_m": 4.857501,
+            "time_at_maximum_depth_s": 45.757487,
+            "on_monitor_boundary": true
+          }
+        ],
+        "peak_touches_monitor_boundary": true,
+        "artificial_monitor_cells": 72,
+        "wetted_artificial_monitor_cells": 0,
+        "eligible_natural_land_cells": 1765,
+        "observed_points": 2491,
+        "monitor_points": 2491,
+        "all_points_observed": true,
+        "depth_threshold_m": 0.1,
+        "metric_scope": "provided_monitor_only",
+        "historically_validated": false,
+        "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence.",
+        "wetted_eligible_cells": 945,
+        "maximum_depth_on_wetted_eligible_land_m": 119.84009
+      },
+      "expanded": {
+        "maximum_wetted_cell_elevation_m": 339.72425,
+        "peak_locations": [
+          {
+            "x_m": 925.0,
+            "y_m": 1758.3609272,
+            "maximum_depth_m": 4.857501,
+            "time_at_maximum_depth_s": 45.757487,
+            "on_monitor_boundary": false
+          }
+        ],
+        "peak_touches_monitor_boundary": false,
+        "artificial_monitor_cells": 5075,
+        "wetted_artificial_monitor_cells": 0,
+        "eligible_natural_land_cells": 2615,
+        "observed_points": 10318,
+        "monitor_points": 10318,
+        "all_points_observed": true,
+        "depth_threshold_m": 0.1,
+        "metric_scope": "provided_monitor_only",
+        "historically_validated": false,
+        "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence.",
+        "wetted_eligible_cells": 1267,
+        "maximum_depth_on_wetted_eligible_land_m": 119.84009
+      }
+    },
+    "cap_100": {
+      "legacy": {
+        "maximum_wetted_cell_elevation_m": 463.9969,
+        "peak_locations": [
+          {
+            "x_m": 925.0,
+            "y_m": 1548.5927152,
+            "maximum_depth_m": 14.682812,
+            "time_at_maximum_depth_s": 44.669211,
+            "on_monitor_boundary": true
+          }
+        ],
+        "peak_touches_monitor_boundary": true,
+        "artificial_monitor_cells": 72,
+        "wetted_artificial_monitor_cells": 0,
+        "eligible_natural_land_cells": 1765,
+        "observed_points": 2491,
+        "monitor_points": 2491,
+        "all_points_observed": true,
+        "depth_threshold_m": 0.1,
+        "metric_scope": "provided_monitor_only",
+        "historically_validated": false,
+        "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence.",
+        "wetted_eligible_cells": 1057,
+        "maximum_depth_on_wetted_eligible_land_m": 126.8762
+      },
+      "expanded": {
+        "maximum_wetted_cell_elevation_m": 469.84918,
+        "peak_locations": [
+          {
+            "x_m": 895.0,
+            "y_m": 1608.5264901,
+            "maximum_depth_m": 1.5597324,
+            "time_at_maximum_depth_s": 45.27179,
+            "on_monitor_boundary": false
+          }
+        ],
+        "peak_touches_monitor_boundary": false,
+        "artificial_monitor_cells": 5075,
+        "wetted_artificial_monitor_cells": 0,
+        "eligible_natural_land_cells": 2615,
+        "observed_points": 10318,
+        "monitor_points": 10318,
+        "all_points_observed": true,
+        "depth_threshold_m": 0.1,
+        "metric_scope": "provided_monitor_only",
+        "historically_validated": false,
+        "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence.",
+        "wetted_eligible_cells": 1412,
+        "maximum_depth_on_wetted_eligible_land_m": 126.8762
+      }
+    }
+  },
+  "excluded_case": {
+    "case": "cap_200",
+    "accepted_runup_m": null,
+    "reason": "Failed CFL/time-step checks despite reaching 420 s.",
+    "recorded_errors": [
+      "Actual CFL 1.12 exceeds the configured maximum.",
+      "Actual CFL 1.19 exceeds the configured maximum."
+    ]
+  },
+  "rendering": {
+    "wave_scale": "SymLogNorm: -500 to 500 m, linear threshold 5 m, base 10, linscale 1",
+    "depth_scale": "LogNorm: 0.1 to 130 m",
+    "terrain_scale": "linear: 0 to 1100 m",
+    "interpolation": "nearest native cells; contours only interpolate display isolines",
+    "wave_wet_threshold_m": 0.1,
+    "artificial_mask": "any positive bilinear overlap with excluded or enabled virtual-wall nodal masks",
+    "initial_shoreline_reference": true,
+    "spatial_domain": "expanded monitor only"
+  },
+  "presentation": {
+    "revision": "README-consistent wording and two-category sensitivity display; original map design retained.",
+    "terminology": "numerical water-speed limit",
+    "figure_titles": [
+      "Wave evolution",
+      "Inundation and run-up",
+      "Numerical sensitivity"
+    ],
+    "captions": "Short interpretation captions; detailed specifications and limitations retained in this file.",
+    "traceability_documents": [
+      "THIRD_PARTY.md",
+      "docs/DATA.md",
+      "experiments/2026-10-19-speed-caps/results.json"
+    ],
+    "wave_panel_times_s": [
+      20,
+      46,
+      80,
+      160,
+      300,
+      420
+    ],
+    "wave_layout": "2 rows by 6 columns; existing map extents, axes, colours and scales preserved",
+    "sensitivity_displayed_cases": [
+      "cap_050",
+      "cap_100"
+    ],
+    "sensitivity_omitted_case": "cap_200 (excluded in caption; all experiment records retained)",
+    "sensitivity_bar_heights_m": [
+      339.72425,
+      469.84918
+    ],
+    "runup_label_decimal_places": 2,
+    "increase_label_decimal_places": 2,
+    "percentage_label_decimal_places": 1,
+    "numeric_rounding": "Display labels only; underlying values and bar heights retain recorded precision.",
+    "measurement_logic_changed": false,
+    "readme_modified": false
+  },
+  "limitations": [
+    "Monitor-specific run-up; domain-wide maxima are not established.",
+    "Maximum-depth envelope combines different times, not one simultaneous water surface.",
+    "Artificial-boundary effects remain even though artificial cells are masked.",
+    "Prescribed source is uncalibrated; historical accuracy and convergence are not established.",
+    "Local Cartesian axes have no verified geographic orientation; no historical observations are plotted.",
+    "Raw fields and reference inputs are not redistributed; regeneration requires the original local session."
+  ],
+  "figures_sha256": {
+    "wave_evolution.png": "27ecdea1e0b5b8f9c6c1e4b8131a25ef4a578f9ef221ed7241ce045e27b930c5",
+    "spatial_runup.png": "5dbe18fb08c083579ffbb1d18188fe57c6f532dd4717be84e1e66c5c6d9d4f2b",
+    "numerical_sensitivity.png": "1bb7b6acd8bcb823d04ecbfa3668e00c62e8c55d329d03718ed08b1650461f6c"
+  }
+}

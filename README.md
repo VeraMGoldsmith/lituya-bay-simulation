@@ -48,7 +48,7 @@ The figures and animation present saved outputs from session `20261019T041033Z_f
 
 ![Lituya Bay — simulated wave evolution](docs/previews/wave_evolution_cap_100/wave_evolution_cap_100_text_preview.gif)
 
-**Inundation and run-up.** The maps show the maximum simulated water depth on eligible natural land within the expanded monitoring area. Each location represents its maximum over the simulation period. Contours show ground elevation, and stars identify the highest monitored run-up in each configuration. These run-up values have not been verified as bay-wide maxima.
+**Inundation and run-up.** The maps show the maximum simulated water depth on eligible natural land within the expanded monitoring area. Here, water depth is the vertical distance from the local ground surface to the water surface. Each location represents its maximum over the simulation period. Contours show ground elevation, and stars identify the highest monitored run-up in each configuration. These run-up values have not been verified as bay-wide maxima.
 
 ![Inundation and run-up](docs/figures/spatial_runup.png)
 

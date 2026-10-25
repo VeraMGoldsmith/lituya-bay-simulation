@@ -78,7 +78,7 @@ The earlier 200 m/s run remains excluded because it failed the established CFL/t
 
 These comparisons describe sensitivity within the tested model setup and monitoring area. Equal run-up does not imply identical flow behavior or establish grid convergence or historical accuracy. See the [speed-limit/grid-resolution report](experiments/speed-limit-grid-resolution/report.html), [presentation methods](docs/presentation/experiment_visuals/presentation_notes.md), and [source provenance](docs/presentation/experiment_visuals/provenance.json) for detailed settings, results, and verification records.
 
-## Software tests
+## Testing and verification
 
 Use Python 3.12 in a virtual environment, from the repository root:
 
@@ -92,6 +92,10 @@ python -m pytest
 The default tests need no reconstruction data and start no water solver.
 Reconstruction-dependent tests are explicitly skipped. See
 [testing instructions](docs/TESTING.md) for the full local check and coverage scope.
+The default command collects only `tests/`; the analysis and experiment tests
+require the separate commands documented there.
+
+The follow-up studies include additional tests for measurement calculations, experiment configuration generation, and handling of invalid data and failed cases. The six follow-up simulations were checked against the declared numerical acceptance criteria using saved outputs, time-step logs, monitoring records, and input and runtime provenance. Measurements and comparisons were recomputed from the saved outputs, and the follow-up figure and table were checked against the committed result tables. Detailed procedures and verification records accompany the [measurement-robustness analysis](analysis/measurement_robustness/README.md), [speed-limit/grid-resolution study](experiments/speed-limit-grid-resolution/README.md), and [completed-run verification](experiments/speed-limit-grid-resolution/REVERIFICATION.md). Passing these checks does not establish historical accuracy or numerical convergence.
 
 ## Reproducibility and data requirements
 

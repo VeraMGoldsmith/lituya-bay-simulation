@@ -1,0 +1,3 @@
+case,runup_m,peak_cell_depth_m,threshold_min_m,threshold_max_m,status
+cap_050,339.72425,4.857501,0.1,1,established from archived peak-cell information
+cap_100,469.84918,1.5597324,0.1,1,established from archived peak-cell information

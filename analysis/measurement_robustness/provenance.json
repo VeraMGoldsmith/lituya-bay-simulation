@@ -1,0 +1,149 @@
+{
+  "schema": 1,
+  "starting_commit": "bc478443109c7bb2620bd3ffb05c5e2cefb1aeca",
+  "head_at_generation": "bc478443109c7bb2620bd3ffb05c5e2cefb1aeca",
+  "branch": "analysis/measurement-robustness",
+  "session": "comparison_runs/20261019T041033Z_ff1b17c2",
+  "input_sha256": {
+    "experiments/2026-10-19-speed-caps/results.json": "a5b0c6a141d21e3cc00614374382cebc331c131723a8a859c370491e49edff66",
+    "docs/figures/figure_provenance.json": "35dd5122b04b0617bc3ccd55711a9c6760b2b6dcad60ee66794e7bbbec95234d",
+    "experiments/2026-10-19-speed-caps/results.csv": "08515f5f9f98bf3ed08346161a8c4596b656b751628d2115f66664c1dcfd7603",
+    "experiments/2026-10-19-speed-caps/provenance.json": "d468a5c3183da1e1949a71ec10c2d30a09147d9981ab48c3963f48ae5b34be6d",
+    "simulation/runup_metrics.py": "dd6636543f630e0e39771814cb6766ac2751b932ed885413710135d0c3e973d3",
+    "simulation/monitoring.py": "0d8d2e445f03bc08dc35500419b429fe8277523ac4d5d13e4427bc56a3b16cf0",
+    "simulation/read_output.py": "83682c1312b26ab38eda360de064086c68ae711eab581311289502a82a79cb21",
+    "simulation/validate.py": "d80c41051d4f4dc36cdc292a1e1cb7a9be836c4b9edbf6a4eb27a90dfdecf594",
+    "simulation/numerics.py": "02b5ee361423d0b4f41f02f003da6d63d545a23cd2e9ad2134a258e5f00e1964",
+    "simulation/__init__.py": "b9689c48c903feb2b81c0a6900fd08922d28030c3164bdbc18d477b380d6e178",
+    "experiments/2026-10-19-speed-caps/plot_figures.py": "d14339d366c4619f502ec9a2417d99e02085eacf77a3c8acdddf3ad34ad88bbb",
+    "docs/DATA.md": "df2b10663755ca7b2609e5c9cb8a78a9cf41fc6fdd15b19f0e4ca2fc5b6d85fe",
+    "release/frozen_baseline_config.json": "a357e1654d6662655b2f89f8e7c5bb11de2b12399d171c913fb4102aaca49d38",
+    "simulation/cap_comparison.py": "3fcf8b52f22de583465d0833c48e3ca24e466039e506642cc8a9c284f21a879c"
+  },
+  "analysis_script_sha256": "715fefb6480384cd6fe171dcb1cd9b05c0438d163831968e9aa3345d533910e6",
+  "tracked_changes_since_start": [],
+  "preserved_untracked_files_sha256": {
+    "docs/previews/wave_evolution_cap_100/render_animation.py": "b802200db0a37b2af1467ba7b89a0a8d988ae2327688a39778299d421009214d",
+    "docs/previews/wave_evolution_cap_100/wave_evolution_cap_100.gif": "6bbd1035ffd86eb1f50c3b6fe99b8a92b95414d996356aa1123602171c12b63c"
+  },
+  "analysis_code_uncommitted": true,
+  "archived_hash_checks": "passed; public source/summary seals checked, raw fields not accessed",
+  "analysis_starts_solver": false,
+  "raw_fields_remeasured": false,
+  "decimal_precision": 28,
+  "area_conversion": {
+    "dx_m": "30.0",
+    "dy_m": "29.96688741721846",
+    "cell_area_m2": "899.006622516553800",
+    "wetted_cells": {
+      "cap_050": 1267,
+      "cap_100": 1412
+    },
+    "formula": "count * dx_m * dy_m / 1000000"
+  },
+  "threshold_bound_evidence": {
+    "cap_050": {
+      "archived_peak_locations": [
+        {
+          "x_m": "925.0",
+          "y_m": "1758.3609272",
+          "maximum_depth_m": "4.857501",
+          "time_at_maximum_depth_s": "45.757487",
+          "on_monitor_boundary": false
+        }
+      ],
+      "bound_reason": "At least one baseline maximum survives the entire requested interval.",
+      "premises_supported": true,
+      "selected_witness": {
+        "x_m": "925.0",
+        "y_m": "1758.3609272",
+        "maximum_depth_m": "4.857501",
+        "time_at_maximum_depth_s": "45.757487",
+        "on_monitor_boundary": false
+      }
+    },
+    "cap_100": {
+      "archived_peak_locations": [
+        {
+          "x_m": "895.0",
+          "y_m": "1608.5264901",
+          "maximum_depth_m": "1.5597324",
+          "time_at_maximum_depth_s": "45.27179",
+          "on_monitor_boundary": false
+        }
+      ],
+      "bound_reason": "At least one baseline maximum survives the entire requested interval.",
+      "premises_supported": true,
+      "selected_witness": {
+        "x_m": "895.0",
+        "y_m": "1608.5264901",
+        "maximum_depth_m": "1.5597324",
+        "time_at_maximum_depth_s": "45.27179",
+        "on_monitor_boundary": false
+      }
+    }
+  },
+  "gauge_coverage": [
+    {
+      "case": "cap_050",
+      "gauge": "P2",
+      "first_time_s": "0.0",
+      "last_time_s": "419.7055",
+      "peak_time_s": "22.8",
+      "samples": 1178
+    },
+    {
+      "case": "cap_050",
+      "gauge": "P3",
+      "first_time_s": "0.0",
+      "last_time_s": "419.7055",
+      "peak_time_s": "48.35241",
+      "samples": 1178
+    },
+    {
+      "case": "cap_050",
+      "gauge": "P5",
+      "first_time_s": "0.0",
+      "last_time_s": "419.7055",
+      "peak_time_s": "75.82434",
+      "samples": 1178
+    },
+    {
+      "case": "cap_100",
+      "gauge": "P2",
+      "first_time_s": "0.0",
+      "last_time_s": "419.6951",
+      "peak_time_s": "22.8",
+      "samples": 1205
+    },
+    {
+      "case": "cap_100",
+      "gauge": "P3",
+      "first_time_s": "0.0",
+      "last_time_s": "419.6951",
+      "peak_time_s": "48.6857",
+      "samples": 1205
+    },
+    {
+      "case": "cap_100",
+      "gauge": "P5",
+      "first_time_s": "0.0",
+      "last_time_s": "419.6951",
+      "peak_time_s": "75.57604",
+      "samples": 1205
+    }
+  ],
+  "source_paths": {
+    "runup": "experiments/2026-10-19-speed-caps/results.json: summary.cases; checked against case monitor diagnostics and figure runup_metrics",
+    "gauges": "experiments/2026-10-19-speed-caps/results.json: cases.<case>.gauges_diagnostic_only_if_invalid",
+    "area_depth": "docs/figures/figure_provenance.json: runup_metrics.<case>.expanded",
+    "grid": "docs/figures/figure_provenance.json: simulation_settings"
+  },
+  "output_sha256": {
+    "comparison.csv": "eb1518ab4c1bb2d463d16bed145592d9eb0abfa774f2eb2697d95240e011f5fd",
+    "monitoring_choice.csv": "6af6cef1f758efc9de9caebf25773b90dd5441a9a5e72af9989b65fa69dd30c5",
+    "threshold_bound.csv": "72cc96a6cdfdc5e2012855f9cf523dfb5e010501761a4596de08eaceec0f5649",
+    "report.md": "d94e0fdbead15988845cd9ef2dba2894441cf26fb6b20e5a4ffe9fd02de89ac2",
+    "report.html": "8272dd7df7cd5316bad119eeb63444c2f104436f894476e58621713e3ee6cbe1"
+  }
+}

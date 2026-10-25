@@ -1,0 +1,8 @@
+metric,quantity,unit,value_50,value_100,difference,percent_difference
+legacy,Highest monitored run-up — original area,m,339.72425,463.9969,124.27265,36.58044723036403789249663514
+expanded,Highest monitored run-up — expanded area,m,339.72425,469.84918,130.12493,38.30310317853376672404163082
+area,Eligible natural land wetted at any time — expanded area,km²,1.1390413907284736646,1.2693973509933739656,0.1303559602649003010,11.44435674822415153906866614
+depth,Maximum water depth on eligible natural land — expanded area,m,119.84009,126.8762,7.03611,5.871248928467927552457612473
+P2,Peak water-surface elevation at P2,m,196.0448,196.0448,0.0000,0
+P3,Peak water-surface elevation at P3,m,73.39219,78.13353,4.74134,6.460278675428543554838736928
+P5,Peak water-surface elevation at P5,m,22.72904,22.34237,-0.38667,-1.701215713466120874440803483

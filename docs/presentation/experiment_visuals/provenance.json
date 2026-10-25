@@ -1,0 +1,396 @@
+{
+  "source_commit": "848b281803c32c1b344e3ef8bfe01fee4408be23",
+  "source_bytes_match_commit": true,
+  "source_sha256": {
+    "experiments/speed-limit-grid-resolution/results.csv": "c15f868004124e086da063865fabd437acaa170135f8f06468a8d4527b29df70",
+    "experiments/speed-limit-grid-resolution/comparisons.csv": "37425b0b867b0018efb31644199abd333e4e1514be593c3b160f92112d12fa07",
+    "experiments/speed-limit-grid-resolution/results.json": "647671407ab5bfdba68ebcee4ed3b7de8f07ce77a35656a058e8ad1928550314",
+    "experiments/speed-limit-grid-resolution/protocol.json": "b7ef081878513b1122e9cf2bf2d0fe1e8f3f108dfbaa48d54c9e524aea8e9096",
+    "experiments/speed-limit-grid-resolution/provenance.json": "98693e9bc6fb60e160f8f095ca16fd41436a460b52846b53d87551722d3ebd64",
+    "experiments/speed-limit-grid-resolution/reverification.json": "8671558513312897db78a10401da6f2918799a1ec4a6922e26a621e32011059c",
+    "geoclaw/setrun.py": "61cbeb8b7cf4d0e5ef4615d50a897ed1da90807c5ff56fcc7c85485fe9a3cf18",
+    "experiments/2026-10-19-speed-caps/plot_figures.py": "d14339d366c4619f502ec9a2417d99e02085eacf77a3c8acdddf3ad34ad88bbb",
+    "experiments/2026-10-19-speed-caps/results.json": "a5b0c6a141d21e3cc00614374382cebc331c131723a8a859c370491e49edff66",
+    "docs/figures/figure_provenance.json": "35dd5122b04b0617bc3ccd55711a9c6760b2b6dcad60ee66794e7bbbec95234d"
+  },
+  "script_sha256": "609d70181047da01767f3ded15db8d374dcc5500d44c43d05d6acb6e10868bb7",
+  "matplotlib_version": "3.10.8",
+  "plotted_data": [
+    {
+      "grid": "original",
+      "x_m_s": [
+        50,
+        100,
+        200
+      ],
+      "y_m": [
+        "317.07672",
+        "449.32707",
+        "449.32707"
+      ]
+    },
+    {
+      "grid": "fine",
+      "x_m_s": [
+        50,
+        100,
+        200
+      ],
+      "y_m": [
+        "338.24187",
+        "492.83979",
+        "492.83979"
+      ]
+    }
+  ],
+  "table_cases": [
+    {
+      "case": "archived_100",
+      "grid": "original",
+      "speed_limit_m_s": "100",
+      "status": "accepted archived policy",
+      "runup_expanded_m": "469.84918",
+      "runup_legacy_m": "463.9969",
+      "wetted_area_km2": "1.2693973509933739656",
+      "max_land_depth_m": "126.8762",
+      "P2_eta_m": "196.0448",
+      "P3_eta_m": "78.13353",
+      "P5_eta_m": "22.34237"
+    },
+    {
+      "case": "original_050",
+      "grid": "original",
+      "speed_limit_m_s": "50",
+      "nx": "227",
+      "ny": "453",
+      "status": "accepted",
+      "runup_expanded_m": "317.07672",
+      "runup_legacy_m": "317.07672",
+      "wetted_area_km2": "1.0347566225165563",
+      "max_land_depth_m": "119.27397",
+      "P2_eta_m": "196.0448",
+      "P3_eta_m": "73.83494",
+      "P5_eta_m": "21.50808",
+      "logged_limiter_events": "15327",
+      "deep_logged_events": "7963",
+      "maximum_printed_cfl": "0.283",
+      "errors": ""
+    },
+    {
+      "case": "original_100",
+      "grid": "original",
+      "speed_limit_m_s": "100",
+      "nx": "227",
+      "ny": "453",
+      "status": "accepted",
+      "runup_expanded_m": "449.32707",
+      "runup_legacy_m": "448.97099",
+      "wetted_area_km2": "1.1597185430463577",
+      "max_land_depth_m": "125.37847",
+      "P2_eta_m": "196.0448",
+      "P3_eta_m": "77.16134",
+      "P5_eta_m": "21.44098",
+      "logged_limiter_events": "4",
+      "deep_logged_events": "0",
+      "maximum_printed_cfl": "0.339",
+      "errors": ""
+    },
+    {
+      "case": "original_200",
+      "grid": "original",
+      "speed_limit_m_s": "200",
+      "nx": "227",
+      "ny": "453",
+      "status": "accepted",
+      "runup_expanded_m": "449.32707",
+      "runup_legacy_m": "448.97099",
+      "wetted_area_km2": "1.1597185430463577",
+      "max_land_depth_m": "125.37847",
+      "P2_eta_m": "196.0448",
+      "P3_eta_m": "77.16134",
+      "P5_eta_m": "21.44098",
+      "logged_limiter_events": "0",
+      "deep_logged_events": "0",
+      "maximum_printed_cfl": "0.467",
+      "errors": ""
+    },
+    {
+      "case": "fine_050",
+      "grid": "fine",
+      "speed_limit_m_s": "50",
+      "nx": "454",
+      "ny": "906",
+      "status": "accepted",
+      "runup_expanded_m": "338.24187",
+      "runup_legacy_m": "338.24187",
+      "wetted_area_km2": "1.077908940397351",
+      "max_land_depth_m": "127.47661",
+      "P2_eta_m": "200.5128",
+      "P3_eta_m": "74.0499",
+      "P5_eta_m": "23.70127",
+      "logged_limiter_events": "57998",
+      "deep_logged_events": "29919",
+      "maximum_printed_cfl": "0.529",
+      "errors": ""
+    },
+    {
+      "case": "fine_100",
+      "grid": "fine",
+      "speed_limit_m_s": "100",
+      "nx": "454",
+      "ny": "906",
+      "status": "accepted",
+      "runup_expanded_m": "492.83979",
+      "runup_legacy_m": "492.83979",
+      "wetted_area_km2": "1.2242222682119206",
+      "max_land_depth_m": "125.29017",
+      "P2_eta_m": "200.5128",
+      "P3_eta_m": "85.55317",
+      "P5_eta_m": "23.45631",
+      "logged_limiter_events": "16",
+      "deep_logged_events": "0",
+      "maximum_printed_cfl": "0.618",
+      "errors": ""
+    },
+    {
+      "case": "fine_200",
+      "grid": "fine",
+      "speed_limit_m_s": "200",
+      "nx": "454",
+      "ny": "906",
+      "status": "accepted",
+      "runup_expanded_m": "492.83979",
+      "runup_legacy_m": "492.83979",
+      "wetted_area_km2": "1.2242222682119206",
+      "max_land_depth_m": "125.27323",
+      "P2_eta_m": "200.5128",
+      "P3_eta_m": "85.55068",
+      "P5_eta_m": "23.45861",
+      "logged_limiter_events": "0",
+      "deep_logged_events": "0",
+      "maximum_printed_cfl": "0.716",
+      "errors": ""
+    }
+  ],
+  "table_display_values": [
+    [
+      "469.85",
+      "317.08",
+      "449.33",
+      "449.33",
+      "338.24",
+      "492.84",
+      "492.84"
+    ],
+    [
+      "464.00",
+      "317.08",
+      "448.97",
+      "448.97",
+      "338.24",
+      "492.84",
+      "492.84"
+    ],
+    [
+      "1.269397",
+      "1.034757",
+      "1.159719",
+      "1.159719",
+      "1.077909",
+      "1.224222",
+      "1.224222"
+    ],
+    [
+      "126.876",
+      "119.274",
+      "125.378",
+      "125.378",
+      "127.477",
+      "125.290",
+      "125.273"
+    ],
+    [
+      "196.045",
+      "196.045",
+      "196.045",
+      "196.045",
+      "200.513",
+      "200.513",
+      "200.513"
+    ],
+    [
+      "78.134",
+      "73.835",
+      "77.161",
+      "77.161",
+      "74.050",
+      "85.553",
+      "85.551"
+    ],
+    [
+      "22.342",
+      "21.508",
+      "21.441",
+      "21.441",
+      "23.701",
+      "23.456",
+      "23.459"
+    ]
+  ],
+  "fresh_time_policy": {
+    "dt_initial_s": 0.02,
+    "dt_max_s": 0.1,
+    "cfl_desired": 0.5,
+    "cfl_max": 1.0,
+    "source_dt_max_s": 0.1,
+    "steps_max": 200000
+  },
+  "archived_time_policy": {
+    "cfl_desired": 0.75,
+    "dt_max_s": 2.0,
+    "cfl_max": 1.0,
+    "source_dt_max_s": 0.1
+  },
+  "control_comparisons": [
+    {
+      "comparison": "100 m/s: archived → fresh time policy",
+      "from_case": "archived_100",
+      "to_case": "original_100",
+      "quantity": "Expanded monitored run-up",
+      "unit": "m",
+      "from_value": "469.84918",
+      "to_value": "449.32707",
+      "difference": "-20.52211",
+      "percent_difference": "-4.367807984681382225675055983",
+      "status": "accepted comparison"
+    },
+    {
+      "comparison": "100 m/s: archived → fresh time policy",
+      "from_case": "archived_100",
+      "to_case": "original_100",
+      "quantity": "Original-area monitored run-up",
+      "unit": "m",
+      "from_value": "463.9969",
+      "to_value": "448.97099",
+      "difference": "-15.02591",
+      "percent_difference": "-3.238364308037402836096534266",
+      "status": "accepted comparison"
+    },
+    {
+      "comparison": "100 m/s: archived → fresh time policy",
+      "from_case": "archived_100",
+      "to_case": "original_100",
+      "quantity": "Eligible land wetted at any time",
+      "unit": "km²",
+      "from_value": "1.2693973509933739656",
+      "to_value": "1.1597185430463577",
+      "difference": "-0.1096788079470162656",
+      "percent_difference": "-8.640226628894924327651959786",
+      "status": "accepted comparison"
+    },
+    {
+      "comparison": "100 m/s: archived → fresh time policy",
+      "from_case": "archived_100",
+      "to_case": "original_100",
+      "quantity": "Maximum water depth on eligible land",
+      "unit": "m",
+      "from_value": "126.8762",
+      "to_value": "125.37847",
+      "difference": "-1.49773",
+      "percent_difference": "-1.180465682295024598782119893",
+      "status": "accepted comparison"
+    },
+    {
+      "comparison": "100 m/s: archived → fresh time policy",
+      "from_case": "archived_100",
+      "to_case": "original_100",
+      "quantity": "P2 peak water-surface elevation",
+      "unit": "m",
+      "from_value": "196.0448",
+      "to_value": "196.0448",
+      "difference": "0.0000",
+      "percent_difference": "0",
+      "status": "accepted comparison"
+    },
+    {
+      "comparison": "100 m/s: archived → fresh time policy",
+      "from_case": "archived_100",
+      "to_case": "original_100",
+      "quantity": "P3 peak water-surface elevation",
+      "unit": "m",
+      "from_value": "78.13353",
+      "to_value": "77.16134",
+      "difference": "-0.97219",
+      "percent_difference": "-1.244267345914103714500036028",
+      "status": "accepted comparison"
+    },
+    {
+      "comparison": "100 m/s: archived → fresh time policy",
+      "from_case": "archived_100",
+      "to_case": "original_100",
+      "quantity": "P5 peak water-surface elevation",
+      "unit": "m",
+      "from_value": "22.34237",
+      "to_value": "21.44098",
+      "difference": "-0.90139",
+      "percent_difference": "-4.034442183170361962495473846",
+      "status": "accepted comparison"
+    }
+  ],
+  "grid_dimensions": {
+    "original": [
+      227,
+      453
+    ],
+    "fine": [
+      454,
+      906
+    ]
+  },
+  "domain_xyxy_m": [
+    -1010.0,
+    -8775.0,
+    5800.0,
+    4800.0
+  ],
+  "runup_definition": "Highest eligible natural-land ground elevation reached by at least 0.1 m of water, within the named monitoring area; relative to model sea level.",
+  "presentation": {
+    "colors_represent": "grid, not accuracy or preference",
+    "x_axis": "linear; actual values 50, 100, 200 m/s",
+    "figure_title": "Run-up sensitivity to speed limit and grid resolution",
+    "figure_subtitle": "On each grid, monitored run-up is unchanged when the limit increases from 100 to 200 m/s.",
+    "figure_note": "Highest monitored run-up is the highest sampled natural-land elevation in the expanded monitoring area where water depth reached at least 0.1 m during the simulation. Elevations are relative to model sea level.",
+    "table_title": "Run-up, flooded area, and water levels",
+    "table_subtitle": "Comparison across speed limits and grid resolutions, including the earlier 100 m/s simulation.",
+    "table_note": "Land measurements use the study’s natural-land selection and 0.1 m water-depth threshold. Wetted area includes land reached by water at any time during the simulation. P2, P3, and P5 identify simulation gauge locations; their water levels are elevations relative to model sea level.",
+    "methods": [
+      "The earlier simulation used a target CFL of 0.75 and a maximum allowed time step of 2 s. The follow-up simulations used a target CFL of 0.5 and a maximum allowed time step of 0.1 s. Actual time steps were adaptive.",
+      "Shared numerical controls: initial step 0.02 s; moving-source maximum step 0.1 s; CFL acceptance ceiling 1.0; maximum 200,000 steps. The existing formatted-log acceptance tolerance is unchanged.",
+      "GeoClaw 5.14.0; simulation duration 420 s. Original grid: 227 × 453 cells; spacing 30 × 29.96688742 m. Finer grid: 454 × 906 cells; spacing 15 × 14.98344371 m.",
+      "Physical source, terrain, domain, friction, wet/dry settings, monitoring boundaries and measurement definitions are unchanged. Actual adaptive time steps may differ across cases and grids. The 100 m/s time-step comparison changes both the target CFL and the maximum allowed time step; it does not isolate either control individually.",
+      "Different maxima need not occur at the same time or location. Equal gauge peaks do not establish identical time series. Run-up is the sampled natural-land ground elevation, not water depth or gauge water-surface elevation."
+    ],
+    "proposed_interpretation": "The follow-up experiment tested three numerical water-speed limits on two grid resolutions using the same physical setup and matched time-stepping settings. Increasing the limit from 50 to 100 m/s increased highest monitored run-up on both grids. Increasing it further to 200 m/s left this measure unchanged on each grid, although some other outputs differed slightly on the finer grid. Grid refinement increased the run-up values, and the comparison with the earlier 100 m/s simulation also showed sensitivity to time-stepping settings. Together, these results show that the strong response to the 50 m/s limit persists under refinement, while the absolute run-up remains sensitive to other numerical choices.",
+    "scope": "These comparisons describe sensitivity within the tested model setup and monitoring area. Agreement between the 100 and 200 m/s run-up values does not establish grid convergence or historical accuracy.",
+    "plotted_heights": "unrounded source values; only text labels rounded",
+    "connecting_lines": "join discrete case results; do not imply simulated intermediate caps",
+    "table_rounding": "run-up 2 decimals; depth/gauges 3; area 6",
+    "smoothing": false,
+    "new_metrics": false
+  },
+  "archived_200": "excluded; failed recorded CFL/time-step checks; never substituted for a fresh case",
+  "code_checks": "Six accepted cases; numeric CSV/JSON and archived-control cross-checks; plotted x/y arrays checked against source; source bytes checked against Git commit.",
+  "limitations": [
+    "Tested setup and monitored area only",
+    "No established historical accuracy or grid convergence",
+    "Neither speed limit nor grid is a ground-truth reference"
+  ],
+  "review_status": "Figure and comparison table approved by the user for root README inclusion; original research reports unchanged",
+  "authorship_reference": "../../../README.md#research-authorship",
+  "output_sha256": {
+    "runup_grid_comparison.png": "55422a180fbdaacbbf8f847f51fca35730a8352e94f490da93162a18a227de7c",
+    "secondary_comparison.png": "00045061fb381950ccb251c187a8df9e8ef09750730668f2018dc9aec6047f62",
+    "secondary_comparison.html": "4e1024378997969328fcef7caf42d7529a5adb51ee166a6258aa910bd90a1d9d",
+    "presentation_notes.md": "42bea6e84e32c96a91dcbcdae6a06522b542d11726410fb23f445cb8a38c1ed1"
+  }
+}

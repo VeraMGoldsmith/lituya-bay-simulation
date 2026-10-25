@@ -60,6 +60,24 @@ The maps use local model coordinates. Masking artificial cells in the figures do
 
 The [figure provenance](docs/figures/figure_provenance.json) records full-precision measurements, settings, source hashes and rendering details. The [plotting script](experiments/2026-10-19-speed-caps/plot_figures.py) checks the saved data before generating the figures. Regeneration requires the original local simulation session; raw simulation fields and reference inputs are not included in this repository.
 
+## Follow-up analysis: measurement robustness and numerical sensitivity
+
+The [measurement-robustness analysis](analysis/measurement_robustness/report.html) examined how monitoring coverage and the wet-depth threshold affect the earlier run-up measurements. The follow-up experiment then compared 50, 100, and 200 m/s numerical water-speed limits on approximately 30 m and 15 m grids, using the same physical setup and matched time-stepping settings across the six new simulations.
+
+The large 50→100 m/s increase in highest monitored run-up persists on both grids. Increasing the limit to 200 m/s leaves this measure unchanged on each grid, although some other outputs differ slightly on the finer grid. Grid refinement increases the run-up values, while the original-grid 100 m/s comparison also shows sensitivity to time-stepping settings: highest monitored run-up changed from 469.85 m in the earlier study to 449.33 m under the revised settings. Actual time steps were adaptive.
+
+The earlier 200 m/s run remains excluded because it failed the established CFL/time-step checks. The follow-up includes independently verified new 200 m/s runs on both grids.
+
+![Highest monitored run-up at 50, 100, and 200 m/s: 317.08, 449.33, and 449.33 m on the original grid; 338.24, 492.84, and 492.84 m on the finer grid.](docs/presentation/experiment_visuals/runup_grid_comparison.png)
+
+*Run-up sensitivity to speed limit and grid resolution.* Run-up is the highest sampled natural-land elevation reached by at least 0.1 m of water in the expanded monitoring area, relative to model sea level.
+
+[![Comparison of seven run-up, wetted-area, water-depth, and gauge-level measurements across six follow-up simulations and the earlier original-grid 100 m/s simulation, separated by time-stepping policy.](docs/presentation/experiment_visuals/secondary_comparison.png)](docs/presentation/experiment_visuals/secondary_comparison.png)
+
+*Run-up, flooded area, and water levels.* The earlier 100 m/s simulation is shown separately because its time-stepping settings differ. [View the table at full size](docs/presentation/experiment_visuals/secondary_comparison.png) or use the [readable HTML table](docs/presentation/experiment_visuals/secondary_comparison.html).
+
+These comparisons describe sensitivity within the tested model setup and monitoring area. Equal run-up does not imply identical flow behavior or establish grid convergence or historical accuracy. See the [speed-limit/grid-resolution report](experiments/speed-limit-grid-resolution/report.html), [presentation methods](docs/presentation/experiment_visuals/presentation_notes.md), and [source provenance](docs/presentation/experiment_visuals/provenance.json) for detailed settings, results, and verification records.
+
 ## Software tests
 
 Use Python 3.12 in a virtual environment, from the repository root:

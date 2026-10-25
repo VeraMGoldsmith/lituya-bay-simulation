@@ -1,0 +1,218 @@
+{
+  "recorded_utc": "2026-10-25T03:22:23.874691+00:00",
+  "checkpoint": "a205e42312762e45ef99df4b1ae19fdd83ce4193",
+  "branch": "experiment/speed-limit-grid-resolution",
+  "measurement_regeneration": {
+    "command": "python3 -B analysis/measurement_robustness/analyze.py --starting-commit bc478443109c7bb2620bd3ffb05c5e2cefb1aeca --output-dir /tmp/lituya-measurement-review",
+    "status": "passed",
+    "private_data_required": false,
+    "note": "Performed after the report-label changes; checkpointed files preserved. Numeric CSV content unchanged."
+  },
+  "measurement_tests": {
+    "command": "python3 -B -m unittest discover -s analysis/measurement_robustness -p 'test_*.py' -v",
+    "passed": 20,
+    "failed": 0,
+    "skipped": 0,
+    "skip_details": [],
+    "result_retained": true,
+    "reason": "Verified after generator labeling changes and in the new worktree; generator and tests have not changed since.",
+    "sha256": {
+      "analysis/measurement_robustness/analyze.py": "715fefb6480384cd6fe171dcb1cd9b05c0438d163831968e9aa3345d533910e6",
+      "analysis/measurement_robustness/test_analysis.py": "c257635792e0085d61cc85a4f08e1de18929eacad29151c14e525e5faf157e6e"
+    }
+  },
+  "experiment_tests": {
+    "command": "python3 -B -m unittest discover -s experiments/speed-limit-grid-resolution -p 'test_*.py' -v",
+    "passed": 23,
+    "failed": 0,
+    "skipped": 0,
+    "skip_details": [],
+    "private_data_required": false,
+    "sha256": "e78fd4d02dc7316eb70333ddbeba39bff216366acce264292e4379ae43ba8812"
+  },
+  "related_existing_tests_retained": {
+    "command": "python -m pytest tests/test_runup_metrics.py tests/test_release_monitoring.py tests/test_readers_and_validation.py -o addopts=-q -p no:cacheprovider",
+    "environment": "Existing pinned Docker image, public-only test mode",
+    "passed": 98,
+    "failed": 0,
+    "skipped": 1,
+    "skip_details": [
+      {
+        "name": "tests/test_release_monitoring.py::test_real_prepared_monitor_geometry_is_expanded_and_static",
+        "reason": "Requires separately supplied reference data; see docs/DATA.md."
+      }
+    ],
+    "note": "Earlier related-test result retained; these tests and the existing implementation are unchanged. The entire suite was not repeated for publication preparation."
+  },
+  "production_acceptance": {
+    "passed_cases": 6,
+    "failed_cases": 0,
+    "unattempted_cases": 0,
+    "excluded_archive_cases": [
+      "archived_cap_200"
+    ],
+    "passed_category_checks": 30,
+    "failed_category_checks": 0,
+    "categories": [
+      "time_steps",
+      "policy",
+      "field",
+      "monitor_deck",
+      "input_consistency"
+    ],
+    "cases": {
+      "original_100": {
+        "status": "accepted",
+        "checks": {
+          "time_steps": "passed",
+          "policy": "passed",
+          "field": "passed",
+          "monitor_deck": "passed",
+          "input_consistency": "passed"
+        },
+        "solver_exit_code": 0,
+        "last_time_s": 420.0,
+        "frames_read": 49,
+        "maximum_printed_cfl": 0.339
+      },
+      "original_200": {
+        "status": "accepted",
+        "checks": {
+          "time_steps": "passed",
+          "policy": "passed",
+          "field": "passed",
+          "monitor_deck": "passed",
+          "input_consistency": "passed"
+        },
+        "solver_exit_code": 0,
+        "last_time_s": 420.0,
+        "frames_read": 49,
+        "maximum_printed_cfl": 0.467
+      },
+      "original_050": {
+        "status": "accepted",
+        "checks": {
+          "time_steps": "passed",
+          "policy": "passed",
+          "field": "passed",
+          "monitor_deck": "passed",
+          "input_consistency": "passed"
+        },
+        "solver_exit_code": 0,
+        "last_time_s": 420.0,
+        "frames_read": 49,
+        "maximum_printed_cfl": 0.283
+      },
+      "fine_050": {
+        "status": "accepted",
+        "checks": {
+          "time_steps": "passed",
+          "policy": "passed",
+          "field": "passed",
+          "monitor_deck": "passed",
+          "input_consistency": "passed"
+        },
+        "solver_exit_code": 0,
+        "last_time_s": 420.0,
+        "frames_read": 49,
+        "maximum_printed_cfl": 0.529
+      },
+      "fine_100": {
+        "status": "accepted",
+        "checks": {
+          "time_steps": "passed",
+          "policy": "passed",
+          "field": "passed",
+          "monitor_deck": "passed",
+          "input_consistency": "passed"
+        },
+        "solver_exit_code": 0,
+        "last_time_s": 420.0,
+        "frames_read": 49,
+        "maximum_printed_cfl": 0.618
+      },
+      "fine_200": {
+        "status": "accepted",
+        "checks": {
+          "time_steps": "passed",
+          "policy": "passed",
+          "field": "passed",
+          "monitor_deck": "passed",
+          "input_consistency": "passed"
+        },
+        "solver_exit_code": 0,
+        "last_time_s": 420.0,
+        "frames_read": 49,
+        "maximum_printed_cfl": 0.716
+      }
+    }
+  },
+  "preflight": {
+    "original": "passed",
+    "fine": "passed",
+    "original_archive_files_verified": 451,
+    "seven_original_reference_hashes_verified": true,
+    "policy_or_driver_changed_after_runs": false
+  },
+  "final_evidence_check": {
+    "command": "python3 -B experiments/speed-limit-grid-resolution/launch.py check --private-root /Users/veramaygoldsmith/Downloads/project_for_git/Lituya_Cap_Comparison --session /Users/veramaygoldsmith/Downloads/project_for_git/Lituya_Cap_Comparison/comparison_runs/speed_grid_a205e423",
+    "exit_code": 0,
+    "verified_case_seals": 6,
+    "private_inputs_and_raw_outputs_required": true
+  },
+  "raw_record_collection": {
+    "command": "python3 -B experiments/speed-limit-grid-resolution/launch.py report --private-root /Users/veramaygoldsmith/Downloads/project_for_git/Lituya_Cap_Comparison --session /Users/veramaygoldsmith/Downloads/project_for_git/Lituya_Cap_Comparison/comparison_runs/speed_grid_a205e423",
+    "exit_code": 0,
+    "private_inputs_and_raw_outputs_required": true
+  },
+  "public_regeneration": {
+    "command": "python3 -B experiments/speed-limit-grid-resolution/report.py --from-records",
+    "actual_container_command": "python -B experiments/speed-limit-grid-resolution/report.py --from-records --output /report",
+    "environment": "sha256:e34a83602d2ed2abaad337aa2a4b97a5f6e84b8f801de5fb6cc40f714d7027d4",
+    "private_mounts": false,
+    "network": "none",
+    "exit_code": 0,
+    "temporary_output": "/private/tmp/lituya-speed-grid-report-repro-zn8wgkwb",
+    "byte_identical_files": [
+      "results.json",
+      "results.csv",
+      "comparisons.csv",
+      "case_status.csv",
+      "report.md",
+      "report.html",
+      "runup_vs_speed_limit.png",
+      "provenance.json"
+    ]
+  },
+  "html_structural_checks": {
+    "status": "passed",
+    "tables": 11,
+    "embedded_figures": 1,
+    "local_links_resolve": true,
+    "external_render_dependencies": false,
+    "table_values_match_csv_and_markdown": true
+  },
+  "figure_visual_review": {
+    "status": "completed",
+    "method": "view_image of generated PNG",
+    "result": "Labels, units, legend and footer readable; no visible overlap or clipping."
+  },
+  "html_visual_review": {
+    "status": "pending",
+    "reason": "Local-file browser inspection was blocked by browser policy; structural and data checks are not a visual review."
+  },
+  "print_layout_visual_review": {
+    "status": "pending"
+  },
+  "scientific_human_review": {
+    "status": "pending"
+  },
+  "new_test_files": [
+    "experiments/speed-limit-grid-resolution/test_experiment.py"
+  ],
+  "new_acceptance_code": [
+    "experiments/speed-limit-grid-resolution/experiment.py"
+  ],
+  "measurement_tests_preserved_in_checkpoint": true,
+  "measurement_csv_line_endings": "Git normalized CRLF to LF in the checkpoint. All three CSV numeric contents were compared and are identical; older provenance output hashes describe pre-normalization generation bytes."
+}

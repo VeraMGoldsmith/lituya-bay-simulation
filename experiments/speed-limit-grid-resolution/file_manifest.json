@@ -1,0 +1,150 @@
+{
+  "checkpoint": "a205e42312762e45ef99df4b1ae19fdd83ce4193",
+  "branch": "experiment/speed-limit-grid-resolution",
+  "worktree": "/Users/veramaygoldsmith/Downloads/project_for_git/Lituya_Cap_Comparison/release/github/lituya-speed-grid",
+  "new_files_count": 16,
+  "new_public_files": [
+    {
+      "path": "experiments/speed-limit-grid-resolution/README.md",
+      "sha256": "c4e614941368f5b0fc1fc7fd2ae5ee52d37d50700a9589ca0305dbb3c39dd5da",
+      "git_status": "A "
+    },
+    {
+      "path": "experiments/speed-limit-grid-resolution/experiment.py",
+      "sha256": "3b2de02e62be9b7eca50efe13589cfc7167307cde6d17ea6533507c8324ef3fd",
+      "git_status": "A "
+    },
+    {
+      "path": "experiments/speed-limit-grid-resolution/launch.py",
+      "sha256": "1ec390f3f05861c5eac1c2a39d320f48d5992c988ee84b231515ef8967401fb9",
+      "git_status": "A "
+    },
+    {
+      "path": "experiments/speed-limit-grid-resolution/protocol.json",
+      "sha256": "b7ef081878513b1122e9cf2bf2d0fe1e8f3f108dfbaa48d54c9e524aea8e9096",
+      "git_status": "A "
+    },
+    {
+      "path": "experiments/speed-limit-grid-resolution/report.py",
+      "sha256": "29cd026e66ac51ec176322c2237a171b9408d4166720f5779809f0266ad0b749",
+      "git_status": "A "
+    },
+    {
+      "path": "experiments/speed-limit-grid-resolution/test_experiment.py",
+      "sha256": "e78fd4d02dc7316eb70333ddbeba39bff216366acce264292e4379ae43ba8812",
+      "git_status": "A "
+    },
+    {
+      "path": "experiments/speed-limit-grid-resolution/results.json",
+      "sha256": "647671407ab5bfdba68ebcee4ed3b7de8f07ce77a35656a058e8ad1928550314",
+      "git_status": "A "
+    },
+    {
+      "path": "experiments/speed-limit-grid-resolution/results.csv",
+      "sha256": "c15f868004124e086da063865fabd437acaa170135f8f06468a8d4527b29df70",
+      "git_status": "A "
+    },
+    {
+      "path": "experiments/speed-limit-grid-resolution/comparisons.csv",
+      "sha256": "37425b0b867b0018efb31644199abd333e4e1514be593c3b160f92112d12fa07",
+      "git_status": "A "
+    },
+    {
+      "path": "experiments/speed-limit-grid-resolution/case_status.csv",
+      "sha256": "c10f711010a084c1bee1db61a800f3df2c4be7ec8046857dd6b8cbcbe8ebe267",
+      "git_status": "A "
+    },
+    {
+      "path": "experiments/speed-limit-grid-resolution/report.md",
+      "sha256": "1e3c7464fee729d298da8e8b8dd74756c6605a1ebbc7e7f18329312536543570",
+      "git_status": "A "
+    },
+    {
+      "path": "experiments/speed-limit-grid-resolution/report.html",
+      "sha256": "eea40cc86d408b7bebb6ae60172cd7c4ba2e9ec213c237ef89161dcd3aefbe93",
+      "git_status": "A "
+    },
+    {
+      "path": "experiments/speed-limit-grid-resolution/runup_vs_speed_limit.png",
+      "sha256": "03f00a247346da47169a05f1e10a31c3843123662677d1e648b9bb4f96708eff",
+      "git_status": "A "
+    },
+    {
+      "path": "experiments/speed-limit-grid-resolution/provenance.json",
+      "sha256": "98693e9bc6fb60e160f8f095ca16fd41436a460b52846b53d87551722d3ebd64",
+      "git_status": "A "
+    },
+    {
+      "path": "experiments/speed-limit-grid-resolution/verification.json",
+      "sha256": "94b595483fa2aeef3c8dd8ec6b4a7e540291eaf9096103f7755bcc2466f39c38",
+      "git_status": "A "
+    },
+    {
+      "path": "experiments/speed-limit-grid-resolution/file_manifest.json",
+      "sha256": null,
+      "git_status": "A "
+    }
+  ],
+  "self_hash_note": "The manifest does not hash itself, to avoid a self-reference.",
+  "checkpointed_measurement_files": [
+    {
+      "path": "analysis/measurement_robustness/README.md",
+      "sha256": "4bbc3faf5394bdab897f3c5f3723b44c54eaca35e5a4d117b58cbaa367150fb3",
+      "git_status": "tracked and unchanged"
+    },
+    {
+      "path": "analysis/measurement_robustness/analyze.py",
+      "sha256": "715fefb6480384cd6fe171dcb1cd9b05c0438d163831968e9aa3345d533910e6",
+      "git_status": "tracked and unchanged"
+    },
+    {
+      "path": "analysis/measurement_robustness/comparison.csv",
+      "sha256": "e28d9f42199db31deaf6db99ca2c1e1d946f69c57ceaa35acc077940c9375b4d",
+      "git_status": "tracked and unchanged"
+    },
+    {
+      "path": "analysis/measurement_robustness/monitoring_choice.csv",
+      "sha256": "fc3b6251058e8f9e2234dc37390761b3e60e20a35d43f64ed5ab57cb858d59d1",
+      "git_status": "tracked and unchanged"
+    },
+    {
+      "path": "analysis/measurement_robustness/provenance.json",
+      "sha256": "7a02f7b2e01e5f6d7d52799f2148d82d730e022afdbd5767d89708d2289da79e",
+      "git_status": "tracked and unchanged"
+    },
+    {
+      "path": "analysis/measurement_robustness/report.html",
+      "sha256": "8272dd7df7cd5316bad119eeb63444c2f104436f894476e58621713e3ee6cbe1",
+      "git_status": "tracked and unchanged"
+    },
+    {
+      "path": "analysis/measurement_robustness/report.md",
+      "sha256": "d94e0fdbead15988845cd9ef2dba2894441cf26fb6b20e5a4ffe9fd02de89ac2",
+      "git_status": "tracked and unchanged"
+    },
+    {
+      "path": "analysis/measurement_robustness/test_analysis.py",
+      "sha256": "c257635792e0085d61cc85a4f08e1de18929eacad29151c14e525e5faf157e6e",
+      "git_status": "tracked and unchanged"
+    },
+    {
+      "path": "analysis/measurement_robustness/threshold_bound.csv",
+      "sha256": "17861425079cf7584afb26779513bd423e985d853d7465a0740585b53a8b2888",
+      "git_status": "tracked and unchanged"
+    }
+  ],
+  "tests_intended_for_publication": [
+    "analysis/measurement_robustness/test_analysis.py",
+    "experiments/speed-limit-grid-resolution/test_experiment.py"
+  ],
+  "acceptance_code_intended_for_publication": [
+    "experiments/speed-limit-grid-resolution/experiment.py"
+  ],
+  "existing_tracked_tests_preserved": 36,
+  "missing_intended_files": [],
+  "ignored_intended_files": [],
+  "unrelated_work_included": false,
+  "publication_status": "Local review only; no experiment commit, push or merge.",
+  "untracked_intended_files": [],
+  "git_status_summary": "16 added files staged for review; no experiment commit. All intended tests are tracked in the checkpoint or present in the index."
+}

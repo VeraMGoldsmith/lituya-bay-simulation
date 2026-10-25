@@ -1,0 +1,8 @@
+case,grid,speed_limit_m_s,status,errors
+original_050,original,50,accepted,
+original_100,original,100,accepted,
+original_200,original,200,accepted,
+fine_050,fine,50,accepted,
+fine_100,fine,100,accepted,
+fine_200,fine,200,accepted,
+archived_cap_200,original (archived policy),200,excluded,Failed CFL/time-step checks despite reaching 420 s.

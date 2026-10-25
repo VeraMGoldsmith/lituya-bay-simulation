@@ -1,0 +1,1941 @@
+{
+  "schema": 1,
+  "protocol": {
+    "schema": 1,
+    "checkpoint": "a205e42312762e45ef99df4b1ae19fdd83ce4193",
+    "archived_session": "comparison_runs/20261019T041033Z_ff1b17c2",
+    "runtime_image": "sha256:e34a83602d2ed2abaad337aa2a4b97a5f6e84b8f801de5fb6cc40f714d7027d4",
+    "solver_sha256": "2f4762f1c0a630a9fb0e11052356270a784901e239ea9968a3dba92ec3de5451",
+    "grids": {
+      "original": [
+        227,
+        453
+      ],
+      "fine": [
+        454,
+        906
+      ]
+    },
+    "speed_limits_m_s": [
+      50,
+      100,
+      200
+    ],
+    "stage1": [
+      "original_100",
+      "original_200"
+    ],
+    "stage2": [
+      "original_050",
+      "fine_050",
+      "fine_100",
+      "fine_200"
+    ],
+    "time_policy": {
+      "dt_initial_s": 0.02,
+      "dt_max_s": 0.1,
+      "cfl_desired": 0.5,
+      "cfl_max": 1.0,
+      "source_dt_max_s": 0.1,
+      "steps_max": 200000
+    },
+    "policy_rationale": "Declared before new integrations: reduce desired CFL from 0.75 to 0.5 and global dt_max from 2 s to 0.1 s. Preserve the 0.1 s moving-source cap and 0.02 s initial step. Adaptive actual steps may differ. No tuning after outcomes.",
+    "acceptance": "Unchanged simulation.time_steps.audit and simulation.validate plus original input/monitor/deck consistency checks; additionally enforce the declared global time-step ceiling. Failed cases excluded. Stop expansion on any failure.",
+    "refinement": "Exactly double nx and ny. Keep original nodal terrain, artificial masks, source grid, source history and domain. Reintegrate nodal terrain and final displacement onto new cells using existing cell_average; do not resample or retune physical source.",
+    "historically_validated": false,
+    "convergence_established": false
+  },
+  "identity": {
+    "created_utc": "2026-10-25T01:52:04.016913+00:00",
+    "checkpoint": "a205e42312762e45ef99df4b1ae19fdd83ce4193",
+    "protocol_sha256": "b7ef081878513b1122e9cf2bf2d0fe1e8f3f108dfbaa48d54c9e524aea8e9096",
+    "driver_sha256": "3b2de02e62be9b7eca50efe13589cfc7167307cde6d17ea6533507c8324ef3fd",
+    "code_sha256": {
+      "geoclaw/setrun.py": "61cbeb8b7cf4d0e5ef4615d50a897ed1da90807c5ff56fcc7c85485fe9a3cf18",
+      "simulation/prepare.py": "a908852cb2e45d3093f04df8ebf7f5338474b8c69af24be0906557d517a1169e",
+      "simulation/numerics.py": "02b5ee361423d0b4f41f02f003da6d63d545a23cd2e9ad2134a258e5f00e1964",
+      "simulation/monitoring.py": "0d8d2e445f03bc08dc35500419b429fe8277523ac4d5d13e4427bc56a3b16cf0",
+      "simulation/runup_metrics.py": "dd6636543f630e0e39771814cb6766ac2751b932ed885413710135d0c3e973d3",
+      "simulation/read_output.py": "83682c1312b26ab38eda360de064086c68ae711eab581311289502a82a79cb21",
+      "simulation/validate.py": "d80c41051d4f4dc36cdc292a1e1cb7a9be836c4b9edbf6a4eb27a90dfdecf594",
+      "simulation/bed_check.py": "fb2fe47b7472f11da4bf3fcf7d2a3c479089812733c7a6292fea72942d46e365",
+      "simulation/time_steps.py": "08b22e600830713618671b46ca4606d6ce73459fc0dc660f9d5c00847763c037",
+      "simulation/cap_comparison.py": "3fcf8b52f22de583465d0833c48e3ca24e466039e506642cc8a9c284f21a879c",
+      "simulation/runtime.py": "5502dbc52266d4cb11da046d11865aff77695d3d6a96213f7dede41c959d4d85",
+      "simulation/common.py": "0964d7d99363b376b8f63e92c861e4d055d375f18a1293531d49c72665cd79cb"
+    },
+    "image_manifest": {
+      "built_utc": "2026-10-18T22:26:40.573285+00:00",
+      "clawpack_tag": "v5.14.0",
+      "clawpack_commit": "5ce53b4814a3e03536fa17e8ae05e65960194c56",
+      "submodules": "98ba14a90986943846a1c019f0cbad82765a60f1 amrclaw (98ba14a)\n b89c96df32bbf3e00738baea54a7dd78a6c00318 classic (b89c96d)\n 807d01379a1d4fb47f3e4f355dd74b85afd6a4bd clawutil (807d013)\n 11479f675dd8bb19066a2430c28206999cebf299 geoclaw (11479f6)\n 885407160cd85737289ef0685e6175c86de03bd1 pyclaw (8854071)\n 789c2b0d2d91694f715dcffed8ce0990871c465b riemann (789c2b0)\n 89aaa1ac760ae15759ca6d14b01136ee8bbaadf5 visclaw (89aaa1a)",
+      "makefile_sha256": "e96d4a9c38b8cde5637cf021efcec3b609550eeecc390a106517b8fbb7d09eac",
+      "solver_sha256": "2f4762f1c0a630a9fb0e11052356270a784901e239ea9968a3dba92ec3de5451",
+      "synthetic_solver_smoke_test": {
+        "status": "passed",
+        "fixture": "synthetic flat-water/moving-bed software test, NOT Lituya",
+        "cases": [
+          {
+            "case": "still",
+            "max_eta_m": 0.0,
+            "solver_wall_seconds_measured": 0.004888291000000322
+          },
+          {
+            "case": "slide",
+            "max_eta_m": 0.07150324712154799,
+            "solver_wall_seconds_measured": 0.0084474999999955
+          }
+        ]
+      },
+      "python": "3.12.15 (main, Oct  6 2026, 02:08:14) [GCC 12.2.0]",
+      "platform": "Linux-7.0.14-linuxkit-aarch64-with-glibc2.36",
+      "machine": "aarch64",
+      "compiler": "GNU Fortran (Debian 12.2.0-14+deb12u1) 12.2.0",
+      "packages": [
+        "Pygments==2.21.0",
+        "affine==3.0.1",
+        "attrs==26.1.0",
+        "certifi==2026.7.22",
+        "click==8.5.0",
+        "cligj==0.7.2",
+        "contourpy==1.4.0",
+        "coverage==7.13.3",
+        "cycler==0.12.1",
+        "fonttools==4.66.1",
+        "iniconfig==2.3.1",
+        "kiwisolver==1.5.1",
+        "llvmlite==0.47.0",
+        "matplotlib==3.10.8",
+        "numba==0.65.1",
+        "numpy==2.3.5",
+        "packaging==26.3",
+        "pillow==12.3.0",
+        "pip==25.0.1",
+        "pluggy==1.6.0",
+        "pyparsing==3.3.3",
+        "pytest-cov==7.0.0",
+        "pytest==9.0.2",
+        "python-dateutil==2.9.0.post0",
+        "rasterio==1.5.0",
+        "scipy==1.17.0",
+        "six==1.17.0"
+      ],
+      "limitation": "A synthetic executable test is not a Lituya Bay run or historical validation."
+    },
+    "runtime_image": "sha256:e34a83602d2ed2abaad337aa2a4b97a5f6e84b8f801de5fb6cc40f714d7027d4",
+    "required_inputs_sha256": {
+      "data/reference/component_roles.json": "cea80898cfcb8e1d259bb2955d6ae5a0079c6972843dbd4ca9c5925b85f00ee5",
+      "data/reference/mesh_sampling.json": "e824a46cd41821a07cec14c34d5824d4e5dfce602c7cec64a8edc084733ed3ca",
+      "data/reference/mesh_surfaces_15m.npz": "0c082bb8331262cb6424296c994e5ac0490a8f1d1d072e67936f80763c081070",
+      "data/reference/original_model_code.txt": "d442b27a9f678e397fb00974d8bf8ec8e5f0b1aa7ed96e290708bc63537a4893",
+      "data/reference/original_probes.json": "339a412f4d45c569f06cfee0cad64db25c626806b8f82d5a1056ccaf1c6ec399",
+      "data/reference/rock_mesh_properties.json": "12478a17074be07e683d70174fa233d5cf2f1b6f381d074da63631a7a8cfc0ad",
+      "data/reference/verified_settings.json": "6fea4c59da95efa472048a70b168735bd52e07704d60ef6f1f4969a093580bca"
+    },
+    "archived_prepared_sha256": {
+      "checks.json": "1863a8a3ec0027b10dd27feb7e0c3722ebed28bb4961b3d7a41c2d80a0d6c09c",
+      "config.json": "a357e1654d6662655b2f89f8e7c5bb11de2b12399d171c913fb4102aaca49d38",
+      "setup.json": "0182e8aa273cb4d1fafb19bce2026e3251225b38adbbabfca487e0ec9ad96d90",
+      "slide.dtt3": "fda47894cf2cae1d336af5b54e6a3fb4e254cb96e1c763933325fe17315f3d19",
+      "source_arrays.npz": "bd92d4c5e39bc8f6b129dae512fd72089648d20f2304f75815f537387b9e7800",
+      "source_history.csv": "c04c5723cb6457efb5c4b3c0a286553d81b7bc9f533d3bdc05209c99a7a34c6b",
+      "source_placement.json": "7761c9e87d936fb1b23fd274120432795958e58be2cc0a16cc927aba5b71fdb0",
+      "terrain.tif": "ecc7fb903ae1f100942b1ebf6344a52205ce9ffb248635b3077dc9b9dac626ec",
+      "terrain.tt3": "87421359138db59e4ff22c1d6c5f0e28d381221e16f03addea681cb28ef646f8",
+      "terrain_arrays.npz": "7df44e4a3c35ff05a92e945cd8e612a7d3b228cac25816aa5e49643a6eeba70c"
+    },
+    "archive_files_verified": 451
+  },
+  "preflights": {
+    "original": {
+      "status": "passed",
+      "grid": "original",
+      "completed_utc": "2026-10-25T01:52:04.502912+00:00",
+      "nx": 227,
+      "ny": 453,
+      "dx_m": 30.0,
+      "dy_m": 29.96688741721846,
+      "domain_xyxy_m": [
+        -1010.0,
+        -8775.0,
+        5800.0,
+        4800.0
+      ],
+      "source_bounds_xyxy_m": [
+        1120.0,
+        2370.0,
+        2200.0,
+        4725.0
+      ],
+      "unchanged_physical_files_sha256": {
+        "terrain.tt3": "87421359138db59e4ff22c1d6c5f0e28d381221e16f03addea681cb28ef646f8",
+        "slide.dtt3": "fda47894cf2cae1d336af5b54e6a3fb4e254cb96e1c763933325fe17315f3d19",
+        "source_arrays.npz": "bd92d4c5e39bc8f6b129dae512fd72089648d20f2304f75815f537387b9e7800",
+        "source_history.csv": "c04c5723cb6457efb5c4b3c0a286553d81b7bc9f533d3bdc05209c99a7a34c6b"
+      },
+      "physical_nodal_geometry_unchanged": true,
+      "source_history_unchanged": true,
+      "coarse_averages_preserved": true,
+      "note": "Source/terrain nodal spacing remains 15 m. Four-node source padding remains 60 m. Solver cells alone change; boundary-cell masks and sampled gauge beds can differ.",
+      "gauges": [
+        {
+          "id": 1,
+          "label": "R524",
+          "x_m": 1422.0,
+          "y_m": 1512.0,
+          "initial_cell_bed_m": 516.0259111448609,
+          "required_initially_wet": false,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        },
+        {
+          "id": 30,
+          "label": "P1",
+          "x_m": 1550.0,
+          "y_m": 3450.0,
+          "initial_cell_bed_m": -22.230013382598038,
+          "required_initially_wet": false,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        },
+        {
+          "id": 31,
+          "label": "P2",
+          "x_m": 1550.0,
+          "y_m": 2810.0,
+          "initial_cell_bed_m": -126.15217975431985,
+          "required_initially_wet": true,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        },
+        {
+          "id": 32,
+          "label": "P3",
+          "x_m": 1550.0,
+          "y_m": 2180.0,
+          "initial_cell_bed_m": 1.7848118573006944,
+          "required_initially_wet": false,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        },
+        {
+          "id": 33,
+          "label": "P4",
+          "x_m": 3101.0,
+          "y_m": 2945.0,
+          "initial_cell_bed_m": -144.36351526737292,
+          "required_initially_wet": true,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        },
+        {
+          "id": 34,
+          "label": "P5",
+          "x_m": 2795.0,
+          "y_m": 464.0,
+          "initial_cell_bed_m": -97.74525169155316,
+          "required_initially_wet": true,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        },
+        {
+          "id": 35,
+          "label": "P6",
+          "x_m": 2488.0,
+          "y_m": -2017.0,
+          "initial_cell_bed_m": -46.88356653546399,
+          "required_initially_wet": true,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        },
+        {
+          "id": 36,
+          "label": "P7N",
+          "x_m": 1373.0,
+          "y_m": -2887.0,
+          "initial_cell_bed_m": -37.787961364088595,
+          "required_initially_wet": true,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        },
+        {
+          "id": 37,
+          "label": "P7S",
+          "x_m": 3854.0,
+          "y_m": -3194.0,
+          "initial_cell_bed_m": -179.56462177244185,
+          "required_initially_wet": true,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        },
+        {
+          "id": 38,
+          "label": "P8",
+          "x_m": 2181.0,
+          "y_m": -4498.0,
+          "initial_cell_bed_m": -126.42437716576539,
+          "required_initially_wet": true,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        },
+        {
+          "id": 39,
+          "label": "P9",
+          "x_m": 1875.0,
+          "y_m": -6979.0,
+          "initial_cell_bed_m": -71.58737162915085,
+          "required_initially_wet": true,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        }
+      ],
+      "monitors": {
+        "legacy": {
+          "points": 2491,
+          "eligible_natural_land_cells": 1765,
+          "requested_bounds_xyxy_m": [
+            900.0,
+            900.0,
+            2500.0,
+            2300.0
+          ],
+          "sampled_bounds_xyxy_m": [
+            925.0,
+            919.2880794701996,
+            2485.0,
+            2297.7649006622523
+          ]
+        },
+        "expanded": {
+          "points": 10318,
+          "eligible_natural_land_cells": 2615,
+          "requested_bounds_xyxy_m": [
+            -1000.0,
+            0.0,
+            3000.0,
+            2300.0
+          ],
+          "sampled_bounds_xyxy_m": [
+            -995.0,
+            20.28145695364219,
+            2995.0,
+            2297.7649006622523
+          ]
+        }
+      },
+      "artificial_cells": 45018,
+      "prepared_files_sha256": {
+        "source_placement.json": "7761c9e87d936fb1b23fd274120432795958e58be2cc0a16cc927aba5b71fdb0",
+        "terrain_arrays.npz": "7df44e4a3c35ff05a92e945cd8e612a7d3b228cac25816aa5e49643a6eeba70c",
+        "setup.json": "0182e8aa273cb4d1fafb19bce2026e3251225b38adbbabfca487e0ec9ad96d90",
+        "config.json": "a357e1654d6662655b2f89f8e7c5bb11de2b12399d171c913fb4102aaca49d38",
+        "terrain.tt3": "87421359138db59e4ff22c1d6c5f0e28d381221e16f03addea681cb28ef646f8",
+        "terrain.tif": "ecc7fb903ae1f100942b1ebf6344a52205ce9ffb248635b3077dc9b9dac626ec",
+        "source_arrays.npz": "bd92d4c5e39bc8f6b129dae512fd72089648d20f2304f75815f537387b9e7800",
+        "checks.json": "1863a8a3ec0027b10dd27feb7e0c3722ebed28bb4961b3d7a41c2d80a0d6c09c",
+        "slide.dtt3": "fda47894cf2cae1d336af5b54e6a3fb4e254cb96e1c763933325fe17315f3d19",
+        "source_history.csv": "c04c5723cb6457efb5c4b3c0a286553d81b7bc9f533d3bdc05209c99a7a34c6b"
+      },
+      "generated_cases_sha256": {
+        "original_050": {
+          "pyclaw.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "multilayer.data": "c17c0c13cb7909e989417ff379e806f4d8cee6558f2b3d2ba3223190d50bb988",
+          "config.json": "7a738e7181f2e4c7398cab7e85345e470d841218f026e5b4e678ee69d119eedd",
+          "friction.data": "66ec61be2ae051d420b73ea499ca92ecb5dc8a904768099661ff350d46aa3cdf",
+          "surge.data": "1099ff822b0751ca97192185a1d5f5d6d5b03930e369541966d4d29c9f84d883",
+          "fgout_grids.data": "534922e09aebd55119087c90688f4a852c4478828a975a26c2ddd8b8e42bccb1",
+          "adjoint.data": "6681e1d2992286d65c128702f421dcfd7c7a3b2864e6a27314a46f001e2f98f1",
+          "geoclaw.data": "eca33be1e0b4fe81e781a148803a4b7bba2b0a86fa275e42a1ccc1b6a6492e30",
+          "flagregions.data": "520be24022e5bc2fef06c7d7081d36bf729ceb79cb7e0378dcbf819cebdeca2b",
+          "amr.data": "c74d70ada6f48ecebbe01ab17090b1693e1ea1aa0ad580c4bb35c5f5ded7aa4d",
+          "refinement.data": "ce5b2d91db827d5d76397aaed2557b615fd27b154dc98ef3c367f873b0d041cc",
+          "dtopo.data": "03f8a026a9daf9213a1b6b6a4e71e197ae8557748b029c06f09abb1185559ad2",
+          "gauges.data": "2c9c7ed133e0ae46a57112530980c95df981519b6e391703b66e9bf2dabd024f",
+          "fgmax_grids.data": "dd5ffff06e66a26558b5bf6b31f32b3cba155a9b6a3ab63b6564c37d8263dccb",
+          "claw.data": "c9f8a9dd08951b5ae6ed78b2aee20b0d4650d3a9c7338cd369fb51276306f666",
+          "regions.data": "4182f5f930b63f2dad77869c58950ac7faa05b8e03cbac09a29b05c4e5b83a5b",
+          "topo.data": "770fe0e79c4f6a07e73417910a69cafeb88439acefa8358b0b3d01c873591c1c",
+          "qinit.data": "2acc76591aeb36923e82b42fadc02aecc526704365c76c2baa74b097a842c339"
+        },
+        "original_100": {
+          "multilayer.data": "c17c0c13cb7909e989417ff379e806f4d8cee6558f2b3d2ba3223190d50bb988",
+          "config.json": "2cb628ee6c1955648a615118678acc77974aed25cf39ca2a0e8cd3c8ce72150e",
+          "friction.data": "66ec61be2ae051d420b73ea499ca92ecb5dc8a904768099661ff350d46aa3cdf",
+          "surge.data": "1099ff822b0751ca97192185a1d5f5d6d5b03930e369541966d4d29c9f84d883",
+          "fgout_grids.data": "534922e09aebd55119087c90688f4a852c4478828a975a26c2ddd8b8e42bccb1",
+          "adjoint.data": "6681e1d2992286d65c128702f421dcfd7c7a3b2864e6a27314a46f001e2f98f1",
+          "geoclaw.data": "30b049fb24d7c986c040176dd06b582ca7719064b9187dc0630d944eae19fb79",
+          "flagregions.data": "520be24022e5bc2fef06c7d7081d36bf729ceb79cb7e0378dcbf819cebdeca2b",
+          "amr.data": "c74d70ada6f48ecebbe01ab17090b1693e1ea1aa0ad580c4bb35c5f5ded7aa4d",
+          "refinement.data": "ce5b2d91db827d5d76397aaed2557b615fd27b154dc98ef3c367f873b0d041cc",
+          "dtopo.data": "03f8a026a9daf9213a1b6b6a4e71e197ae8557748b029c06f09abb1185559ad2",
+          "gauges.data": "2c9c7ed133e0ae46a57112530980c95df981519b6e391703b66e9bf2dabd024f",
+          "fgmax_grids.data": "dd5ffff06e66a26558b5bf6b31f32b3cba155a9b6a3ab63b6564c37d8263dccb",
+          "claw.data": "c9f8a9dd08951b5ae6ed78b2aee20b0d4650d3a9c7338cd369fb51276306f666",
+          "regions.data": "4182f5f930b63f2dad77869c58950ac7faa05b8e03cbac09a29b05c4e5b83a5b",
+          "topo.data": "770fe0e79c4f6a07e73417910a69cafeb88439acefa8358b0b3d01c873591c1c",
+          "qinit.data": "2acc76591aeb36923e82b42fadc02aecc526704365c76c2baa74b097a842c339"
+        },
+        "original_200": {
+          "multilayer.data": "c17c0c13cb7909e989417ff379e806f4d8cee6558f2b3d2ba3223190d50bb988",
+          "config.json": "891a313bec919b3d8ec3b4e33273af28aa0de0e568cc073a861ed24acad90bea",
+          "friction.data": "66ec61be2ae051d420b73ea499ca92ecb5dc8a904768099661ff350d46aa3cdf",
+          "surge.data": "1099ff822b0751ca97192185a1d5f5d6d5b03930e369541966d4d29c9f84d883",
+          "fgout_grids.data": "534922e09aebd55119087c90688f4a852c4478828a975a26c2ddd8b8e42bccb1",
+          "adjoint.data": "6681e1d2992286d65c128702f421dcfd7c7a3b2864e6a27314a46f001e2f98f1",
+          "geoclaw.data": "55f7ffe4ea5a02592c2733660cffca1a383882db0c4b6315fd10a0cea7fb22cc",
+          "flagregions.data": "520be24022e5bc2fef06c7d7081d36bf729ceb79cb7e0378dcbf819cebdeca2b",
+          "amr.data": "c74d70ada6f48ecebbe01ab17090b1693e1ea1aa0ad580c4bb35c5f5ded7aa4d",
+          "refinement.data": "ce5b2d91db827d5d76397aaed2557b615fd27b154dc98ef3c367f873b0d041cc",
+          "dtopo.data": "03f8a026a9daf9213a1b6b6a4e71e197ae8557748b029c06f09abb1185559ad2",
+          "gauges.data": "2c9c7ed133e0ae46a57112530980c95df981519b6e391703b66e9bf2dabd024f",
+          "fgmax_grids.data": "dd5ffff06e66a26558b5bf6b31f32b3cba155a9b6a3ab63b6564c37d8263dccb",
+          "claw.data": "c9f8a9dd08951b5ae6ed78b2aee20b0d4650d3a9c7338cd369fb51276306f666",
+          "regions.data": "4182f5f930b63f2dad77869c58950ac7faa05b8e03cbac09a29b05c4e5b83a5b",
+          "topo.data": "770fe0e79c4f6a07e73417910a69cafeb88439acefa8358b0b3d01c873591c1c",
+          "qinit.data": "2acc76591aeb36923e82b42fadc02aecc526704365c76c2baa74b097a842c339"
+        }
+      }
+    },
+    "fine": {
+      "status": "passed",
+      "grid": "fine",
+      "completed_utc": "2026-10-25T01:58:03.637300+00:00",
+      "nx": 454,
+      "ny": 906,
+      "dx_m": 15.0,
+      "dy_m": 14.983443708610139,
+      "domain_xyxy_m": [
+        -1010.0,
+        -8775.0,
+        5800.0,
+        4800.0
+      ],
+      "source_bounds_xyxy_m": [
+        1120.0,
+        2370.0,
+        2200.0,
+        4725.0
+      ],
+      "unchanged_physical_files_sha256": {
+        "terrain.tt3": "87421359138db59e4ff22c1d6c5f0e28d381221e16f03addea681cb28ef646f8",
+        "slide.dtt3": "fda47894cf2cae1d336af5b54e6a3fb4e254cb96e1c763933325fe17315f3d19",
+        "source_arrays.npz": "bd92d4c5e39bc8f6b129dae512fd72089648d20f2304f75815f537387b9e7800",
+        "source_history.csv": "c04c5723cb6457efb5c4b3c0a286553d81b7bc9f533d3bdc05209c99a7a34c6b"
+      },
+      "physical_nodal_geometry_unchanged": true,
+      "source_history_unchanged": true,
+      "coarse_averages_preserved": true,
+      "note": "Source/terrain nodal spacing remains 15 m. Four-node source padding remains 60 m. Solver cells alone change; boundary-cell masks and sampled gauge beds can differ.",
+      "gauges": [
+        {
+          "id": 1,
+          "label": "R524",
+          "x_m": 1422.0,
+          "y_m": 1512.0,
+          "initial_cell_bed_m": 522.2253122410134,
+          "required_initially_wet": false,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        },
+        {
+          "id": 30,
+          "label": "P1",
+          "x_m": 1550.0,
+          "y_m": 3450.0,
+          "initial_cell_bed_m": -18.856350736101135,
+          "required_initially_wet": false,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        },
+        {
+          "id": 31,
+          "label": "P2",
+          "x_m": 1550.0,
+          "y_m": 2810.0,
+          "initial_cell_bed_m": -125.52409387308205,
+          "required_initially_wet": true,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        },
+        {
+          "id": 32,
+          "label": "P3",
+          "x_m": 1550.0,
+          "y_m": 2180.0,
+          "initial_cell_bed_m": 1.833897304755383,
+          "required_initially_wet": false,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        },
+        {
+          "id": 33,
+          "label": "P4",
+          "x_m": 3101.0,
+          "y_m": 2945.0,
+          "initial_cell_bed_m": -144.19356526589593,
+          "required_initially_wet": true,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        },
+        {
+          "id": 34,
+          "label": "P5",
+          "x_m": 2795.0,
+          "y_m": 464.0,
+          "initial_cell_bed_m": -101.97927785787347,
+          "required_initially_wet": true,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        },
+        {
+          "id": 35,
+          "label": "P6",
+          "x_m": 2488.0,
+          "y_m": -2017.0,
+          "initial_cell_bed_m": -49.347637525466226,
+          "required_initially_wet": true,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        },
+        {
+          "id": 36,
+          "label": "P7N",
+          "x_m": 1373.0,
+          "y_m": -2887.0,
+          "initial_cell_bed_m": -37.64255915390345,
+          "required_initially_wet": true,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        },
+        {
+          "id": 37,
+          "label": "P7S",
+          "x_m": 3854.0,
+          "y_m": -3194.0,
+          "initial_cell_bed_m": -180.32854630370775,
+          "required_initially_wet": true,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        },
+        {
+          "id": 38,
+          "label": "P8",
+          "x_m": 2181.0,
+          "y_m": -4498.0,
+          "initial_cell_bed_m": -125.59995917513636,
+          "required_initially_wet": true,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        },
+        {
+          "id": 39,
+          "label": "P9",
+          "x_m": 1875.0,
+          "y_m": -6979.0,
+          "initial_cell_bed_m": -72.85347596971366,
+          "required_initially_wet": true,
+          "source": "original authors XY; water column output, not original 3-D point sampling"
+        }
+      ],
+      "monitors": {
+        "legacy": {
+          "points": 9951,
+          "eligible_natural_land_cells": 7105,
+          "requested_bounds_xyxy_m": [
+            900.0,
+            900.0,
+            2500.0,
+            2300.0
+          ],
+          "sampled_bounds_xyxy_m": [
+            902.5,
+            911.7963576158945,
+            2492.5,
+            2290.2731788079473
+          ]
+        },
+        "expanded": {
+          "points": 40698,
+          "eligible_natural_land_cells": 10493,
+          "requested_bounds_xyxy_m": [
+            -1000.0,
+            0.0,
+            3000.0,
+            2300.0
+          ],
+          "sampled_bounds_xyxy_m": [
+            -987.5,
+            12.789735099337122,
+            2987.5,
+            2290.2731788079473
+          ]
+        }
+      },
+      "artificial_cells": 178583,
+      "prepared_files_sha256": {
+        "source_placement.json": "7761c9e87d936fb1b23fd274120432795958e58be2cc0a16cc927aba5b71fdb0",
+        "terrain_arrays.npz": "51e0107dfc6574e9bcc6f164798ed3899dabe1c0d5a33966327b84cff4dbd084",
+        "setup.json": "9d886f5b1e43766ba78271e06759285491ef12a349c74c7bdc60fa5d45c16085",
+        "config.json": "25569caab4bb6005728dab43fc75974abd8cefad067048e9015698ed811dd1f8",
+        "terrain.tt3": "87421359138db59e4ff22c1d6c5f0e28d381221e16f03addea681cb28ef646f8",
+        "terrain.tif": "ecc7fb903ae1f100942b1ebf6344a52205ce9ffb248635b3077dc9b9dac626ec",
+        "source_arrays.npz": "bd92d4c5e39bc8f6b129dae512fd72089648d20f2304f75815f537387b9e7800",
+        "checks.json": "1863a8a3ec0027b10dd27feb7e0c3722ebed28bb4961b3d7a41c2d80a0d6c09c",
+        "slide.dtt3": "fda47894cf2cae1d336af5b54e6a3fb4e254cb96e1c763933325fe17315f3d19",
+        "source_history.csv": "c04c5723cb6457efb5c4b3c0a286553d81b7bc9f533d3bdc05209c99a7a34c6b"
+      },
+      "generated_cases_sha256": {
+        "fine_050": {
+          "pyclaw.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "multilayer.data": "c17c0c13cb7909e989417ff379e806f4d8cee6558f2b3d2ba3223190d50bb988",
+          "config.json": "c987ccb414038d687a6fee54c1c741b4a641ad712e254c7fda669b8bbdd58d75",
+          "friction.data": "66ec61be2ae051d420b73ea499ca92ecb5dc8a904768099661ff350d46aa3cdf",
+          "surge.data": "1099ff822b0751ca97192185a1d5f5d6d5b03930e369541966d4d29c9f84d883",
+          "fgout_grids.data": "534922e09aebd55119087c90688f4a852c4478828a975a26c2ddd8b8e42bccb1",
+          "adjoint.data": "6681e1d2992286d65c128702f421dcfd7c7a3b2864e6a27314a46f001e2f98f1",
+          "geoclaw.data": "eca33be1e0b4fe81e781a148803a4b7bba2b0a86fa275e42a1ccc1b6a6492e30",
+          "flagregions.data": "520be24022e5bc2fef06c7d7081d36bf729ceb79cb7e0378dcbf819cebdeca2b",
+          "amr.data": "e8d914198757c2f97bf36c2efa6235c9dc3b5a738bb7fa8d0498962ee8faf756",
+          "refinement.data": "ce5b2d91db827d5d76397aaed2557b615fd27b154dc98ef3c367f873b0d041cc",
+          "dtopo.data": "2668e94ef450b241121018ed04ca711f81db44b4787afdfb7ca7632a9f946c34",
+          "gauges.data": "2c9c7ed133e0ae46a57112530980c95df981519b6e391703b66e9bf2dabd024f",
+          "fgmax_grids.data": "48c7f93b349b9ba4f4c36727f75974d7a36af8431f1c2011818dd6fc006a1eeb",
+          "claw.data": "a0332546d143578b73d088ae53ead74c00caf05878b2f2899170400217084f09",
+          "regions.data": "4182f5f930b63f2dad77869c58950ac7faa05b8e03cbac09a29b05c4e5b83a5b",
+          "topo.data": "ab0b19d315c996a389e1c626833e98a07105dfa1f19db028a6d3f6d4df17b83c",
+          "qinit.data": "2acc76591aeb36923e82b42fadc02aecc526704365c76c2baa74b097a842c339"
+        },
+        "fine_100": {
+          "multilayer.data": "c17c0c13cb7909e989417ff379e806f4d8cee6558f2b3d2ba3223190d50bb988",
+          "config.json": "9a2513157f290958b58027f4a9823fc6e5ec88cd9c21e86a3bbbc2cb7253ba6a",
+          "friction.data": "66ec61be2ae051d420b73ea499ca92ecb5dc8a904768099661ff350d46aa3cdf",
+          "surge.data": "1099ff822b0751ca97192185a1d5f5d6d5b03930e369541966d4d29c9f84d883",
+          "fgout_grids.data": "534922e09aebd55119087c90688f4a852c4478828a975a26c2ddd8b8e42bccb1",
+          "adjoint.data": "6681e1d2992286d65c128702f421dcfd7c7a3b2864e6a27314a46f001e2f98f1",
+          "geoclaw.data": "30b049fb24d7c986c040176dd06b582ca7719064b9187dc0630d944eae19fb79",
+          "flagregions.data": "520be24022e5bc2fef06c7d7081d36bf729ceb79cb7e0378dcbf819cebdeca2b",
+          "amr.data": "e8d914198757c2f97bf36c2efa6235c9dc3b5a738bb7fa8d0498962ee8faf756",
+          "refinement.data": "ce5b2d91db827d5d76397aaed2557b615fd27b154dc98ef3c367f873b0d041cc",
+          "dtopo.data": "2668e94ef450b241121018ed04ca711f81db44b4787afdfb7ca7632a9f946c34",
+          "gauges.data": "2c9c7ed133e0ae46a57112530980c95df981519b6e391703b66e9bf2dabd024f",
+          "fgmax_grids.data": "48c7f93b349b9ba4f4c36727f75974d7a36af8431f1c2011818dd6fc006a1eeb",
+          "claw.data": "a0332546d143578b73d088ae53ead74c00caf05878b2f2899170400217084f09",
+          "regions.data": "4182f5f930b63f2dad77869c58950ac7faa05b8e03cbac09a29b05c4e5b83a5b",
+          "topo.data": "ab0b19d315c996a389e1c626833e98a07105dfa1f19db028a6d3f6d4df17b83c",
+          "qinit.data": "2acc76591aeb36923e82b42fadc02aecc526704365c76c2baa74b097a842c339"
+        },
+        "fine_200": {
+          "multilayer.data": "c17c0c13cb7909e989417ff379e806f4d8cee6558f2b3d2ba3223190d50bb988",
+          "config.json": "b98887ac97e049936e4c615bc1d3e70bed69573843c21c078582abba7c7d5038",
+          "friction.data": "66ec61be2ae051d420b73ea499ca92ecb5dc8a904768099661ff350d46aa3cdf",
+          "surge.data": "1099ff822b0751ca97192185a1d5f5d6d5b03930e369541966d4d29c9f84d883",
+          "fgout_grids.data": "534922e09aebd55119087c90688f4a852c4478828a975a26c2ddd8b8e42bccb1",
+          "adjoint.data": "6681e1d2992286d65c128702f421dcfd7c7a3b2864e6a27314a46f001e2f98f1",
+          "geoclaw.data": "55f7ffe4ea5a02592c2733660cffca1a383882db0c4b6315fd10a0cea7fb22cc",
+          "flagregions.data": "520be24022e5bc2fef06c7d7081d36bf729ceb79cb7e0378dcbf819cebdeca2b",
+          "amr.data": "e8d914198757c2f97bf36c2efa6235c9dc3b5a738bb7fa8d0498962ee8faf756",
+          "refinement.data": "ce5b2d91db827d5d76397aaed2557b615fd27b154dc98ef3c367f873b0d041cc",
+          "dtopo.data": "2668e94ef450b241121018ed04ca711f81db44b4787afdfb7ca7632a9f946c34",
+          "gauges.data": "2c9c7ed133e0ae46a57112530980c95df981519b6e391703b66e9bf2dabd024f",
+          "fgmax_grids.data": "48c7f93b349b9ba4f4c36727f75974d7a36af8431f1c2011818dd6fc006a1eeb",
+          "claw.data": "a0332546d143578b73d088ae53ead74c00caf05878b2f2899170400217084f09",
+          "regions.data": "4182f5f930b63f2dad77869c58950ac7faa05b8e03cbac09a29b05c4e5b83a5b",
+          "topo.data": "ab0b19d315c996a389e1c626833e98a07105dfa1f19db028a6d3f6d4df17b83c",
+          "qinit.data": "2acc76591aeb36923e82b42fadc02aecc526704365c76c2baa74b097a842c339"
+        }
+      }
+    }
+  },
+  "cases": {
+    "original_100": {
+      "case": "original_100",
+      "grid": "original",
+      "cap_m_s": 100,
+      "status": "accepted",
+      "started_utc": "2026-10-25T01:52:31.047255+00:00",
+      "checks": {
+        "time_steps": "passed",
+        "policy": "passed",
+        "field": "passed",
+        "monitor_deck": "passed",
+        "input_consistency": "passed"
+      },
+      "errors": [],
+      "metrics": {
+        "runup_expanded_m": 449.32707,
+        "runup_legacy_m": 448.97099,
+        "wetted_eligible_cells": 1290,
+        "wetted_area_km2": 1.1597185430463577,
+        "max_land_depth_m": 125.37847,
+        "peak_locations": [
+          {
+            "x_m": 895.0,
+            "y_m": 1638.4933775,
+            "maximum_depth_m": 0.68724346,
+            "time_at_maximum_depth_s": 45.8,
+            "on_monitor_boundary": false
+          }
+        ],
+        "boundary_touching": false,
+        "gauges": {
+          "P2": {
+            "peak_time_s": 22.8,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4201
+          },
+          "P3": {
+            "peak_time_s": 48.3,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4201
+          },
+          "P5": {
+            "peak_time_s": 75.7,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4201
+          }
+        },
+        "P2_eta_m": 196.0448,
+        "P3_eta_m": 77.16134,
+        "P5_eta_m": 21.44098
+      },
+      "solver_exit_code": 0,
+      "completed_utc": "2026-10-25T01:54:22.354542+00:00",
+      "wall_seconds": 111.305478343,
+      "limiter": {
+        "status": "parsed",
+        "logged_b4step2_events": 4,
+        "events_at_depth_ge_10_m": 0,
+        "maximum_printed_depth_m": 0.346,
+        "first_time_s": 48.9,
+        "last_time_s": 53.3,
+        "note": "Rounded b4step2 log events only; not all limiting operations or energy loss."
+      },
+      "field_check_summary": {
+        "status": "passed_basic_checks",
+        "frames_read": 49,
+        "last_time_s": 420.0,
+        "initial_bed_max_error_m": 1.5273826647899114e-08,
+        "final_bed_change_max_error_m": 2.8940689844603185e-09,
+        "accepted_small_dry_land_occurrences": 0
+      },
+      "monitor_diagnostics": {
+        "primary_monitor": "expanded",
+        "monitors": {
+          "legacy": {
+            "maximum_wetted_cell_elevation_m": 448.97099,
+            "peak_locations": [
+              {
+                "x_m": 925.0,
+                "y_m": 1578.5596026,
+                "maximum_depth_m": 4.3627305,
+                "time_at_maximum_depth_s": 45.0,
+                "on_monitor_boundary": true
+              }
+            ],
+            "peak_touches_monitor_boundary": true,
+            "artificial_monitor_cells": 72,
+            "wetted_artificial_monitor_cells": 0,
+            "eligible_natural_land_cells": 1765,
+            "observed_points": 2491,
+            "monitor_points": 2491,
+            "all_points_observed": true,
+            "depth_threshold_m": 0.1,
+            "metric_scope": "provided_monitor_only",
+            "historically_validated": false,
+            "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence.",
+            "name": "legacy",
+            "fgno": 1,
+            "requested_bounds_xyxy_m": [
+              900.0,
+              900.0,
+              2500.0,
+              2300.0
+            ],
+            "sampled_bounds_xyxy_m": [
+              925.0,
+              919.2880794701996,
+              2485.0,
+              2297.7649006622523
+            ],
+            "static_source_separation_checked": true
+          },
+          "expanded": {
+            "maximum_wetted_cell_elevation_m": 449.32707,
+            "peak_locations": [
+              {
+                "x_m": 895.0,
+                "y_m": 1638.4933775,
+                "maximum_depth_m": 0.68724346,
+                "time_at_maximum_depth_s": 45.8,
+                "on_monitor_boundary": false
+              }
+            ],
+            "peak_touches_monitor_boundary": false,
+            "artificial_monitor_cells": 5075,
+            "wetted_artificial_monitor_cells": 0,
+            "eligible_natural_land_cells": 2615,
+            "observed_points": 10318,
+            "monitor_points": 10318,
+            "all_points_observed": true,
+            "depth_threshold_m": 0.1,
+            "metric_scope": "provided_monitor_only",
+            "historically_validated": false,
+            "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence.",
+            "name": "expanded",
+            "fgno": 2,
+            "requested_bounds_xyxy_m": [
+              -1000.0,
+              0.0,
+              3000.0,
+              2300.0
+            ],
+            "sampled_bounds_xyxy_m": [
+              -995.0,
+              20.28145695364219,
+              2995.0,
+              2297.7649006622523
+            ],
+            "static_source_separation_checked": true
+          }
+        },
+        "note": "Maxima within declared diagnostic windows, not proven whole-slope or historical maxima. GeoClaw arrival is not an independently validated landward arrival measurement."
+      },
+      "bed_timing_check": {
+        "transition_frames": [
+          {
+            "output_time_s": 30.0,
+            "maximum_raw_final_bed_error_m": 0.006251865838130755,
+            "bounded_phase_fraction": 0.4000000055748121,
+            "bed_reference_time_s": 29.899999998606297,
+            "allowed_step_s": 0.1001,
+            "comparison_residual_m": 2.8940689844603185e-09,
+            "method": "single global phase within one permitted step; final two source samples"
+          }
+        ],
+        "fully_post_source_frames_checked": 33,
+        "spatial_tolerance_m": 0.02,
+        "note": "Transition frames use one bounded global source phase; later frames must match the final bed."
+      },
+      "time_step_check": {
+        "status": "passed",
+        "case": "slide",
+        "steps": 4201,
+        "last_time_s": 420.0,
+        "requested_source_step_cap_s": 0.1,
+        "output_time_step_factor": 1.001,
+        "maxima": {
+          "all_steps_s": 0.1,
+          "steps_starting_before_source_stop_s": 0.1
+        },
+        "errors": [],
+        "logged_speed_resets": 4,
+        "speed_limit_sensitivity_validated": false
+      },
+      "policy_check": {
+        "status": "passed",
+        "steps": 4201,
+        "maximum_printed_dt_s": 0.1,
+        "dt_max_s": 0.1
+      },
+      "trace_statistics": {
+        "maximum_printed_cfl": 0.339,
+        "minimum_printed_dt_s": 0.02,
+        "maximum_printed_dt_s": 0.1
+      }
+    },
+    "original_200": {
+      "case": "original_200",
+      "grid": "original",
+      "cap_m_s": 200,
+      "status": "accepted",
+      "started_utc": "2026-10-25T01:54:41.257381+00:00",
+      "checks": {
+        "time_steps": "passed",
+        "policy": "passed",
+        "field": "passed",
+        "monitor_deck": "passed",
+        "input_consistency": "passed"
+      },
+      "errors": [],
+      "metrics": {
+        "runup_expanded_m": 449.32707,
+        "runup_legacy_m": 448.97099,
+        "wetted_eligible_cells": 1290,
+        "wetted_area_km2": 1.1597185430463577,
+        "max_land_depth_m": 125.37847,
+        "peak_locations": [
+          {
+            "x_m": 895.0,
+            "y_m": 1638.4933775,
+            "maximum_depth_m": 0.68724346,
+            "time_at_maximum_depth_s": 45.8,
+            "on_monitor_boundary": false
+          }
+        ],
+        "boundary_touching": false,
+        "gauges": {
+          "P2": {
+            "peak_time_s": 22.8,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4201
+          },
+          "P3": {
+            "peak_time_s": 48.3,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4201
+          },
+          "P5": {
+            "peak_time_s": 75.7,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4201
+          }
+        },
+        "P2_eta_m": 196.0448,
+        "P3_eta_m": 77.16134,
+        "P5_eta_m": 21.44098
+      },
+      "solver_exit_code": 0,
+      "completed_utc": "2026-10-25T01:56:40.188003+00:00",
+      "wall_seconds": 118.92890868000006,
+      "limiter": {
+        "status": "parsed",
+        "logged_b4step2_events": 0,
+        "events_at_depth_ge_10_m": 0,
+        "maximum_printed_depth_m": null,
+        "first_time_s": null,
+        "last_time_s": null,
+        "note": "Rounded b4step2 log events only; not all limiting operations or energy loss."
+      },
+      "field_check_summary": {
+        "status": "passed_basic_checks",
+        "frames_read": 49,
+        "last_time_s": 420.0,
+        "initial_bed_max_error_m": 1.5273826647899114e-08,
+        "final_bed_change_max_error_m": 2.8940689844603185e-09,
+        "accepted_small_dry_land_occurrences": 0
+      },
+      "monitor_diagnostics": {
+        "primary_monitor": "expanded",
+        "monitors": {
+          "legacy": {
+            "maximum_wetted_cell_elevation_m": 448.97099,
+            "peak_locations": [
+              {
+                "x_m": 925.0,
+                "y_m": 1578.5596026,
+                "maximum_depth_m": 4.3627305,
+                "time_at_maximum_depth_s": 45.0,
+                "on_monitor_boundary": true
+              }
+            ],
+            "peak_touches_monitor_boundary": true,
+            "artificial_monitor_cells": 72,
+            "wetted_artificial_monitor_cells": 0,
+            "eligible_natural_land_cells": 1765,
+            "observed_points": 2491,
+            "monitor_points": 2491,
+            "all_points_observed": true,
+            "depth_threshold_m": 0.1,
+            "metric_scope": "provided_monitor_only",
+            "historically_validated": false,
+            "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence.",
+            "name": "legacy",
+            "fgno": 1,
+            "requested_bounds_xyxy_m": [
+              900.0,
+              900.0,
+              2500.0,
+              2300.0
+            ],
+            "sampled_bounds_xyxy_m": [
+              925.0,
+              919.2880794701996,
+              2485.0,
+              2297.7649006622523
+            ],
+            "static_source_separation_checked": true
+          },
+          "expanded": {
+            "maximum_wetted_cell_elevation_m": 449.32707,
+            "peak_locations": [
+              {
+                "x_m": 895.0,
+                "y_m": 1638.4933775,
+                "maximum_depth_m": 0.68724346,
+                "time_at_maximum_depth_s": 45.8,
+                "on_monitor_boundary": false
+              }
+            ],
+            "peak_touches_monitor_boundary": false,
+            "artificial_monitor_cells": 5075,
+            "wetted_artificial_monitor_cells": 0,
+            "eligible_natural_land_cells": 2615,
+            "observed_points": 10318,
+            "monitor_points": 10318,
+            "all_points_observed": true,
+            "depth_threshold_m": 0.1,
+            "metric_scope": "provided_monitor_only",
+            "historically_validated": false,
+            "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence.",
+            "name": "expanded",
+            "fgno": 2,
+            "requested_bounds_xyxy_m": [
+              -1000.0,
+              0.0,
+              3000.0,
+              2300.0
+            ],
+            "sampled_bounds_xyxy_m": [
+              -995.0,
+              20.28145695364219,
+              2995.0,
+              2297.7649006622523
+            ],
+            "static_source_separation_checked": true
+          }
+        },
+        "note": "Maxima within declared diagnostic windows, not proven whole-slope or historical maxima. GeoClaw arrival is not an independently validated landward arrival measurement."
+      },
+      "bed_timing_check": {
+        "transition_frames": [
+          {
+            "output_time_s": 30.0,
+            "maximum_raw_final_bed_error_m": 0.006251865838130755,
+            "bounded_phase_fraction": 0.4000000055748121,
+            "bed_reference_time_s": 29.899999998606297,
+            "allowed_step_s": 0.1001,
+            "comparison_residual_m": 2.8940689844603185e-09,
+            "method": "single global phase within one permitted step; final two source samples"
+          }
+        ],
+        "fully_post_source_frames_checked": 33,
+        "spatial_tolerance_m": 0.02,
+        "note": "Transition frames use one bounded global source phase; later frames must match the final bed."
+      },
+      "time_step_check": {
+        "status": "passed",
+        "case": "slide",
+        "steps": 4201,
+        "last_time_s": 420.0,
+        "requested_source_step_cap_s": 0.1,
+        "output_time_step_factor": 1.001,
+        "maxima": {
+          "all_steps_s": 0.1,
+          "steps_starting_before_source_stop_s": 0.1
+        },
+        "errors": [],
+        "logged_speed_resets": 0,
+        "speed_limit_sensitivity_validated": false
+      },
+      "policy_check": {
+        "status": "passed",
+        "steps": 4201,
+        "maximum_printed_dt_s": 0.1,
+        "dt_max_s": 0.1
+      },
+      "trace_statistics": {
+        "maximum_printed_cfl": 0.467,
+        "minimum_printed_dt_s": 0.02,
+        "maximum_printed_dt_s": 0.1
+      }
+    },
+    "original_050": {
+      "case": "original_050",
+      "grid": "original",
+      "cap_m_s": 50,
+      "status": "accepted",
+      "started_utc": "2026-10-25T02:14:19.591840+00:00",
+      "checks": {
+        "time_steps": "passed",
+        "policy": "passed",
+        "field": "passed",
+        "monitor_deck": "passed",
+        "input_consistency": "passed"
+      },
+      "errors": [],
+      "metrics": {
+        "runup_expanded_m": 317.07672,
+        "runup_legacy_m": 317.07672,
+        "wetted_eligible_cells": 1151,
+        "wetted_area_km2": 1.0347566225165563,
+        "max_land_depth_m": 119.27397,
+        "peak_locations": [
+          {
+            "x_m": 1705.0,
+            "y_m": 1608.5264901,
+            "maximum_depth_m": 0.60377841,
+            "time_at_maximum_depth_s": 46.0,
+            "on_monitor_boundary": false
+          }
+        ],
+        "boundary_touching": false,
+        "gauges": {
+          "P2": {
+            "peak_time_s": 22.8,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4201
+          },
+          "P3": {
+            "peak_time_s": 48.0,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4201
+          },
+          "P5": {
+            "peak_time_s": 75.9,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4201
+          }
+        },
+        "P2_eta_m": 196.0448,
+        "P3_eta_m": 73.83494,
+        "P5_eta_m": 21.50808
+      },
+      "solver_exit_code": 0,
+      "completed_utc": "2026-10-25T02:16:09.180649+00:00",
+      "wall_seconds": 109.585564675,
+      "limiter": {
+        "status": "parsed",
+        "logged_b4step2_events": 15327,
+        "events_at_depth_ge_10_m": 7963,
+        "maximum_printed_depth_m": 128.0,
+        "first_time_s": 24.8,
+        "last_time_s": 94.7,
+        "note": "Rounded b4step2 log events only; not all limiting operations or energy loss."
+      },
+      "field_check_summary": {
+        "status": "passed_basic_checks",
+        "frames_read": 49,
+        "last_time_s": 420.0,
+        "initial_bed_max_error_m": 1.5273826647899114e-08,
+        "final_bed_change_max_error_m": 2.8940689844603185e-09,
+        "accepted_small_dry_land_occurrences": 0
+      },
+      "monitor_diagnostics": {
+        "primary_monitor": "expanded",
+        "monitors": {
+          "legacy": {
+            "maximum_wetted_cell_elevation_m": 317.07672,
+            "peak_locations": [
+              {
+                "x_m": 1705.0,
+                "y_m": 1608.5264901,
+                "maximum_depth_m": 0.60377841,
+                "time_at_maximum_depth_s": 46.0,
+                "on_monitor_boundary": false
+              }
+            ],
+            "peak_touches_monitor_boundary": false,
+            "artificial_monitor_cells": 72,
+            "wetted_artificial_monitor_cells": 0,
+            "eligible_natural_land_cells": 1765,
+            "observed_points": 2491,
+            "monitor_points": 2491,
+            "all_points_observed": true,
+            "depth_threshold_m": 0.1,
+            "metric_scope": "provided_monitor_only",
+            "historically_validated": false,
+            "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence.",
+            "name": "legacy",
+            "fgno": 1,
+            "requested_bounds_xyxy_m": [
+              900.0,
+              900.0,
+              2500.0,
+              2300.0
+            ],
+            "sampled_bounds_xyxy_m": [
+              925.0,
+              919.2880794701996,
+              2485.0,
+              2297.7649006622523
+            ],
+            "static_source_separation_checked": true
+          },
+          "expanded": {
+            "maximum_wetted_cell_elevation_m": 317.07672,
+            "peak_locations": [
+              {
+                "x_m": 1705.0,
+                "y_m": 1608.5264901,
+                "maximum_depth_m": 0.60377841,
+                "time_at_maximum_depth_s": 46.0,
+                "on_monitor_boundary": false
+              }
+            ],
+            "peak_touches_monitor_boundary": false,
+            "artificial_monitor_cells": 5075,
+            "wetted_artificial_monitor_cells": 0,
+            "eligible_natural_land_cells": 2615,
+            "observed_points": 10318,
+            "monitor_points": 10318,
+            "all_points_observed": true,
+            "depth_threshold_m": 0.1,
+            "metric_scope": "provided_monitor_only",
+            "historically_validated": false,
+            "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence.",
+            "name": "expanded",
+            "fgno": 2,
+            "requested_bounds_xyxy_m": [
+              -1000.0,
+              0.0,
+              3000.0,
+              2300.0
+            ],
+            "sampled_bounds_xyxy_m": [
+              -995.0,
+              20.28145695364219,
+              2995.0,
+              2297.7649006622523
+            ],
+            "static_source_separation_checked": true
+          }
+        },
+        "note": "Maxima within declared diagnostic windows, not proven whole-slope or historical maxima. GeoClaw arrival is not an independently validated landward arrival measurement."
+      },
+      "bed_timing_check": {
+        "transition_frames": [
+          {
+            "output_time_s": 30.0,
+            "maximum_raw_final_bed_error_m": 0.006251865838130755,
+            "bounded_phase_fraction": 0.40000000557493093,
+            "bed_reference_time_s": 29.89999999860627,
+            "allowed_step_s": 0.1001,
+            "comparison_residual_m": 2.8940689844603185e-09,
+            "method": "single global phase within one permitted step; final two source samples"
+          }
+        ],
+        "fully_post_source_frames_checked": 33,
+        "spatial_tolerance_m": 0.02,
+        "note": "Transition frames use one bounded global source phase; later frames must match the final bed."
+      },
+      "time_step_check": {
+        "status": "passed",
+        "case": "slide",
+        "steps": 4201,
+        "last_time_s": 420.0,
+        "requested_source_step_cap_s": 0.1,
+        "output_time_step_factor": 1.001,
+        "maxima": {
+          "all_steps_s": 0.1,
+          "steps_starting_before_source_stop_s": 0.1
+        },
+        "errors": [],
+        "logged_speed_resets": 15327,
+        "speed_limit_sensitivity_validated": false
+      },
+      "policy_check": {
+        "status": "passed",
+        "steps": 4201,
+        "maximum_printed_dt_s": 0.1,
+        "dt_max_s": 0.1
+      },
+      "trace_statistics": {
+        "maximum_printed_cfl": 0.283,
+        "minimum_printed_dt_s": 0.02,
+        "maximum_printed_dt_s": 0.1
+      }
+    },
+    "fine_050": {
+      "case": "fine_050",
+      "grid": "fine",
+      "cap_m_s": 50,
+      "status": "accepted",
+      "started_utc": "2026-10-25T02:23:46.795141+00:00",
+      "checks": {
+        "time_steps": "passed",
+        "policy": "passed",
+        "field": "passed",
+        "monitor_deck": "passed",
+        "input_consistency": "passed"
+      },
+      "errors": [],
+      "metrics": {
+        "runup_expanded_m": 338.24187,
+        "runup_legacy_m": 338.24187,
+        "wetted_eligible_cells": 4796,
+        "wetted_area_km2": 1.077908940397351,
+        "max_land_depth_m": 127.47661,
+        "peak_locations": [
+          {
+            "x_m": 1427.5,
+            "y_m": 1780.8360927,
+            "maximum_depth_m": 4.9250126,
+            "time_at_maximum_depth_s": 40.9,
+            "on_monitor_boundary": false
+          }
+        ],
+        "boundary_touching": false,
+        "gauges": {
+          "P2": {
+            "peak_time_s": 22.55954,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4218
+          },
+          "P3": {
+            "peak_time_s": 46.4,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4218
+          },
+          "P5": {
+            "peak_time_s": 75.2,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4218
+          }
+        },
+        "P2_eta_m": 200.5128,
+        "P3_eta_m": 74.0499,
+        "P5_eta_m": 23.70127
+      },
+      "solver_exit_code": 0,
+      "completed_utc": "2026-10-25T02:35:19.374993+00:00",
+      "wall_seconds": 484.564794304,
+      "limiter": {
+        "status": "parsed",
+        "logged_b4step2_events": 57998,
+        "events_at_depth_ge_10_m": 29919,
+        "maximum_printed_depth_m": 141.0,
+        "first_time_s": 20.77,
+        "last_time_s": 92.0,
+        "note": "Rounded b4step2 log events only; not all limiting operations or energy loss."
+      },
+      "field_check_summary": {
+        "status": "passed_basic_checks",
+        "frames_read": 49,
+        "last_time_s": 420.0,
+        "initial_bed_max_error_m": 2.8350541469990276e-08,
+        "final_bed_change_max_error_m": 4.442838985596609e-09,
+        "accepted_small_dry_land_occurrences": 0
+      },
+      "monitor_diagnostics": {
+        "primary_monitor": "expanded",
+        "monitors": {
+          "legacy": {
+            "maximum_wetted_cell_elevation_m": 338.24187,
+            "peak_locations": [
+              {
+                "x_m": 1427.5,
+                "y_m": 1780.8360927,
+                "maximum_depth_m": 4.9250126,
+                "time_at_maximum_depth_s": 40.9,
+                "on_monitor_boundary": false
+              }
+            ],
+            "peak_touches_monitor_boundary": false,
+            "artificial_monitor_cells": 290,
+            "wetted_artificial_monitor_cells": 0,
+            "eligible_natural_land_cells": 7105,
+            "observed_points": 9951,
+            "monitor_points": 9951,
+            "all_points_observed": true,
+            "depth_threshold_m": 0.1,
+            "metric_scope": "provided_monitor_only",
+            "historically_validated": false,
+            "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence.",
+            "name": "legacy",
+            "fgno": 1,
+            "requested_bounds_xyxy_m": [
+              900.0,
+              900.0,
+              2500.0,
+              2300.0
+            ],
+            "sampled_bounds_xyxy_m": [
+              902.5,
+              911.7963576158945,
+              2492.5,
+              2290.2731788079473
+            ],
+            "static_source_separation_checked": true
+          },
+          "expanded": {
+            "maximum_wetted_cell_elevation_m": 338.24187,
+            "peak_locations": [
+              {
+                "x_m": 1427.5,
+                "y_m": 1780.8360927,
+                "maximum_depth_m": 4.9250126,
+                "time_at_maximum_depth_s": 40.9,
+                "on_monitor_boundary": false
+              }
+            ],
+            "peak_touches_monitor_boundary": false,
+            "artificial_monitor_cells": 19934,
+            "wetted_artificial_monitor_cells": 1,
+            "eligible_natural_land_cells": 10493,
+            "observed_points": 40698,
+            "monitor_points": 40698,
+            "all_points_observed": true,
+            "depth_threshold_m": 0.1,
+            "metric_scope": "provided_monitor_only",
+            "historically_validated": false,
+            "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence.",
+            "name": "expanded",
+            "fgno": 2,
+            "requested_bounds_xyxy_m": [
+              -1000.0,
+              0.0,
+              3000.0,
+              2300.0
+            ],
+            "sampled_bounds_xyxy_m": [
+              -987.5,
+              12.789735099337122,
+              2987.5,
+              2290.2731788079473
+            ],
+            "static_source_separation_checked": true
+          }
+        },
+        "note": "Maxima within declared diagnostic windows, not proven whole-slope or historical maxima. GeoClaw arrival is not an independently validated landward arrival measurement."
+      },
+      "bed_timing_check": {
+        "transition_frames": [
+          {
+            "output_time_s": 30.0,
+            "maximum_raw_final_bed_error_m": 0.006967096468422085,
+            "bounded_phase_fraction": 0.3125333572556649,
+            "bed_reference_time_s": 29.921866660686085,
+            "allowed_step_s": 0.1001,
+            "comparison_residual_m": 4.2797410060302354e-09,
+            "method": "single global phase within one permitted step; final two source samples"
+          }
+        ],
+        "fully_post_source_frames_checked": 33,
+        "spatial_tolerance_m": 0.02,
+        "note": "Transition frames use one bounded global source phase; later frames must match the final bed."
+      },
+      "time_step_check": {
+        "status": "passed",
+        "case": "slide",
+        "steps": 4218,
+        "last_time_s": 420.0,
+        "requested_source_step_cap_s": 0.1,
+        "output_time_step_factor": 1.001,
+        "maxima": {
+          "all_steps_s": 0.1,
+          "steps_starting_before_source_stop_s": 0.1
+        },
+        "errors": [],
+        "logged_speed_resets": 57998,
+        "speed_limit_sensitivity_validated": false
+      },
+      "policy_check": {
+        "status": "passed",
+        "steps": 4218,
+        "maximum_printed_dt_s": 0.1,
+        "dt_max_s": 0.1
+      },
+      "trace_statistics": {
+        "maximum_printed_cfl": 0.529,
+        "minimum_printed_dt_s": 0.001924,
+        "maximum_printed_dt_s": 0.1
+      }
+    },
+    "fine_100": {
+      "case": "fine_100",
+      "grid": "fine",
+      "cap_m_s": 100,
+      "status": "accepted",
+      "started_utc": "2026-10-25T02:35:51.589444+00:00",
+      "checks": {
+        "time_steps": "passed",
+        "policy": "passed",
+        "field": "passed",
+        "monitor_deck": "passed",
+        "input_consistency": "passed"
+      },
+      "errors": [],
+      "metrics": {
+        "runup_expanded_m": 492.83979,
+        "runup_legacy_m": 492.83979,
+        "wetted_eligible_cells": 5447,
+        "wetted_area_km2": 1.2242222682119206,
+        "max_land_depth_m": 125.29017,
+        "peak_locations": [
+          {
+            "x_m": 902.5,
+            "y_m": 1541.1009934,
+            "maximum_depth_m": 7.4172964,
+            "time_at_maximum_depth_s": 44.6,
+            "on_monitor_boundary": false
+          }
+        ],
+        "boundary_touching": false,
+        "gauges": {
+          "P2": {
+            "peak_time_s": 22.55954,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4257
+          },
+          "P3": {
+            "peak_time_s": 48.87032,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4257
+          },
+          "P5": {
+            "peak_time_s": 74.8,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4257
+          }
+        },
+        "P2_eta_m": 200.5128,
+        "P3_eta_m": 85.55317,
+        "P5_eta_m": 23.45631
+      },
+      "solver_exit_code": 0,
+      "completed_utc": "2026-10-25T02:53:39.306536+00:00",
+      "wall_seconds": 507.49460939799997,
+      "limiter": {
+        "status": "parsed",
+        "logged_b4step2_events": 16,
+        "events_at_depth_ge_10_m": 0,
+        "maximum_printed_depth_m": 1.3,
+        "first_time_s": 47.16,
+        "last_time_s": 54.97,
+        "note": "Rounded b4step2 log events only; not all limiting operations or energy loss."
+      },
+      "field_check_summary": {
+        "status": "passed_basic_checks",
+        "frames_read": 49,
+        "last_time_s": 420.0,
+        "initial_bed_max_error_m": 2.8350541469990276e-08,
+        "final_bed_change_max_error_m": 4.442853196451324e-09,
+        "accepted_small_dry_land_occurrences": 0
+      },
+      "monitor_diagnostics": {
+        "primary_monitor": "expanded",
+        "monitors": {
+          "legacy": {
+            "maximum_wetted_cell_elevation_m": 492.83979,
+            "peak_locations": [
+              {
+                "x_m": 902.5,
+                "y_m": 1541.1009934,
+                "maximum_depth_m": 7.4172964,
+                "time_at_maximum_depth_s": 44.6,
+                "on_monitor_boundary": true
+              }
+            ],
+            "peak_touches_monitor_boundary": true,
+            "artificial_monitor_cells": 290,
+            "wetted_artificial_monitor_cells": 0,
+            "eligible_natural_land_cells": 7105,
+            "observed_points": 9951,
+            "monitor_points": 9951,
+            "all_points_observed": true,
+            "depth_threshold_m": 0.1,
+            "metric_scope": "provided_monitor_only",
+            "historically_validated": false,
+            "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence.",
+            "name": "legacy",
+            "fgno": 1,
+            "requested_bounds_xyxy_m": [
+              900.0,
+              900.0,
+              2500.0,
+              2300.0
+            ],
+            "sampled_bounds_xyxy_m": [
+              902.5,
+              911.7963576158945,
+              2492.5,
+              2290.2731788079473
+            ],
+            "static_source_separation_checked": true
+          },
+          "expanded": {
+            "maximum_wetted_cell_elevation_m": 492.83979,
+            "peak_locations": [
+              {
+                "x_m": 902.5,
+                "y_m": 1541.1009934,
+                "maximum_depth_m": 7.4172964,
+                "time_at_maximum_depth_s": 44.6,
+                "on_monitor_boundary": false
+              }
+            ],
+            "peak_touches_monitor_boundary": false,
+            "artificial_monitor_cells": 19934,
+            "wetted_artificial_monitor_cells": 1,
+            "eligible_natural_land_cells": 10493,
+            "observed_points": 40698,
+            "monitor_points": 40698,
+            "all_points_observed": true,
+            "depth_threshold_m": 0.1,
+            "metric_scope": "provided_monitor_only",
+            "historically_validated": false,
+            "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence.",
+            "name": "expanded",
+            "fgno": 2,
+            "requested_bounds_xyxy_m": [
+              -1000.0,
+              0.0,
+              3000.0,
+              2300.0
+            ],
+            "sampled_bounds_xyxy_m": [
+              -987.5,
+              12.789735099337122,
+              2987.5,
+              2290.2731788079473
+            ],
+            "static_source_separation_checked": true
+          }
+        },
+        "note": "Maxima within declared diagnostic windows, not proven whole-slope or historical maxima. GeoClaw arrival is not an independently validated landward arrival measurement."
+      },
+      "bed_timing_check": {
+        "transition_frames": [
+          {
+            "output_time_s": 30.0,
+            "maximum_raw_final_bed_error_m": 0.006552449356554746,
+            "bounded_phase_fraction": 0.2939329185453526,
+            "bed_reference_time_s": 29.926516770363662,
+            "allowed_step_s": 0.1001,
+            "comparison_residual_m": 4.2797410060302354e-09,
+            "method": "single global phase within one permitted step; final two source samples"
+          }
+        ],
+        "fully_post_source_frames_checked": 33,
+        "spatial_tolerance_m": 0.02,
+        "note": "Transition frames use one bounded global source phase; later frames must match the final bed."
+      },
+      "time_step_check": {
+        "status": "passed",
+        "case": "slide",
+        "steps": 4257,
+        "last_time_s": 420.0,
+        "requested_source_step_cap_s": 0.1,
+        "output_time_step_factor": 1.001,
+        "maxima": {
+          "all_steps_s": 0.1,
+          "steps_starting_before_source_stop_s": 0.1
+        },
+        "errors": [],
+        "logged_speed_resets": 16,
+        "speed_limit_sensitivity_validated": false
+      },
+      "policy_check": {
+        "status": "passed",
+        "steps": 4257,
+        "maximum_printed_dt_s": 0.1,
+        "dt_max_s": 0.1
+      },
+      "trace_statistics": {
+        "maximum_printed_cfl": 0.618,
+        "minimum_printed_dt_s": 0.002455,
+        "maximum_printed_dt_s": 0.1
+      }
+    },
+    "fine_200": {
+      "case": "fine_200",
+      "grid": "fine",
+      "cap_m_s": 200,
+      "status": "accepted",
+      "started_utc": "2026-10-25T02:54:21.863585+00:00",
+      "checks": {
+        "time_steps": "passed",
+        "policy": "passed",
+        "field": "passed",
+        "monitor_deck": "passed",
+        "input_consistency": "passed"
+      },
+      "errors": [],
+      "metrics": {
+        "runup_expanded_m": 492.83979,
+        "runup_legacy_m": 492.83979,
+        "wetted_eligible_cells": 5447,
+        "wetted_area_km2": 1.2242222682119206,
+        "max_land_depth_m": 125.27323,
+        "peak_locations": [
+          {
+            "x_m": 902.5,
+            "y_m": 1541.1009934,
+            "maximum_depth_m": 7.4172964,
+            "time_at_maximum_depth_s": 44.6,
+            "on_monitor_boundary": false
+          }
+        ],
+        "boundary_touching": false,
+        "gauges": {
+          "P2": {
+            "peak_time_s": 22.55954,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4259
+          },
+          "P3": {
+            "peak_time_s": 48.86837,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4259
+          },
+          "P5": {
+            "peak_time_s": 74.8,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4259
+          }
+        },
+        "P2_eta_m": 200.5128,
+        "P3_eta_m": 85.55068,
+        "P5_eta_m": 23.45861
+      },
+      "solver_exit_code": 0,
+      "completed_utc": "2026-10-25T03:17:19.362296+00:00",
+      "wall_seconds": 602.008536607,
+      "limiter": {
+        "status": "parsed",
+        "logged_b4step2_events": 0,
+        "events_at_depth_ge_10_m": 0,
+        "maximum_printed_depth_m": null,
+        "first_time_s": null,
+        "last_time_s": null,
+        "note": "Rounded b4step2 log events only; not all limiting operations or energy loss."
+      },
+      "field_check_summary": {
+        "status": "passed_basic_checks",
+        "frames_read": 49,
+        "last_time_s": 420.0,
+        "initial_bed_max_error_m": 2.8350541469990276e-08,
+        "final_bed_change_max_error_m": 4.442853196451324e-09,
+        "accepted_small_dry_land_occurrences": 0
+      },
+      "monitor_diagnostics": {
+        "primary_monitor": "expanded",
+        "monitors": {
+          "legacy": {
+            "maximum_wetted_cell_elevation_m": 492.83979,
+            "peak_locations": [
+              {
+                "x_m": 902.5,
+                "y_m": 1541.1009934,
+                "maximum_depth_m": 7.4172964,
+                "time_at_maximum_depth_s": 44.6,
+                "on_monitor_boundary": true
+              }
+            ],
+            "peak_touches_monitor_boundary": true,
+            "artificial_monitor_cells": 290,
+            "wetted_artificial_monitor_cells": 0,
+            "eligible_natural_land_cells": 7105,
+            "observed_points": 9951,
+            "monitor_points": 9951,
+            "all_points_observed": true,
+            "depth_threshold_m": 0.1,
+            "metric_scope": "provided_monitor_only",
+            "historically_validated": false,
+            "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence.",
+            "name": "legacy",
+            "fgno": 1,
+            "requested_bounds_xyxy_m": [
+              900.0,
+              900.0,
+              2500.0,
+              2300.0
+            ],
+            "sampled_bounds_xyxy_m": [
+              902.5,
+              911.7963576158945,
+              2492.5,
+              2290.2731788079473
+            ],
+            "static_source_separation_checked": true
+          },
+          "expanded": {
+            "maximum_wetted_cell_elevation_m": 492.83979,
+            "peak_locations": [
+              {
+                "x_m": 902.5,
+                "y_m": 1541.1009934,
+                "maximum_depth_m": 7.4172964,
+                "time_at_maximum_depth_s": 44.6,
+                "on_monitor_boundary": false
+              }
+            ],
+            "peak_touches_monitor_boundary": false,
+            "artificial_monitor_cells": 19934,
+            "wetted_artificial_monitor_cells": 1,
+            "eligible_natural_land_cells": 10493,
+            "observed_points": 40698,
+            "monitor_points": 40698,
+            "all_points_observed": true,
+            "depth_threshold_m": 0.1,
+            "metric_scope": "provided_monitor_only",
+            "historically_validated": false,
+            "note": "Cell-bed elevation, not free-surface height. No claim of a domain-wide maximum or convergence.",
+            "name": "expanded",
+            "fgno": 2,
+            "requested_bounds_xyxy_m": [
+              -1000.0,
+              0.0,
+              3000.0,
+              2300.0
+            ],
+            "sampled_bounds_xyxy_m": [
+              -987.5,
+              12.789735099337122,
+              2987.5,
+              2290.2731788079473
+            ],
+            "static_source_separation_checked": true
+          }
+        },
+        "note": "Maxima within declared diagnostic windows, not proven whole-slope or historical maxima. GeoClaw arrival is not an independently validated landward arrival measurement."
+      },
+      "bed_timing_check": {
+        "transition_frames": [
+          {
+            "output_time_s": 30.0,
+            "maximum_raw_final_bed_error_m": 0.006552449356554746,
+            "bounded_phase_fraction": 0.2939329185453526,
+            "bed_reference_time_s": 29.926516770363662,
+            "allowed_step_s": 0.1001,
+            "comparison_residual_m": 4.2797410060302354e-09,
+            "method": "single global phase within one permitted step; final two source samples"
+          }
+        ],
+        "fully_post_source_frames_checked": 33,
+        "spatial_tolerance_m": 0.02,
+        "note": "Transition frames use one bounded global source phase; later frames must match the final bed."
+      },
+      "time_step_check": {
+        "status": "passed",
+        "case": "slide",
+        "steps": 4259,
+        "last_time_s": 420.0,
+        "requested_source_step_cap_s": 0.1,
+        "output_time_step_factor": 1.001,
+        "maxima": {
+          "all_steps_s": 0.1,
+          "steps_starting_before_source_stop_s": 0.1
+        },
+        "errors": [],
+        "logged_speed_resets": 0,
+        "speed_limit_sensitivity_validated": false
+      },
+      "policy_check": {
+        "status": "passed",
+        "steps": 4259,
+        "maximum_printed_dt_s": 0.1,
+        "dt_max_s": 0.1
+      },
+      "trace_statistics": {
+        "maximum_printed_cfl": 0.716,
+        "minimum_printed_dt_s": 0.002304,
+        "maximum_printed_dt_s": 0.1
+      }
+    }
+  },
+  "archived_100_metrics": {
+    "runup_legacy_m": "463.9969",
+    "runup_expanded_m": "469.84918",
+    "wetted_area_km2": "1.2693973509933739656",
+    "max_land_depth_m": "126.8762",
+    "P2_eta_m": "196.0448",
+    "P3_eta_m": "78.13353",
+    "P5_eta_m": "22.34237"
+  },
+  "physical_configuration": {
+    "project": "Lituya Bay \u2014 reconstructed basin and prescribed landslide",
+    "version": "2.0.0",
+    "clawpack_tag": "v5.14.0",
+    "historically_calibrated": false,
+    "coordinates": {
+      "system": "native local Cartesian metres",
+      "native_reference_water_z_m": 220.0
+    },
+    "domain": {
+      "x_min_m": -1010.0,
+      "x_max_m": 5800.0,
+      "y_min_m": -8775.0,
+      "y_max_m": 4800.0
+    },
+    "geometry": {
+      "sw_relief_factor": 1.0,
+      "exclusion_barrier_elevation_m": 2000.0,
+      "include_published_virtual_wall": true
+    },
+    "source": {
+      "kind": "volume-conserving translation of the projected original Rockslide.stl thickness; prescribed, not two-fluid dynamics",
+      "volume_m3": 51066493.51727992,
+      "travel_negative_y_m": 1400.0,
+      "travel_x_m": 0.0,
+      "start_time_s": 0.0,
+      "travel_duration_s": 30.0,
+      "history_interval_s": 0.25,
+      "maximum_solver_step_during_motion_s": 0.1,
+      "motion_law": "quintic smoothstep, rest to rest",
+      "provenance": "Initial footprint and volume from uploaded Franco mesh. Direction follows the reconstructed cross-inlet setting. Travel distance and duration are explicit UNCALIBRATED adaptation choices, not recovered FLOW-3D outputs."
+    },
+    "water": {
+      "sea_level_m": 0.0,
+      "gravity_m_s2": 9.81,
+      "dry_tolerance_m": 1e-06,
+      "manning_n": 0.025,
+      "friction_depth_m": 1000000.0
+    },
+    "run": {
+      "target_cell_size_m": 30.0,
+      "duration_s": 420.0,
+      "early_output_until_s": 60.0,
+      "early_output_interval_s": 2.0,
+      "late_output_interval_s": 20.0,
+      "still_output_interval_s": 60.0
+    },
+    "checks": {
+      "still_evaluation_depth_m": 1.0,
+      "still_eta_limit_m": 1e-05,
+      "still_speed_limit_m_s": 1e-05,
+      "negative_depth_limit_m": 1e-09,
+      "dry_land_negative_limit_m": 1e-06,
+      "dry_land_momentum_limit_m2_s": 1e-10,
+      "minimum_wave_above_baseline_m": 0.01,
+      "maximum_bed_change_error_m": 0.02,
+      "initial_bed_error_limit_m": 0.02,
+      "runup_depth_threshold_m": 0.1,
+      "require_open_connection_to_bay": true
+    },
+    "diagnostics": {
+      "runup_monitors": [
+        {
+          "name": "legacy",
+          "fgno": 1,
+          "bounds_xyxy_m": [
+            900.0,
+            900.0,
+            2500.0,
+            2300.0
+          ]
+        },
+        {
+          "name": "expanded",
+          "fgno": 2,
+          "bounds_xyxy_m": [
+            -1000.0,
+            0.0,
+            3000.0,
+            2300.0
+          ]
+        }
+      ],
+      "primary_runup_monitor": "expanded",
+      "require_static_runup_terrain": true
+    }
+  },
+  "source_history_summary": {
+    "samples": 121,
+    "first_time_s": 0.0,
+    "last_time_s": 30.0,
+    "first_travel_m": 0.0,
+    "last_travel_m": 1400.0,
+    "minimum_represented_volume_m3": 51066493.5172799,
+    "maximum_represented_volume_m3": 51066493.51727995
+  },
+  "archived_200_exclusion": {
+    "case": "cap_200",
+    "accepted_runup_m": null,
+    "reason": "Failed CFL/time-step checks despite reaching 420 s.",
+    "recorded_errors": [
+      "Actual CFL 1.12 exceeds the configured maximum.",
+      "Actual CFL 1.19 exceeds the configured maximum."
+    ]
+  },
+  "historical_accuracy_established": false,
+  "grid_convergence_established": false
+}

@@ -1,0 +1,57 @@
+comparison,from_case,to_case,quantity,unit,from_value,to_value,difference,percent_difference,status
+original: 50 → 100 m/s,original_050,original_100,Expanded monitored run-up,m,317.07672,449.32707,132.25035,41.70925888220365090190159656,accepted comparison
+original: 50 → 100 m/s,original_050,original_100,Original-area monitored run-up,m,317.07672,448.97099,131.89427,41.59695798543645840665943561,accepted comparison
+original: 50 → 100 m/s,original_050,original_100,Eligible land wetted at any time,km²,1.0347566225165563,1.1597185430463577,0.1249619205298014,12.07645525629887774295461336,accepted comparison
+original: 50 → 100 m/s,original_050,original_100,Maximum water depth on eligible land,m,119.27397,125.37847,6.10450,5.118048808134750608200599007,accepted comparison
+original: 50 → 100 m/s,original_050,original_100,P2 peak water-surface elevation,m,196.0448,196.0448,0.0000,0,accepted comparison
+original: 50 → 100 m/s,original_050,original_100,P3 peak water-surface elevation,m,73.83494,77.16134,3.32640,4.505184130981890145776511771,accepted comparison
+original: 50 → 100 m/s,original_050,original_100,P5 peak water-surface elevation,m,21.50808,21.44098,-0.06710,-0.3119757784051389059367456323,accepted comparison
+fine: 50 → 100 m/s,fine_050,fine_100,Expanded monitored run-up,m,338.24187,492.83979,154.59792,45.70632252003573655739308679,accepted comparison
+fine: 50 → 100 m/s,fine_050,fine_100,Original-area monitored run-up,m,338.24187,492.83979,154.59792,45.70632252003573655739308679,accepted comparison
+fine: 50 → 100 m/s,fine_050,fine_100,Eligible land wetted at any time,km²,1.077908940397351,1.2242222682119206,0.1463133278145696,13.57381150959133191979312712,accepted comparison
+fine: 50 → 100 m/s,fine_050,fine_100,Maximum water depth on eligible land,m,127.47661,125.29017,-2.18644,-1.715169551496545130906760072,accepted comparison
+fine: 50 → 100 m/s,fine_050,fine_100,P2 peak water-surface elevation,m,200.5128,200.5128,0.0000,0,accepted comparison
+fine: 50 → 100 m/s,fine_050,fine_100,P3 peak water-surface elevation,m,74.0499,85.55317,11.50327,15.53448417891178786196875350,accepted comparison
+fine: 50 → 100 m/s,fine_050,fine_100,P5 peak water-surface elevation,m,23.70127,23.45631,-0.24496,-1.033531114577404501952848940,accepted comparison
+original: 100 → 200 m/s,original_100,original_200,Expanded monitored run-up,m,449.32707,449.32707,0.00000,0,accepted comparison
+original: 100 → 200 m/s,original_100,original_200,Original-area monitored run-up,m,448.97099,448.97099,0.00000,0,accepted comparison
+original: 100 → 200 m/s,original_100,original_200,Eligible land wetted at any time,km²,1.1597185430463577,1.1597185430463577,0E-16,0,accepted comparison
+original: 100 → 200 m/s,original_100,original_200,Maximum water depth on eligible land,m,125.37847,125.37847,0.00000,0,accepted comparison
+original: 100 → 200 m/s,original_100,original_200,P2 peak water-surface elevation,m,196.0448,196.0448,0.0000,0,accepted comparison
+original: 100 → 200 m/s,original_100,original_200,P3 peak water-surface elevation,m,77.16134,77.16134,0.00000,0,accepted comparison
+original: 100 → 200 m/s,original_100,original_200,P5 peak water-surface elevation,m,21.44098,21.44098,0.00000,0,accepted comparison
+fine: 100 → 200 m/s,fine_100,fine_200,Expanded monitored run-up,m,492.83979,492.83979,0.00000,0,accepted comparison
+fine: 100 → 200 m/s,fine_100,fine_200,Original-area monitored run-up,m,492.83979,492.83979,0.00000,0,accepted comparison
+fine: 100 → 200 m/s,fine_100,fine_200,Eligible land wetted at any time,km²,1.2242222682119206,1.2242222682119206,0E-16,0,accepted comparison
+fine: 100 → 200 m/s,fine_100,fine_200,Maximum water depth on eligible land,m,125.29017,125.27323,-0.01694,-0.01352061378797714138307897579,accepted comparison
+fine: 100 → 200 m/s,fine_100,fine_200,P2 peak water-surface elevation,m,200.5128,200.5128,0.0000,0,accepted comparison
+fine: 100 → 200 m/s,fine_100,fine_200,P3 peak water-surface elevation,m,85.55317,85.55068,-0.00249,-0.002910470763386090778401314644,accepted comparison
+fine: 100 → 200 m/s,fine_100,fine_200,P5 peak water-surface elevation,m,23.45631,23.45861,0.00230,0.009805463860257644957796004572,accepted comparison
+50 m/s: original → fine grid,original_050,fine_050,Expanded monitored run-up,m,317.07672,338.24187,21.16515,6.675087972399865874732146844,accepted comparison
+50 m/s: original → fine grid,original_050,fine_050,Original-area monitored run-up,m,317.07672,338.24187,21.16515,6.675087972399865874732146844,accepted comparison
+50 m/s: original → fine grid,original_050,fine_050,Eligible land wetted at any time,km²,1.0347566225165563,1.077908940397351,0.0431523178807947,4.170286707211120537853238552,accepted comparison
+50 m/s: original → fine grid,original_050,fine_050,Maximum water depth on eligible land,m,119.27397,127.47661,8.20264,6.877141760268397203513893266,accepted comparison
+50 m/s: original → fine grid,original_050,fine_050,P2 peak water-surface elevation,m,196.0448,200.5128,4.4680,2.279070906241838600156698877,accepted comparison
+50 m/s: original → fine grid,original_050,fine_050,P3 peak water-surface elevation,m,73.83494,74.0499,0.21496,0.2911358768626344112963320618,accepted comparison
+50 m/s: original → fine grid,original_050,fine_050,P5 peak water-surface elevation,m,21.50808,23.70127,2.19319,10.19705152668206553072147770,accepted comparison
+100 m/s: original → fine grid,original_100,fine_100,Expanded monitored run-up,m,449.32707,492.83979,43.51272,9.683974749173247006907462753,accepted comparison
+100 m/s: original → fine grid,original_100,fine_100,Original-area monitored run-up,m,448.97099,492.83979,43.86880,9.770965380190822574082124994,accepted comparison
+100 m/s: original → fine grid,original_100,fine_100,Eligible land wetted at any time,km²,1.1597185430463577,1.2242222682119206,0.0645037251655629,5.562015503875967389680660704,accepted comparison
+100 m/s: original → fine grid,original_100,fine_100,Maximum water depth on eligible land,m,125.37847,125.29017,-0.08830,-0.07042676465903595728995576354,accepted comparison
+100 m/s: original → fine grid,original_100,fine_100,P2 peak water-surface elevation,m,196.0448,200.5128,4.4680,2.279070906241838600156698877,accepted comparison
+100 m/s: original → fine grid,original_100,fine_100,P3 peak water-surface elevation,m,77.16134,85.55317,8.39183,10.87569241280672419633977326,accepted comparison
+100 m/s: original → fine grid,original_100,fine_100,P5 peak water-surface elevation,m,21.44098,23.45631,2.01533,9.399430436481914539354078032,accepted comparison
+200 m/s: original → fine grid,original_200,fine_200,Expanded monitored run-up,m,449.32707,492.83979,43.51272,9.683974749173247006907462753,accepted comparison
+200 m/s: original → fine grid,original_200,fine_200,Original-area monitored run-up,m,448.97099,492.83979,43.86880,9.770965380190822574082124994,accepted comparison
+200 m/s: original → fine grid,original_200,fine_200,Eligible land wetted at any time,km²,1.1597185430463577,1.2242222682119206,0.0645037251655629,5.562015503875967389680660704,accepted comparison
+200 m/s: original → fine grid,original_200,fine_200,Maximum water depth on eligible land,m,125.37847,125.27323,-0.10524,-0.08393785631616018284478985906,accepted comparison
+200 m/s: original → fine grid,original_200,fine_200,P2 peak water-surface elevation,m,196.0448,200.5128,4.4680,2.279070906241838600156698877,accepted comparison
+200 m/s: original → fine grid,original_200,fine_200,P3 peak water-surface elevation,m,77.16134,85.55068,8.38934,10.87246540819534756654044629,accepted comparison
+200 m/s: original → fine grid,original_200,fine_200,P5 peak water-surface elevation,m,21.44098,23.45861,2.01763,9.410157558096691475856047625,accepted comparison
+100 m/s: archived → fresh time policy,archived_100,original_100,Expanded monitored run-up,m,469.84918,449.32707,-20.52211,-4.367807984681382225675055983,accepted comparison
+100 m/s: archived → fresh time policy,archived_100,original_100,Original-area monitored run-up,m,463.9969,448.97099,-15.02591,-3.238364308037402836096534266,accepted comparison
+100 m/s: archived → fresh time policy,archived_100,original_100,Eligible land wetted at any time,km²,1.2693973509933739656,1.1597185430463577,-0.1096788079470162656,-8.640226628894924327651959786,accepted comparison
+100 m/s: archived → fresh time policy,archived_100,original_100,Maximum water depth on eligible land,m,126.8762,125.37847,-1.49773,-1.180465682295024598782119893,accepted comparison
+100 m/s: archived → fresh time policy,archived_100,original_100,P2 peak water-surface elevation,m,196.0448,196.0448,0.0000,0,accepted comparison
+100 m/s: archived → fresh time policy,archived_100,original_100,P3 peak water-surface elevation,m,78.13353,77.16134,-0.97219,-1.244267345914103714500036028,accepted comparison
+100 m/s: archived → fresh time policy,archived_100,original_100,P5 peak water-surface elevation,m,22.34237,21.44098,-0.90139,-4.034442183170361962495473846,accepted comparison

@@ -1,0 +1,769 @@
+{
+  "started_utc": "2026-10-25T04:58:17.966629+00:00",
+  "status": "passed",
+  "solver_launched": false,
+  "runtime_image": "sha256:e34a83602d2ed2abaad337aa2a4b97a5f6e84b8f801de5fb6cc40f714d7027d4",
+  "solver_sha256": "2f4762f1c0a630a9fb0e11052356270a784901e239ea9968a3dba92ec3de5451",
+  "checkpoint": "a205e42312762e45ef99df4b1ae19fdd83ce4193",
+  "source_sha256": {
+    "reverify.py": "6633642893ac38deaa34bddfe74545b08ec261ea88331981c59ac80b4b33211a",
+    "experiment.py": "3b2de02e62be9b7eca50efe13589cfc7167307cde6d17ea6533507c8324ef3fd",
+    "report.py": "29cd026e66ac51ec176322c2237a171b9408d4166720f5779809f0266ad0b749",
+    "protocol.json": "b7ef081878513b1122e9cf2bf2d0fe1e8f3f108dfbaa48d54c9e524aea8e9096"
+  },
+  "cases": {
+    "original_100": {
+      "status": "passed",
+      "configuration": "regenerated decks match executed files",
+      "checks": {
+        "CFL/time_steps": "passed",
+        "declared_global_step": "passed",
+        "fields": "passed",
+        "monitor_coverage": "passed",
+        "input_consistency": "passed",
+        "metrics": "passed",
+        "run_identity": "passed"
+      },
+      "frames": 49,
+      "last_time_s": 420.0,
+      "maximum_printed_cfl": 0.339,
+      "desired_cfl": 0.5,
+      "acceptance_cfl_ceiling": 1.0,
+      "maximum_printed_dt_s": 0.1,
+      "metrics": {
+        "runup_expanded_m": 449.32707,
+        "runup_legacy_m": 448.97099,
+        "wetted_eligible_cells": 1290,
+        "wetted_area_km2": 1.1597185430463577,
+        "max_land_depth_m": 125.37847,
+        "peak_locations": [
+          {
+            "x_m": 895.0,
+            "y_m": 1638.4933775,
+            "maximum_depth_m": 0.68724346,
+            "time_at_maximum_depth_s": 45.8,
+            "on_monitor_boundary": false
+          }
+        ],
+        "boundary_touching": false,
+        "gauges": {
+          "P2": {
+            "peak_time_s": 22.8,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4201
+          },
+          "P3": {
+            "peak_time_s": 48.3,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4201
+          },
+          "P5": {
+            "peak_time_s": 75.7,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4201
+          }
+        },
+        "P2_eta_m": 196.0448,
+        "P3_eta_m": 77.16134,
+        "P5_eta_m": 21.44098
+      },
+      "raw_run_fingerprint_sha256": "d5497103f8191b62b9b090d3f83eebb9a31f91ffecd9529b86f372b61b333d0d",
+      "sealed_file_count": 143,
+      "limiter": {
+        "status": "parsed",
+        "logged_b4step2_events": 4,
+        "events_at_depth_ge_10_m": 0,
+        "maximum_printed_depth_m": 0.346,
+        "first_time_s": 48.9,
+        "last_time_s": 53.3,
+        "note": "Rounded b4step2 log events only; not all limiting operations or energy loss."
+      }
+    },
+    "original_200": {
+      "status": "passed",
+      "configuration": "regenerated decks match executed files",
+      "checks": {
+        "CFL/time_steps": "passed",
+        "declared_global_step": "passed",
+        "fields": "passed",
+        "monitor_coverage": "passed",
+        "input_consistency": "passed",
+        "metrics": "passed",
+        "run_identity": "passed"
+      },
+      "frames": 49,
+      "last_time_s": 420.0,
+      "maximum_printed_cfl": 0.467,
+      "desired_cfl": 0.5,
+      "acceptance_cfl_ceiling": 1.0,
+      "maximum_printed_dt_s": 0.1,
+      "metrics": {
+        "runup_expanded_m": 449.32707,
+        "runup_legacy_m": 448.97099,
+        "wetted_eligible_cells": 1290,
+        "wetted_area_km2": 1.1597185430463577,
+        "max_land_depth_m": 125.37847,
+        "peak_locations": [
+          {
+            "x_m": 895.0,
+            "y_m": 1638.4933775,
+            "maximum_depth_m": 0.68724346,
+            "time_at_maximum_depth_s": 45.8,
+            "on_monitor_boundary": false
+          }
+        ],
+        "boundary_touching": false,
+        "gauges": {
+          "P2": {
+            "peak_time_s": 22.8,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4201
+          },
+          "P3": {
+            "peak_time_s": 48.3,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4201
+          },
+          "P5": {
+            "peak_time_s": 75.7,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4201
+          }
+        },
+        "P2_eta_m": 196.0448,
+        "P3_eta_m": 77.16134,
+        "P5_eta_m": 21.44098
+      },
+      "raw_run_fingerprint_sha256": "8595e20248ad92102814264f7916cefef37e2ecd353ca112a32c6667dcce6f47",
+      "sealed_file_count": 143,
+      "limiter": {
+        "status": "parsed",
+        "logged_b4step2_events": 0,
+        "events_at_depth_ge_10_m": 0,
+        "maximum_printed_depth_m": null,
+        "first_time_s": null,
+        "last_time_s": null,
+        "note": "Rounded b4step2 log events only; not all limiting operations or energy loss."
+      }
+    },
+    "original_050": {
+      "status": "passed",
+      "configuration": "regenerated decks match executed files",
+      "checks": {
+        "CFL/time_steps": "passed",
+        "declared_global_step": "passed",
+        "fields": "passed",
+        "monitor_coverage": "passed",
+        "input_consistency": "passed",
+        "metrics": "passed",
+        "run_identity": "passed"
+      },
+      "frames": 49,
+      "last_time_s": 420.0,
+      "maximum_printed_cfl": 0.283,
+      "desired_cfl": 0.5,
+      "acceptance_cfl_ceiling": 1.0,
+      "maximum_printed_dt_s": 0.1,
+      "metrics": {
+        "runup_expanded_m": 317.07672,
+        "runup_legacy_m": 317.07672,
+        "wetted_eligible_cells": 1151,
+        "wetted_area_km2": 1.0347566225165563,
+        "max_land_depth_m": 119.27397,
+        "peak_locations": [
+          {
+            "x_m": 1705.0,
+            "y_m": 1608.5264901,
+            "maximum_depth_m": 0.60377841,
+            "time_at_maximum_depth_s": 46.0,
+            "on_monitor_boundary": false
+          }
+        ],
+        "boundary_touching": false,
+        "gauges": {
+          "P2": {
+            "peak_time_s": 22.8,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4201
+          },
+          "P3": {
+            "peak_time_s": 48.0,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4201
+          },
+          "P5": {
+            "peak_time_s": 75.9,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4201
+          }
+        },
+        "P2_eta_m": 196.0448,
+        "P3_eta_m": 73.83494,
+        "P5_eta_m": 21.50808
+      },
+      "raw_run_fingerprint_sha256": "595888ff9e64449d0b40d6c0e94a597f497becb47a8dbbce9cea442261c5cefd",
+      "sealed_file_count": 144,
+      "limiter": {
+        "status": "parsed",
+        "logged_b4step2_events": 15327,
+        "events_at_depth_ge_10_m": 7963,
+        "maximum_printed_depth_m": 128.0,
+        "first_time_s": 24.8,
+        "last_time_s": 94.7,
+        "note": "Rounded b4step2 log events only; not all limiting operations or energy loss."
+      }
+    },
+    "fine_050": {
+      "status": "passed",
+      "configuration": "regenerated decks match executed files",
+      "checks": {
+        "CFL/time_steps": "passed",
+        "declared_global_step": "passed",
+        "fields": "passed",
+        "monitor_coverage": "passed",
+        "input_consistency": "passed",
+        "metrics": "passed",
+        "run_identity": "passed"
+      },
+      "frames": 49,
+      "last_time_s": 420.0,
+      "maximum_printed_cfl": 0.529,
+      "desired_cfl": 0.5,
+      "acceptance_cfl_ceiling": 1.0,
+      "maximum_printed_dt_s": 0.1,
+      "metrics": {
+        "runup_expanded_m": 338.24187,
+        "runup_legacy_m": 338.24187,
+        "wetted_eligible_cells": 4796,
+        "wetted_area_km2": 1.077908940397351,
+        "max_land_depth_m": 127.47661,
+        "peak_locations": [
+          {
+            "x_m": 1427.5,
+            "y_m": 1780.8360927,
+            "maximum_depth_m": 4.9250126,
+            "time_at_maximum_depth_s": 40.9,
+            "on_monitor_boundary": false
+          }
+        ],
+        "boundary_touching": false,
+        "gauges": {
+          "P2": {
+            "peak_time_s": 22.55954,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4218
+          },
+          "P3": {
+            "peak_time_s": 46.4,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4218
+          },
+          "P5": {
+            "peak_time_s": 75.2,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4218
+          }
+        },
+        "P2_eta_m": 200.5128,
+        "P3_eta_m": 74.0499,
+        "P5_eta_m": 23.70127
+      },
+      "raw_run_fingerprint_sha256": "1a4073fac98b5ea9090963c275903fc50a9d6947ea0245878a87cbcb1986cc0d",
+      "sealed_file_count": 144,
+      "limiter": {
+        "status": "parsed",
+        "logged_b4step2_events": 57998,
+        "events_at_depth_ge_10_m": 29919,
+        "maximum_printed_depth_m": 141.0,
+        "first_time_s": 20.77,
+        "last_time_s": 92.0,
+        "note": "Rounded b4step2 log events only; not all limiting operations or energy loss."
+      }
+    },
+    "fine_100": {
+      "status": "passed",
+      "configuration": "regenerated decks match executed files",
+      "checks": {
+        "CFL/time_steps": "passed",
+        "declared_global_step": "passed",
+        "fields": "passed",
+        "monitor_coverage": "passed",
+        "input_consistency": "passed",
+        "metrics": "passed",
+        "run_identity": "passed"
+      },
+      "frames": 49,
+      "last_time_s": 420.0,
+      "maximum_printed_cfl": 0.618,
+      "desired_cfl": 0.5,
+      "acceptance_cfl_ceiling": 1.0,
+      "maximum_printed_dt_s": 0.1,
+      "metrics": {
+        "runup_expanded_m": 492.83979,
+        "runup_legacy_m": 492.83979,
+        "wetted_eligible_cells": 5447,
+        "wetted_area_km2": 1.2242222682119206,
+        "max_land_depth_m": 125.29017,
+        "peak_locations": [
+          {
+            "x_m": 902.5,
+            "y_m": 1541.1009934,
+            "maximum_depth_m": 7.4172964,
+            "time_at_maximum_depth_s": 44.6,
+            "on_monitor_boundary": false
+          }
+        ],
+        "boundary_touching": false,
+        "gauges": {
+          "P2": {
+            "peak_time_s": 22.55954,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4257
+          },
+          "P3": {
+            "peak_time_s": 48.87032,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4257
+          },
+          "P5": {
+            "peak_time_s": 74.8,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4257
+          }
+        },
+        "P2_eta_m": 200.5128,
+        "P3_eta_m": 85.55317,
+        "P5_eta_m": 23.45631
+      },
+      "raw_run_fingerprint_sha256": "1fdb5eb4c62096e3579f941df7cfc5a135a0f1efd3cab8a9026386e27bb5d16f",
+      "sealed_file_count": 143,
+      "limiter": {
+        "status": "parsed",
+        "logged_b4step2_events": 16,
+        "events_at_depth_ge_10_m": 0,
+        "maximum_printed_depth_m": 1.3,
+        "first_time_s": 47.16,
+        "last_time_s": 54.97,
+        "note": "Rounded b4step2 log events only; not all limiting operations or energy loss."
+      }
+    },
+    "fine_200": {
+      "status": "passed",
+      "configuration": "regenerated decks match executed files",
+      "checks": {
+        "CFL/time_steps": "passed",
+        "declared_global_step": "passed",
+        "fields": "passed",
+        "monitor_coverage": "passed",
+        "input_consistency": "passed",
+        "metrics": "passed",
+        "run_identity": "passed"
+      },
+      "frames": 49,
+      "last_time_s": 420.0,
+      "maximum_printed_cfl": 0.716,
+      "desired_cfl": 0.5,
+      "acceptance_cfl_ceiling": 1.0,
+      "maximum_printed_dt_s": 0.1,
+      "metrics": {
+        "runup_expanded_m": 492.83979,
+        "runup_legacy_m": 492.83979,
+        "wetted_eligible_cells": 5447,
+        "wetted_area_km2": 1.2242222682119206,
+        "max_land_depth_m": 125.27323,
+        "peak_locations": [
+          {
+            "x_m": 902.5,
+            "y_m": 1541.1009934,
+            "maximum_depth_m": 7.4172964,
+            "time_at_maximum_depth_s": 44.6,
+            "on_monitor_boundary": false
+          }
+        ],
+        "boundary_touching": false,
+        "gauges": {
+          "P2": {
+            "peak_time_s": 22.55954,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4259
+          },
+          "P3": {
+            "peak_time_s": 48.86837,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4259
+          },
+          "P5": {
+            "peak_time_s": 74.8,
+            "first_time_s": 0.0,
+            "last_time_s": 419.9,
+            "samples": 4259
+          }
+        },
+        "P2_eta_m": 200.5128,
+        "P3_eta_m": 85.55068,
+        "P5_eta_m": 23.45861
+      },
+      "raw_run_fingerprint_sha256": "68befb12de182cfc3b2bbe493219699658e30d896622606638c96cf0d8c2a51e",
+      "sealed_file_count": 143,
+      "limiter": {
+        "status": "parsed",
+        "logged_b4step2_events": 0,
+        "events_at_depth_ge_10_m": 0,
+        "maximum_printed_depth_m": null,
+        "first_time_s": null,
+        "last_time_s": null,
+        "note": "Rounded b4step2 log events only; not all limiting operations or energy loss."
+      }
+    }
+  },
+  "refinement": {
+    "original": {
+      "status": "passed",
+      "dimensions": [
+        227,
+        453
+      ],
+      "monitors": {
+        "legacy": {
+          "points": 2491,
+          "eligible_natural_land_cells": 1765
+        },
+        "expanded": {
+          "points": 10318,
+          "eligible_natural_land_cells": 2615
+        }
+      }
+    },
+    "fine": {
+      "status": "passed",
+      "dimensions": [
+        454,
+        906
+      ],
+      "monitors": {
+        "legacy": {
+          "points": 9951,
+          "eligible_natural_land_cells": 7105
+        },
+        "expanded": {
+          "points": 40698,
+          "eligible_natural_land_cells": 10493
+        }
+      }
+    },
+    "bcell_maximum_coarse_average_error_m": 3.785771696129814e-11,
+    "expected_final_dz_cells_maximum_coarse_average_error_m": 9.094947017729282e-13
+  },
+  "archived_evidence_sha256": {
+    "cases/cap_100/gauge00033.txt": "058c47f4f88f26fec0ec6a6ce258f98c21f129f5d1692fcc351a6dcae8846a08",
+    "cases/cap_100/fgmax0001.txt": "dfb758fc7d875b3680aea1515c0eb1aa6dd6fbf5b13b279fee4cdd5ab1f4fdd8",
+    "cases/cap_100/gauge00032.txt": "081a997d855820d4196ebd4d744ae240235ef5f0ef9aa157732157a75c8bc81e",
+    "cases/cap_100/gauge00030.txt": "0248be322688e77df5e14cc5398a8d7af9b37d0135c5c265f0a44b22f0d90678",
+    "cases/cap_100/fgmax0002.txt": "50777d8c07d8d71f245a830b7aa0a28c3ecc9bd9d621c22f258e00289f17a835",
+    "cases/cap_100/gauge00031.txt": "0e224abbc6b68c4aaac6601e94280ceeb727850b4c40e421d382e4113cb454f6",
+    "cases/cap_100/gauge00035.txt": "77ce3b0a47bc994676282571d65ebcaddb77beb476b24815554b9c6af4287a85",
+    "cases/cap_100/gauge00034.txt": "f852bb947d788f7a68735aeb1731f7d97d538ccae69c82841f4886ed383d86e7",
+    "cases/cap_100/gauge00036.txt": "863dc3e8a4839e89dd63c078f7656cbdc0d47a40df68165bc0f867839ec9a238",
+    "cases/cap_100/gauge00037.txt": "12e461a6f060c99c8068dfdd0a1ba0b9f83a888d474a2b27b15c95ed5ed38f40",
+    "cases/cap_100/fort.amr": "c864aea2a575f25ffba51e9c45808431aca24487b2ae1ee262024bfcc1e7045b",
+    "cases/cap_100/config.json": "2cb628ee6c1955648a615118678acc77974aed25cf39ca2a0e8cd3c8ce72150e",
+    "cases/cap_100/gauges.data": "2c9c7ed133e0ae46a57112530980c95df981519b6e391703b66e9bf2dabd024f",
+    "cases/cap_100/fgmax_grids.data": "dd5ffff06e66a26558b5bf6b31f32b3cba155a9b6a3ab63b6564c37d8263dccb",
+    "cases/cap_100/gauge00039.txt": "806d7ebe7eee8c91530d9af2ea2be8ec726474b77710ec8b3b6bade2e248af5a",
+    "cases/cap_100/gauge00038.txt": "304564210e7b37843faf60db9ba147dffea193c8907e5fa7dace0942dd8d7cb4",
+    "cases/cap_100/gauge00001.txt": "9f61702429236b63fefb17c7ae4d91f7b5f159c1ae0fab4ba724949e3ca8f872",
+    "cases/cap_200/gauge00033.txt": "97f96715feff264e275d89250387aff9b91e4955db67443f0282bbf5cd585a7e",
+    "cases/cap_200/fgmax0001.txt": "cf6337bf2bc181e1c1886c40f48e7f643613b8dc6cd53898dacb9d9b0f8d7150",
+    "cases/cap_200/gauge00032.txt": "d2928a48908fe5fcfe939b40e4c4edc6cdb4cc08838de7b4c6416a4abb74b5b6",
+    "cases/cap_200/gauge00030.txt": "603148884f4ec4c5686aa9dccb46293de941ba59a021ebfb3d6b8661e3dd82c4",
+    "cases/cap_200/fgmax0002.txt": "a1f3ae3e8f98601a999da9b3322f573c94934cdf14171b0d3a880be611c1e476",
+    "cases/cap_200/gauge00031.txt": "128fc6ebb1e8c88c9d2d1108c4155b4b6d404f8677908528027bb343f532a2f2",
+    "cases/cap_200/gauge00035.txt": "1f98975941710007e09e6d40e514146e1746586557fb95021ca363f51cdc2fef",
+    "cases/cap_200/gauge00034.txt": "06fae1b5008297a834376831a64b1827f9e3032ab6d87bf6c52722fd073957bd",
+    "cases/cap_200/gauge00036.txt": "5e6d2f1e343383e182551adcbd3dfec8975c921e2f880aae786a539256f46ebb",
+    "cases/cap_200/gauge00037.txt": "fb79aa05cbe2c24704ab1b3f1a85d5867e5db47e63f5c39c73702ddd177095eb",
+    "cases/cap_200/fort.amr": "a26c7a670e7d99bbb7af42b988e69fa22f05b58fd07a578f8492f1b2bf8f86b0",
+    "cases/cap_200/config.json": "891a313bec919b3d8ec3b4e33273af28aa0de0e568cc073a861ed24acad90bea",
+    "cases/cap_200/gauges.data": "2c9c7ed133e0ae46a57112530980c95df981519b6e391703b66e9bf2dabd024f",
+    "cases/cap_200/fgmax_grids.data": "dd5ffff06e66a26558b5bf6b31f32b3cba155a9b6a3ab63b6564c37d8263dccb",
+    "cases/cap_200/gauge00039.txt": "c2f2afb97366a24ea5a600c280fe6c11931a6255adb4abb4cbbd64da251a669f",
+    "cases/cap_200/gauge00038.txt": "0681f55080f0b1277e1a3bafdf8b66745a07d7133136fd21ca3052bd9dfce41d",
+    "cases/cap_200/gauge00001.txt": "a329b0eaabb4e162ed4b7997136fcafd1a0bfaad59329593af65a96b0500d094"
+  },
+  "archived_100": {
+    "status": "passed",
+    "metrics": {
+      "runup_legacy_m": 463.9969,
+      "runup_expanded_m": 469.84918,
+      "wetted_eligible_cells": 1412,
+      "wetted_area_km2": 1.2693973509933776,
+      "max_land_depth_m": 126.8762,
+      "P2_eta_m": 196.0448,
+      "P3_eta_m": 78.13353,
+      "P5_eta_m": 22.34237
+    }
+  },
+  "archived_200": {
+    "status": "excluded",
+    "rechecked_time_audit": {
+      "status": "failed",
+      "case": "slide",
+      "steps": 1205,
+      "last_time_s": 420.0,
+      "requested_source_step_cap_s": 0.1,
+      "output_time_step_factor": 1.001,
+      "maxima": {
+        "all_steps_s": 0.4867,
+        "steps_starting_before_source_stop_s": 0.1
+      },
+      "errors": [
+        "Actual CFL 1.12 exceeds the configured maximum.",
+        "Actual CFL 1.19 exceeds the configured maximum."
+      ],
+      "logged_speed_resets": 0,
+      "speed_limit_sensitivity_validated": false
+    }
+  },
+  "pairwise_comparisons_verified": 56,
+  "independent_area_roundoff": {
+    "maximum_difference_km2": "3.6344E-15",
+    "maximum_percentage_points": "2.61571335468839E-13",
+    "note": "Only independent area conversion permits 1e-14 km\u00b2 / 1e-12 percentage-point arithmetic roundoff. Other metric comparisons are exact; simulation acceptance limits are unchanged."
+  },
+  "regenerated_files_identical": {
+    "results.csv": "c15f868004124e086da063865fabd437acaa170135f8f06468a8d4527b29df70",
+    "comparisons.csv": "37425b0b867b0018efb31644199abd333e4e1514be593c3b160f92112d12fa07",
+    "case_status.csv": "c10f711010a084c1bee1db61a800f3df2c4be7ec8046857dd6b8cbcbe8ebe267",
+    "report.md": "1e3c7464fee729d298da8e8b8dd74756c6605a1ebbc7e7f18329312536543570",
+    "report.html": "eea40cc86d408b7bebb6ae60172cd7c4ba2e9ec213c237ef89161dcd3aefbe93",
+    "runup_vs_speed_limit.png": "03f00a247346da47169a05f1e10a31c3843123662677d1e648b9bb4f96708eff"
+  },
+  "html_visual_review": {
+    "status": "blocked",
+    "reason": "Fresh file:// navigation in the in-app browser was rejected by browser URL policy. No workaround attempted. Numerical/structural checks are not a rendered HTML review."
+  },
+  "limitations": [
+    "Hashes and consistent execution evidence detect no mixing; solver speed limit is recorded in sealed geoclaw.data, not separately echoed by fort.geo.",
+    "Field validity is checked at all saved frames; this is not an audit of every unsaved field state.",
+    "Gauge outputs end near 419.9 s and pass the existing coverage tolerance; no exact 420 s gauge sample is invented.",
+    "No historical accuracy, grid convergence, optimal speed limit or independent solver reproduction is established."
+  ],
+  "completed_utc": "2026-10-25T05:00:10.923631+00:00",
+  "code_tests": {
+    "environment": "Existing pinned Docker image; no software installed",
+    "executions": [
+      {
+        "command": "python -B -m pytest -o addopts=-q -p no:cacheprovider -rs --junitxml=/review/tests.xml experiments/speed-limit-grid-resolution/test_experiment.py experiments/speed-limit-grid-resolution/test_reverification.py analysis/measurement_robustness/test_analysis.py tests/test_runup_metrics.py tests/test_release_monitoring.py tests/test_readers_and_validation.py tests/test_time_controls.py tests/test_common_and_setrun.py",
+        "exit_code": 0,
+        "counts": {
+          "passed": 199,
+          "failed": 0,
+          "skipped": 1
+        },
+        "subtests_passed": 33,
+        "by_test_file": {
+          "experiments/speed-limit-grid-resolution/test_experiment.py": {
+            "passed": 23,
+            "failed": 0,
+            "skipped": 0
+          },
+          "experiments/speed-limit-grid-resolution/test_reverification.py": {
+            "passed": 7,
+            "failed": 0,
+            "skipped": 0
+          },
+          "analysis/measurement_robustness/test_analysis.py": {
+            "passed": 20,
+            "failed": 0,
+            "skipped": 0
+          },
+          "tests/test_runup_metrics.py": {
+            "passed": 29,
+            "failed": 0,
+            "skipped": 0
+          },
+          "tests/test_release_monitoring.py": {
+            "passed": 27,
+            "failed": 0,
+            "skipped": 1
+          },
+          "tests/test_readers_and_validation.py": {
+            "passed": 42,
+            "failed": 0,
+            "skipped": 0
+          },
+          "tests/test_time_controls.py": {
+            "passed": 36,
+            "failed": 0,
+            "skipped": 0
+          },
+          "tests/test_common_and_setrun.py": {
+            "passed": 15,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        "skip_details": [
+          {
+            "name": "tests.test_release_monitoring::test_real_prepared_monitor_geometry_is_expanded_and_static",
+            "reason": "Requires separately supplied reference data; see docs/DATA.md."
+          }
+        ]
+      },
+      {
+        "command": "python -B -m pytest -o addopts=-q -p no:cacheprovider -rs --with-reference-data --junitxml=/review/focused_final_tests.xml experiments/speed-limit-grid-resolution/test_reverification.py tests/test_release_monitoring.py::test_real_prepared_monitor_geometry_is_expanded_and_static",
+        "exit_code": 0,
+        "counts": {
+          "passed": 9,
+          "failed": 0,
+          "skipped": 0
+        },
+        "subtests_passed": 9,
+        "by_test_file": {
+          "experiments/speed-limit-grid-resolution/test_reverification.py": {
+            "passed": 8,
+            "failed": 0,
+            "skipped": 0
+          },
+          "tests/test_release_monitoring.py": {
+            "passed": 1,
+            "failed": 0,
+            "skipped": 0
+          }
+        },
+        "skip_details": []
+      }
+    ],
+    "final_distinct_tests": {
+      "passed": 201,
+      "failed": 0,
+      "skipped": 0
+    },
+    "note": "Initial run contained seven new verifier tests. A roundoff regression test was then added; all eight new tests and the initially skipped private-reference geometry test passed in the final focused run. Other tested files remained unchanged.",
+    "warning": "One existing rasterio/transform.py PendingDeprecationWarning: affine matrix multiplication API; no test failed.",
+    "sha256": {
+      "experiments/speed-limit-grid-resolution/test_experiment.py": "e78fd4d02dc7316eb70333ddbeba39bff216366acce264292e4379ae43ba8812",
+      "experiments/speed-limit-grid-resolution/test_reverification.py": "8d8d238c325051aa1958fe7d74abc42491ed8f07d460492535989eb62b09a26d",
+      "analysis/measurement_robustness/test_analysis.py": "c257635792e0085d61cc85a4f08e1de18929eacad29151c14e525e5faf157e6e",
+      "tests/test_runup_metrics.py": "f5fbe1b52c5a446abb7b39fb55a53df58e107d6f6ad1f96c0110ee48db0b248b",
+      "tests/test_release_monitoring.py": "3212311ee8883f18478499b06d4789aa865e759c450759407a443af0121b8aa3",
+      "tests/test_readers_and_validation.py": "0b872695fbb3109b6bdcce3e91c88b8221c426fb40db5208489c0584432733fa",
+      "tests/test_time_controls.py": "f2c23dfcfc7b12253574ede097989e478fd6ad37ad20f68403c26db84a1bcff4",
+      "tests/test_common_and_setrun.py": "c5c958f9acca5577b953efdc0f646fcf4cd8dc69c37b47fd0b979b16ac0d08bc"
+    }
+  },
+  "execution_command": "python -B experiments/speed-limit-grid-resolution/reverify.py --session /session --archive /archive --output /review/replay_final",
+  "mount_policy": {
+    "repository": "/repo (read-only)",
+    "required_references": "/repo/data/reference (read-only)",
+    "private_session": "/session (read-only)",
+    "archived_session": "/archive (read-only)",
+    "scratch": "/review (writable)",
+    "network": "none",
+    "image_pull": "never"
+  },
+  "initial_verifier_issue": {
+    "scope": "New verification code only; no experiment/analysis/report bug found",
+    "initial_exit_code": 1,
+    "explanation": "Exact Decimal equality incorrectly treated the independently converted archived land area as identical to a decimalized recorded-spacing calculation. The discrepancy was 3.6344e-15 km\u00b2 (3.6344e-9 m\u00b2), with 2.61571335468839e-13 percentage-point difference.",
+    "correction": "Allow only area arithmetic roundoff of 1e-14 km\u00b2 / 1e-12 percentage points; keep other differences exact. Add a hand-checkable regression that rejects changed values. Repeat the complete six-case verification with the corrected checker.",
+    "simulation_acceptance_changed": false,
+    "numerical_findings_changed": false,
+    "simulation_rerun_required": false
+  },
+  "html_structural_checks": {
+    "status": "passed",
+    "tables": 11,
+    "table_rows": 80,
+    "embedded_figures": 1,
+    "embedded_figure_matches_png": true,
+    "local_links_resolve": true,
+    "external_render_dependencies": false,
+    "visual_review": "blocked by browser URL policy; not inferred from structural checks"
+  },
+  "figure_visual_review": {
+    "status": "completed",
+    "method": "view_image of unchanged runup_vs_speed_limit.png",
+    "finding": "Axes, units, curves, legend and interpretation footer readable; no clipping or overlap detected."
+  },
+  "review_status": {
+    "human_scientific_review": "pending",
+    "html_visual_review": "pending",
+    "ready_for_reviewed_synthesis": true
+  },
+  "supporting_provenance": {
+    "path": "provenance.json",
+    "sha256": "98693e9bc6fb60e160f8f095ca16fd41436a460b52846b53d87551722d3ebd64",
+    "session_identity_sha256": "f3d68ea0029ea18e477a7109e95ddeeb6a42aef5480359d0c75cfc4c95c1b038"
+  },
+  "new_files": [
+    "experiments/speed-limit-grid-resolution/reverify.py",
+    "experiments/speed-limit-grid-resolution/test_reverification.py",
+    "experiments/speed-limit-grid-resolution/reverification.json",
+    "experiments/speed-limit-grid-resolution/REVERIFICATION.md"
+  ],
+  "preservation": {
+    "branch": "experiment/speed-limit-grid-resolution",
+    "head": "a205e42312762e45ef99df4b1ae19fdd83ce4193",
+    "existing_index_unchanged": true,
+    "preexisting_tracked_and_staged_content_unchanged": true,
+    "preexisting_staged_additions": 16,
+    "new_files_staged": false,
+    "root_README_unchanged": true,
+    "measurement_analysis_unchanged": true,
+    "original_experiment_unchanged": true,
+    "approved_figures_unchanged": true,
+    "committed": false,
+    "pushed": false,
+    "merged": false,
+    "final_index_sha256": "140b1e0308d02a0d71e1ff031d762bec9ad8a515cc2fbb2e4b124c3068cc24b5",
+    "preexisting_files_verified": 144,
+    "original_preview_sha256": {
+      "docs/previews/wave_evolution_cap_100/render_animation.py": "b802200db0a37b2af1467ba7b89a0a8d988ae2327688a39778299d421009214d",
+      "docs/previews/wave_evolution_cap_100/wave_evolution_cap_100.gif": "6bbd1035ffd86eb1f50c3b6fe99b8a92b95414d996356aa1123602171c12b63c"
+    },
+    "pdf_review_copy_unchanged": true,
+    "main_ref_unchanged": true,
+    "new_files_untracked_and_not_ignored": true
+  },
+  "record_written_utc": "2026-10-25T05:04:39.663344+00:00",
+  "final_git_status": [
+    "A  experiments/speed-limit-grid-resolution/README.md",
+    "A  experiments/speed-limit-grid-resolution/case_status.csv",
+    "A  experiments/speed-limit-grid-resolution/comparisons.csv",
+    "A  experiments/speed-limit-grid-resolution/experiment.py",
+    "A  experiments/speed-limit-grid-resolution/file_manifest.json",
+    "A  experiments/speed-limit-grid-resolution/launch.py",
+    "A  experiments/speed-limit-grid-resolution/protocol.json",
+    "A  experiments/speed-limit-grid-resolution/provenance.json",
+    "A  experiments/speed-limit-grid-resolution/report.html",
+    "A  experiments/speed-limit-grid-resolution/report.md",
+    "A  experiments/speed-limit-grid-resolution/report.py",
+    "A  experiments/speed-limit-grid-resolution/results.csv",
+    "A  experiments/speed-limit-grid-resolution/results.json",
+    "A  experiments/speed-limit-grid-resolution/runup_vs_speed_limit.png",
+    "A  experiments/speed-limit-grid-resolution/test_experiment.py",
+    "A  experiments/speed-limit-grid-resolution/verification.json",
+    "?? experiments/speed-limit-grid-resolution/REVERIFICATION.md",
+    "?? experiments/speed-limit-grid-resolution/reverification.json",
+    "?? experiments/speed-limit-grid-resolution/reverify.py",
+    "?? experiments/speed-limit-grid-resolution/test_reverification.py"
+  ]
+}

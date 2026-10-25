@@ -1,0 +1,17 @@
+{
+  "schema": 1,
+  "checkpoint": "a205e42312762e45ef99df4b1ae19fdd83ce4193",
+  "archived_session": "comparison_runs/20261019T041033Z_ff1b17c2",
+  "runtime_image": "sha256:e34a83602d2ed2abaad337aa2a4b97a5f6e84b8f801de5fb6cc40f714d7027d4",
+  "solver_sha256": "2f4762f1c0a630a9fb0e11052356270a784901e239ea9968a3dba92ec3de5451",
+  "grids": {"original": [227, 453], "fine": [454, 906]},
+  "speed_limits_m_s": [50, 100, 200],
+  "stage1": ["original_100", "original_200"],
+  "stage2": ["original_050", "fine_050", "fine_100", "fine_200"],
+  "time_policy": {"dt_initial_s": 0.02, "dt_max_s": 0.1, "cfl_desired": 0.5, "cfl_max": 1.0, "source_dt_max_s": 0.1, "steps_max": 200000},
+  "policy_rationale": "Declared before new integrations: reduce desired CFL from 0.75 to 0.5 and global dt_max from 2 s to 0.1 s. Preserve the 0.1 s moving-source cap and 0.02 s initial step. Adaptive actual steps may differ. No tuning after outcomes.",
+  "acceptance": "Unchanged simulation.time_steps.audit and simulation.validate plus original input/monitor/deck consistency checks; additionally enforce the declared global time-step ceiling. Failed cases excluded. Stop expansion on any failure.",
+  "refinement": "Exactly double nx and ny. Keep original nodal terrain, artificial masks, source grid, source history and domain. Reintegrate nodal terrain and final displacement onto new cells using existing cell_average; do not resample or retune physical source.",
+  "historically_validated": false,
+  "convergence_established": false
+}

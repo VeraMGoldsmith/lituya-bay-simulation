@@ -2,17 +2,17 @@
 
 A numerical investigation of the 1958 Lituya Bay megatsunami using GeoClaw, focusing on landslide-generated wave propagation, run-up estimation, and numerical sensitivity.
 
-The repository contains a moving-bed source model, simulation configurations, validation procedures, software tests, and results from a controlled comparison of water-speed limits (50, 100, and 200 m/s).
+The repository contains a moving-bed source model, simulation configurations, validation procedures, software tests, and visualizations. The experimental work includes a controlled comparison of numerical water-speed limits (50, 100, and 200 m/s), followed by analyses of run-up measurement methods and the influence of grid resolution.
 
-This preliminary release documents the modeling approach, experimental results, and identified numerical limitations. Further validation and sensitivity analysis are needed to assess historical accuracy and numerical convergence.
+This preliminary release brings together the modeling approach, results from the original and follow-up studies, and identified numerical limitations. The studies examine how numerical settings and measurement choices affect the simulated results and their interpretation.
 
 ## Research objectives
 
 This project investigates the numerical behavior of a simplified model of the 1958 Lituya Bay megatsunami, with particular attention to wave propagation, run-up estimation, and numerical sensitivity.
 
-The study examines how different water-speed limits (50, 100, and 200 m/s) affect simulated run-up and numerical stability. It also considers how measurement criteria and monitoring boundaries influence the interpretation of results.
+The study examines how different water-speed limits (50, 100, and 200 m/s) affect simulated run-up and numerical stability. The follow-up experiment investigates whether the sensitivity to these limits persists when the grid is refined, using smaller cells to represent the terrain and water movement in greater detail.
 
-The objective is to identify the model’s numerical limitations and establish a basis for further validation and refinement.
+The study also considers how the boundaries of the monitored area and the minimum water depth used to report run-up influence the measurements. The objective is to identify which findings remain consistent across these comparisons and which depend on the selected numerical settings or measurement criteria.
 
 ## Recorded experiment
 
@@ -60,7 +60,7 @@ The maps use local model coordinates. Masking artificial cells in the figures do
 
 The [figure provenance](docs/figures/figure_provenance.json) records full-precision measurements, settings, source hashes and rendering details. The [plotting script](experiments/2026-10-19-speed-caps/plot_figures.py) checks the saved data before generating the figures. Regeneration requires the original local simulation session; raw simulation fields and reference inputs are not included in this repository.
 
-## Follow-up analysis: measurement robustness and numerical sensitivity
+## Follow-up analysis: run-up measurements and grid resolution
 
 The [measurement-robustness analysis](analysis/measurement_robustness/report.html) examined how monitoring coverage and the wet-depth threshold affect the earlier run-up measurements. The follow-up experiment then compared 50, 100, and 200 m/s numerical water-speed limits on approximately 30 m and 15 m grids, using the same physical setup and matched time-stepping settings across the six new simulations.
 

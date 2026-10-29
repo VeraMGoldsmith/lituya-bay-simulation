@@ -62,11 +62,14 @@ The [figure provenance](docs/figures/figure_provenance.json) records full-precis
 
 ## Follow-up analysis: run-up measurements and grid resolution
 
-The [measurement-robustness analysis](analysis/measurement_robustness/report.html) examined how monitoring coverage and the wet-depth threshold affect the earlier run-up measurements. The follow-up experiment then compared 50, 100, and 200 m/s numerical water-speed limits on approximately 30 m and 15 m grids, using the same physical setup and matched time-stepping settings across the six new simulations.
+The follow-up analyses examined how measurement choices and grid resolution affect the interpretation of the original speed-limit comparison. The [measurement-robustness analysis](analysis/measurement_robustness/report.html) used archived results to assess the influence of the monitored area and the water-depth reporting threshold—the minimum depth used to count a land location as wetted. Expanding the monitored area left the 50 m/s run-up unchanged and increased the original 100 m/s value by 5.85 m. The large difference between the two speed limits remained.
+The grid-resolution experiment then investigated whether that difference persisted when the model used smaller cells. Water-speed limits of 50, 100, and 200 m/s were compared on the original grid, with approximately 30 m cell spacing, and a finer grid, with approximately 15 m cell spacing. The finer grid represents the same physical area with smaller cells, allowing terrain and water movement to be represented in greater spatial detail. All six simulations used the same physical setup and a common set of revised time-stepping settings.
 
-The large 50→100 m/s increase in highest monitored run-up persists on both grids. Increasing the limit to 200 m/s leaves this measure unchanged on each grid, although some other outputs differ slightly on the finer grid. Grid refinement increases the run-up values, while the original-grid 100 m/s comparison also shows sensitivity to time-stepping settings: highest monitored run-up changed from 469.85 m in the earlier study to 449.33 m under the revised settings. Actual time steps were adaptive.
+The large increase in highest monitored run-up from 50 to 100 m/s persisted on both grids. Raising the limit further, from 100 to 200 m/s, left the highest monitored run-up unchanged on each grid. The finer grid produced higher run-up values at all three speed limits, while some other measurements differed slightly between its 100 and 200 m/s simulations.
 
-The earlier 200 m/s run remains excluded because it failed the established CFL/time-step checks. The follow-up includes independently verified new 200 m/s runs on both grids.
+The comparison between the original and follow-up 100 m/s simulations also showed sensitivity to time-stepping settings. On the original grid, highest monitored run-up changed from 469.85 m in the earlier experiment to 449.33 m under the revised settings. The actual time steps adjusted automatically as each simulation progressed.
+
+The new 200 m/s simulations passed the numerical checks on both grids. The original 200 m/s simulation remains excluded because it failed the numerical stability checks.
 
 ![Highest monitored run-up at 50, 100, and 200 m/s: 317.08, 449.33, and 449.33 m on the original grid; 338.24, 492.84, and 492.84 m on the finer grid.](docs/presentation/experiment_visuals/runup_grid_comparison.png)
 
@@ -76,7 +79,9 @@ The earlier 200 m/s run remains excluded because it failed the established CFL/t
 
 *Run-up, flooded area, and water levels.* The earlier 100 m/s simulation is shown separately because its time-stepping settings differ. [View the table at full size](docs/presentation/experiment_visuals/secondary_comparison.png) or use the [readable HTML table](docs/presentation/experiment_visuals/secondary_comparison.html).
 
-These comparisons describe sensitivity within the tested model setup and monitoring area. Equal run-up does not imply identical flow behavior or establish grid convergence or historical accuracy. See the [speed-limit/grid-resolution report](experiments/speed-limit-grid-resolution/report.html), [presentation methods](docs/presentation/experiment_visuals/presentation_notes.md), and [source provenance](docs/presentation/experiment_visuals/provenance.json) for detailed settings, results, and verification records.
+The follow-up findings support the original observation of a large run-up difference between the 50 and 100 m/s limits. That difference persisted on both grids, while increasing the limit from 100 to 200 m/s did not change the highest monitored run-up. The absolute run-up values, however, remained sensitive to grid resolution and time-stepping settings.
+
+These findings apply to the tested model setup and monitored area. Equal run-up values do not mean that all aspects of the simulated flow were identical, and the comparisons do not establish numerical convergence or historical accuracy. See the [speed-limit/grid-resolution report](experiments/speed-limit-grid-resolution/report.html), [presentation methods](docs/presentation/experiment_visuals/presentation_notes.md), and [source provenance](docs/presentation/experiment_visuals/provenance.json) for detailed settings, results, and verification records.
 
 ## Testing and verification
 

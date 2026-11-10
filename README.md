@@ -10,7 +10,7 @@ This preliminary release brings together the modeling approach, results from the
 
 Vera M. Goldsmith (2026), **A Simplified GeoClaw Model of Landslide-Generated Waves in Lituya Bay: Development and Numerical Sensitivity**.
 
-[Read the project report (PDF)](docs/reports/Goldsmith_Lituya_Bay_GeoClaw_Manuscript.pdf) · [Download the original Word document](docs/reports/Goldsmith_Lituya_Bay_GeoClaw_Manuscript.docx)
+[Read the project report (PDF)](docs/reports/Goldsmith_Lituya_Bay_GeoClaw_Manuscript.pdf) · [Download the Word document](docs/reports/Goldsmith_Lituya_Bay_GeoClaw_Manuscript.docx)
 
 ## Research objectives
 

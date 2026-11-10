@@ -6,6 +6,12 @@ The repository contains a moving-bed source model, simulation configurations, va
 
 This preliminary release brings together the modeling approach, results from the original and follow-up studies, and identified numerical limitations. The studies examine how numerical settings and measurement choices affect the simulated results and their interpretation.
 
+## Project report
+
+Vera M. Goldsmith (2026), **A Simplified GeoClaw Model of Landslide-Generated Waves in Lituya Bay: Development and Numerical Sensitivity**.
+
+[Read the project report (PDF)](docs/reports/Goldsmith_Lituya_Bay_GeoClaw_Manuscript.pdf) · [Download the original Word document](docs/reports/Goldsmith_Lituya_Bay_GeoClaw_Manuscript.docx)
+
 ## Research objectives
 
 This project investigates the numerical behavior of a simplified model of the 1958 Lituya Bay megatsunami, with particular attention to wave propagation, run-up estimation, and numerical sensitivity.
